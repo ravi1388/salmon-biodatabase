@@ -115,17 +115,14 @@ names(erin_work)
 
 #' Execute join to get common observations
 sep_dat <- erin_work |>
-  # distinct(id, erin_stock_of_origin) |>
   right_join(enpro_work, 
-             by = "id",
-             suffix = c("_enpro", "_erin"))
-
+             by = "id")
 
 ### adipose_fin_clip_impute ----
-sep_dat$adipose_fin_clip |> tolower() |> unique() |> sort()
+sep_dat$enpro_adipose_fin_clip |> tolower() |> unique() |> sort()
 
 sep_dat <- sep_dat |> 
-  mutate(adipose_fin_clip_impute = adipose_fin_clip |> tolower(),
+  mutate(adipose_fin_clip_impute = enpro_adipose_fin_clip |> tolower(),
          adipose_fin_clip_impute = case_when(
            adipose_fin_clip_impute %in% c("ad", "yes", "y", "rv", "adrv") ~ "yes",
            adipose_fin_clip_impute %in% c("unch", "adlv", "no", "n", "nomk") ~ "no"))
@@ -134,13 +131,15 @@ unique(sep_dat$adipose_fin_clip_impute)
 
 
 ### sex_final_impute ----
-sep_dat$sex_final |> tolower() |>  unique() |> sort()
+sep_dat$enpro_sex_final |> tolower() |>  unique() |> sort()
 
 sep_dat <- sep_dat |> 
-  mutate(sex_final_impute = sex_final |> tolower(),
+  mutate(sex_final_impute = enpro_sex_final |> tolower(),
          sex_final_impute = case_when(
            sex_final_impute %in% c("unspecified", "unspecified", "undetermined", "u/k") ~ "unknown",
            TRUE ~ sex_final_impute))
+
+sep_dat$sex_final_impute |> tolower() |>  unique() |> sort()
 
 ### stock_of_origin_impute ----
 sort(unique(sep_dat$erin_stock_of_origin))
@@ -150,31 +149,35 @@ sort(unique(sep_dat$erin_stock_of_origin))
 #' Combine "Atnarko R Low", "Atnarko R Up" & "Atnarko R" into "Atnarko R"
 #' Combine "First Lk/GSVI" & "Nanaimo R" into "Namaimo R"
 sep_dat <- sep_dat |> 
-  mutate(stock_of_origin_impute = str_trim(stock_of_origin),
+  mutate(stock_of_origin_impute = str_trim(erin_stock_of_origin),
          stock_of_origin_impute = case_when(
            stock_of_origin_impute == "First Lk/GSVI" ~ "Nanaimo R",
-           stock_of_origin_impute %in% c("Atnarko R Low", "Atnarko R Up") ~ "Atnarko R"
+           stock_of_origin_impute %in% c("Atnarko R Low", "Atnarko R Up") ~ "Atnarko R",
            stock_of_origin_impute == "" ~ NA,
            TRUE ~ stock_of_origin_impute
          ))
 
-sep_dat |> distinct(stock_of_origin, stock_of_origin_impute) |> print(n=100)
+sep_dat |> distinct(erin_stock_of_origin, stock_of_origin_impute) |> 
+  mutate(diff = ifelse(stock_of_origin_impute != erin_stock_of_origin, T, F)) |> 
+  filter(diff == T)
+  # print(n=100)
 
 
-### site_river_location ----
-sort(unique(sep_dat$site_river_location))
+### site_river_location_impute ----
+sort(unique(sep_dat$enpro_site_river_location))
 
-### Add abbreviations for River, Creek, Lower and Upper
+#### Add abbreviations for River, Creek, Lower and Upper
 sep_dat <- sep_dat |> 
-  mutate(site_river_location_impute = str_to_title(site_river_location),
+  mutate(site_river_location_impute = str_to_title(enpro_site_river_location),
          site_river_location_impute = str_replace(site_river_location_impute, "River", "R"),
          site_river_location_impute = str_replace(site_river_location_impute, "Creek", "Cr"),
          site_river_location_impute = str_replace(site_river_location_impute, "Lower", "Low"),
-         site_river_location_impute = str_replace(site_river_location_impute, "Upper", "Up"))
+         site_river_location_impute = str_replace(site_river_location_impute, "Upper", "Up"),
+         site_river_location_impute = str_replace(site_river_location_impute, "Cove", "Cv"))
 
 sort(unique(sep_dat$site_river_location_impute))
 
-### Consolidate names:
+#### Consolidate names:
 #' "Atnarko R Low", "Atnarko R Mid" & "Atnarko R Up" into "Atnarko R"
 #' "Tsu-Ma_Uss" & "Somass R" to "Somass R"
 sep_dat <- sep_dat |> 
@@ -185,20 +188,67 @@ sep_dat <- sep_dat |>
 
 sort(unique(sep_dat$site_river_location_impute))
 
-### Fill gaps in stock_of_origin
-#### Check number of NA values in stock_of_origin
-table(sep_dat$stock_of_origin_impute, useNA = "ifany")
+### Fill gaps in `stock_of_origin_impute` using `site_river_location_impute` ----
+#' After standardizing both variables for uniformity,
+#' 
+#' - *~60%* of observations have `NA` values for `stock_of_origin_impute`
+#' - The correspondence rate between `stock_of_origin_impute` and 
+#'   `site_river_location_impute` is *~94.8%*
 
-sep_dat |> filter(is.na(stock_of_origin_impute)) |> 
-  pull(site_river_location_impute) |> unique()
+#### Check percent of observations with NA stock_of_origin_impute
+sep_dat |> 
+  group_by(stock_of_origin_impute) |> 
+  summarise(n_obs_stk = n()) |> 
+  ungroup() |> 
+  mutate(n_obs_all = sum(n_obs_stk),
+         p_obs_stk = 100*(n_obs_stk/n_obs_all)) |> 
+  arrange(desc(p_obs_stk)) |> 
+  print(n = 100)
+#' ~60% of observations have NA values for stock of origin
 
-#' Assuming that all fish will return to their stock of origin, location where
-#' fish were sampled, site_river_location_impute, used to fill NA values in
-#' stock_of_origin
+#### Standardize values for `stock_of_origin_impute` & `site_river_location_impute`
+sep_dat <- sep_dat |> 
+  #' `stock_of_origin_impute`
+  mutate(stock_of_origin_impute = case_when(grepl("Qual", stock_of_origin_impute) ~ "B+L Qualicum R",
+                                            grepl("Capilano\\+Chill", stock_of_origin_impute) ~ "Capilano R",
+                                            grepl("Chill\\+Harrison R", stock_of_origin_impute) ~ "Chilliwack R",
+                                            grepl("Salmon R/JNST", stock_of_origin_impute) ~ "Salmon R",
+                                            TRUE ~ stock_of_origin_impute),
+  #' `site_river_location_impute`
+         site_river_location_impute = case_when(grepl("Qual", site_river_location_impute) ~ "B+L Qualicum R",
+                                                grepl("Nanaimo R Low Fall", site_river_location_impute) ~ "Nanaimo R",
+                                                grepl("Nanaimo R Up Summer", site_river_location_impute) ~ "Nanaimo R",
+                                                grepl("Great Central Lake Fishway", site_river_location_impute) ~ "Robertson Cr",
+                                            TRUE ~ site_river_location_impute))
+
+
+#### Check correspondence between stock_of_origin_impute and site_river_location_impute
+check_correspondance <- sep_dat |> 
+  select(stock_of_origin_impute, site_river_location_impute) |> 
+  filter(!is.na(stock_of_origin_impute)) |> 
+  mutate(diff = ifelse(stock_of_origin_impute == site_river_location_impute,
+                       "same", "diff")) #|> 
+  # distinct() |> filter(diff == T)
+
+check_correspondance |>
+  group_by(diff) |> 
+  mutate(n_pair = n()) |> ungroup() |>
+  distinct(diff, n_pair) |> 
+  pivot_wider(values_from = n_pair, names_from = diff) |> 
+  mutate(p_diff = 100*(diff/sum(same, diff)))
+#' `stock_of_origin_impute` and `site_river_location_impute` differ in ~5.19% of 
+#' observations with values for both variables.
+
+#' Assuming that all fish will return to their home waterbody, location where 
+#' fish were sampled, `site_river_location_impute`, used to fill `NA` values in
+#' `stock_of_origin_impute`.
 sep_dat <- sep_dat |>
   mutate(stock_of_origin_impute = ifelse(is.na(stock_of_origin_impute),
-                                        site_river_location_impute, stock_of_origin_impute))
+                                        site_river_location_impute, 
+                                        stock_of_origin_impute))
 
+sep_dat |> 
+  filter(is.na(stock_of_origin_impute)) |> nrow()
 
 ### final_use_distribution ----
 unique(sep_dat$final_use_distribution)
