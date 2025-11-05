@@ -289,9 +289,10 @@ sep_biodata_work$enpro_post_orbital_hypural_poh |> table(useNA = "ifany")
 ### Impute ocean_age ----
 #' 'ocean_age' is taken from resolved_age. However, this variable contains many 
 #' `NA` values and some errors in Cowichan R data. First, erroneous data from
-#' Cowichan R were corrected, then `NA` values were replaced with:
-#' 1. Values from 'age_gr' (Gilbert-Rich age) and
-#' 2. Age in the Gilbert-Rich format, back-calculated as 'CWT_age'
+#' Cowichan R were corrected, then `NA` values were replaced with age values 
+#' from 'age_gr' (Gilbert-Rich age) and an estimate of Gilbert-Rich age called
+#' 'cwt_age', created using 'brood_year' (year of release) and 
+#' 'enpro_smolt_or_yearling' (life stage at release).
 #' 
 #' 1. Fix errors in resolved_age for Cowichan R data
 #' 2. Replace NA values in resolved_age with corresponding values for age_gr 
@@ -302,50 +303,53 @@ sep_biodata_work$enpro_post_orbital_hypural_poh |> table(useNA = "ifany")
 #' 6. Backfill resolved age with CWT age
 #' 7. clean up ocean age
 
-# 1. Fix errors in resolved_age
-# General
-sep_biodata_work$Resolved_Age_clean <- sep_biodata_work$`RESOLVED AGE`
-sort(unique(sep_biodata_work$Resolved_Age_clean))
-sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="Reading Error"] <- NA
-sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="No Age"] <- NA
-sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`==""] <- NA
+#### Fix errors in resolved_age ----
+sep_biodata_work$enpro_resolved_age |> unique()
+sep_biodata_work <- sep_biodata_work |> 
+  # General
+  mutate(resolved_age_impute = case_when(
+    enpro_resolved_age == "Reading Error" ~ NA,
+    enpro_resolved_age == "No Age" ~ NA,
+    enpro_resolved_age == "" ~ NA,
+    # Cowichan R Project errors - 2007
+    enpro_resolved_age == "01" & 
+      enpro_year == 2007 & 
+      enpro_project == "Cowichan River River Assessment" ~ "21",
+    enpro_resolved_age == "02" & 
+      enpro_year == 2007 & 
+      enpro_project == "Cowichan River River Assessment" ~ "31",
+    enpro_resolved_age == "03" & 
+      enpro_year == 2007 & 
+      enpro_project == "Cowichan River River Assessment" ~ "41",
+    enpro_resolved_age == "03" &
+      enpro_age_gr == "1M" & 
+      enpro_year == 2007 & 
+      enpro_project == "Cowichan River River Assessment" ~ "21",
+    # Cowichan R Project errors - 2012
+    enpro_resolved_age == "2" & 
+      enpro_year == 2012 & 
+      enpro_project == "Cowichan River River Assessment" ~ "21",
+    enpro_resolved_age == "5" & 
+      enpro_year == 2012 & 
+      enpro_project == "Cowichan River River Assessment" ~ "51",
+    # Cowichan R Project errors - 2015
+    enpro_resolved_age == "3" & 
+      enpro_year == 2015 & 
+      enpro_project == "Cowichan River River Assessment" ~ "31",
+    enpro_resolved_age == "4" & 
+      enpro_year == 2015 & 
+      enpro_project == "Cowichan River River Assessment" ~ "41",
+    TRUE ~ enpro_resolved_age))
 
-# Cowichan R Proj Age Errors
-sep_biodata_work$Year_clean <- sep_biodata_work$YEAR
-sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="01" &
-                                sep_biodata_work$Year_clean==2007 &
-                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "21"
-sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="02" &
-                                sep_biodata_work$Year_clean==2007 &
-                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "31"
-sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="03" &
-                                sep_biodata_work$Year_clean==2007 &
-                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "41"
-sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="03" &
-                                sep_biodata_work$Year_clean==2007 &
-                                sep_biodata_work$PROJECT=="Cowichan River River Assessment" &
-                                sep_biodata_work$AGE_GR=="1M"] <- "21"
-sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="2" &
-                                sep_biodata_work$Year_clean==2012 &
-                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "21"
-sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="3" &
-                                sep_biodata_work$Year_clean==2015 &
-                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "31"
-sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="4" &
-                                sep_biodata_work$Year_clean==2015 &
-                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "41"
-sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="5" &
-                                sep_biodata_work$Year_clean==2012 &
-                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "51"
 
 # 2. Fill gaps in Resolved Age with Gilbert Rich Ages from PADs
-sep_biodata_work$Age_GR_clean <- sep_biodata_work$AGE_GR
-sort(unique(sep_biodata_work$Age_GR_clean))
-sep_biodata_work$Age_R_GR <- ifelse(is.na(sep_biodata_work$Resolved_Age_clean), 
-                             sep_biodata_work$Age_GR_clean, sep_biodata_work$Resolved_Age_clean)
+sep_biodata_work$enpro_age_gr_clean <- sep_biodata_work$enpro_age_gr
+sort(unique(sep_biodata_work$enpro_age_gr_clean))
+sep_biodata_work$Age_R_GR <- ifelse(is.na(sep_biodata_work$resolved_age_impute), 
+                             sep_biodata_work$enpro_age_gr_clean, sep_biodata_work$resolved_age_impute)
 sort(unique(sep_biodata_work$Age_R_GR))
 
-unique(sep_biodata_work[,c("Age_GR_clean", "Resolved_Age_clean", "Age_R_GR")]) |> 
+unique(sep_biodata_work[,c("Age_GR_clean", "resolved_age_impute", "Age_R_GR")]) |> 
   print(n=96)
 
 # 3. Estimate freshwater age
@@ -360,7 +364,7 @@ sep_biodata_work$Smolt_Yearling_clean <- as.numeric(sep_biodata_work$Smolt_Yearl
 unique(sep_biodata_work$Smolt_Yearling_clean)
 
 # 4. Estimate Total age
-sep_biodata_work$Total_Age <- sep_biodata_work$Year_clean - sep_biodata_work$BROOD_YEAR
+sep_biodata_work$Total_Age <- sep_biodata_work$enpro_year - sep_biodata_work$BROOD_YEAR
 
 # 5. Combine freshwater and total age to estimate CWT age, clean up result and backfill resolved age with CWT age
 sep_biodata_work$CWT_Age <- paste0(sep_biodata_work$Total_Age, sep_biodata_work$Smolt_Yearling_clean)
@@ -686,7 +690,7 @@ unique(temp$CWT_Age)
 temp2 <- temp |>
   filter(CWT_Age_clean>1000)
 unique(temp2$CWT_Age_clean)
-temp2$CWT_Age_clean <- temp2$YEAR - temp2$CWT_Age_clean
+temp2$CWT_Age_clean <- temp2$enpro_year - temp2$CWT_Age_clean
 unique(temp2$CWT_Age_clean)
 # Get entries with CWT age and bind rows with calculated CWT age.
 temp2 <- temp |>
@@ -811,7 +815,7 @@ rh_dat$Stock_clean2 <- "Robertson Cr"
 rh_dat$Database <- "SEP Historical"
 
 # Year
-rh_dat$Year <- rh_dat$YEAR
+rh_dat$enpro_year <- rh_dat$enpro_year
 
 # Out
 if(out==T) {
@@ -844,7 +848,7 @@ ch_dat <- ch_dat |>
 # |>
 #   filter(!is.na(POHL_clean))
 
-ch_dat$Year <- ch_dat$YEAR
+ch_dat$enpro_year <- ch_dat$enpro_year
 
 ch_dat |>
   group_by(LM.C.9) |>
@@ -960,7 +964,7 @@ rcv2 <- rcv |>
   filter(species==1) |>
   filter(!tag_code=="")
 
-unique(rcv2$Year)
+unique(rcv2$enpro_year)
 
 rcv2$Month <- substr(rcv2$recovery_date, 5, 6)
 
@@ -1141,7 +1145,7 @@ rmis <- rmis |>
   unite("ID", A, B, sep="")
 
 # Year ####
-rmis$Year <- rmis$run_year
+rmis$enpro_year <- rmis$run_year
 
 if(out==T) {
   write.csv(rmis, "dat/processed/rmis_clean.csv")
