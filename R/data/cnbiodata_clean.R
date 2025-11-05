@@ -102,7 +102,12 @@ enpro_work <- enpro_work |>
   mutate(site_river_location_impute = case_when(
     site_river_location_impute %in% c("Atnarko R Low", "Atnarko R Mid", "Atnarko R Up") ~ "Atnarko R",
     site_river_location_impute == "Tsu-Ma_uss" ~ "Somass R",
-    TRUE ~ site_river_location_impute))
+    TRUE ~ site_river_location_impute)) |> 
+  mutate(site_river_location_impute = case_when(grepl("Qual", site_river_location_impute) ~ "B+L Qualicum R",
+                                                grepl("Nanaimo R Low Fall", site_river_location_impute) ~ "Nanaimo R",
+                                                grepl("Nanaimo R Up Summer", site_river_location_impute) ~ "Nanaimo R",
+                                                grepl("Great Central Lake Fishway", site_river_location_impute) ~ "Robertson Cr",
+                                                TRUE ~ site_river_location_impute))
 
 sort(unique(enpro_work$site_river_location_impute))
 rm(dupes_enpro, keep_rows, enpro_dupe_ids)
@@ -132,7 +137,12 @@ erin_work <- erin_work |>
            stock_of_origin_impute %in% c("Atnarko R Low", "Atnarko R Up") ~ "Atnarko R",
            stock_of_origin_impute == "" ~ NA,
            TRUE ~ stock_of_origin_impute
-         ))
+         )) |> 
+  mutate(stock_of_origin_impute = case_when(grepl("Qual", stock_of_origin_impute) ~ "B+L Qualicum R",
+                                            grepl("Capilano\\+Chill", stock_of_origin_impute) ~ "Capilano R",
+                                            grepl("Chill\\+Harrison R", stock_of_origin_impute) ~ "Chilliwack R",
+                                            grepl("Salmon R/JNST", stock_of_origin_impute) ~ "Salmon R",
+                                            TRUE ~ stock_of_origin_impute))
 
 erin_work |> distinct(stock_of_origin, stock_of_origin_impute) |> 
   mutate(diff = ifelse(stock_of_origin_impute != stock_of_origin, T, F)) |> 
@@ -196,7 +206,7 @@ sep_biodata <- erin_work |>
 ### Clear unneeded variables
 rm(dupes_erin, match_names, names_enpro, names_erin)
 
-### Impute 'stock' ----
+### Impute stock ----
 #' Use `stock_of_origin_impute` with NA values replaced with those from 
 #' `site_river_location_impute`.
 #' 
@@ -207,7 +217,7 @@ rm(dupes_erin, match_names, names_enpro, names_erin)
 
 #### Check percent of observations with NA stock_of_origin_impute
 sep_biodata |> 
-  group_by(stock_of_origin_impute) |> 
+  group_by(erin_stock_of_origin_impute) |> 
   summarise(n_obs_stk = n()) |> 
   ungroup() |> 
   mutate(n_obs_all = sum(n_obs_stk),
@@ -216,27 +226,12 @@ sep_biodata |>
   print(n = 100)
 #' ~60% of observations have NA values for stock_of_origin
 
-#### Standardize values for `stock_of_origin_impute` & `site_river_location_impute`
-sep_biodata_work <- sep_biodata_work |> 
-  #' `stock_of_origin_impute`
-  mutate(stock_of_origin_impute = case_when(grepl("Qual", stock_of_origin_impute) ~ "B+L Qualicum R",
-                                            grepl("Capilano\\+Chill", stock_of_origin_impute) ~ "Capilano R",
-                                            grepl("Chill\\+Harrison R", stock_of_origin_impute) ~ "Chilliwack R",
-                                            grepl("Salmon R/JNST", stock_of_origin_impute) ~ "Salmon R",
-                                            TRUE ~ stock_of_origin_impute),
-  #' `site_river_location_impute`
-         site_river_location_impute = case_when(grepl("Qual", site_river_location_impute) ~ "B+L Qualicum R",
-                                                grepl("Nanaimo R Low Fall", site_river_location_impute) ~ "Nanaimo R",
-                                                grepl("Nanaimo R Up Summer", site_river_location_impute) ~ "Nanaimo R",
-                                                grepl("Great Central Lake Fishway", site_river_location_impute) ~ "Robertson Cr",
-                                            TRUE ~ site_river_location_impute))
 
-
-#### Check correspondence between stock_of_origin_impute and site_river_location_impute
-check_correspondance <- sep_biodata_work |> 
-  select(stock_of_origin_impute, site_river_location_impute) |> 
-  filter(!is.na(stock_of_origin_impute)) |> 
-  mutate(diff = ifelse(stock_of_origin_impute == site_river_location_impute,
+#### Check correspondence between erin_stock_of_origin_impute and enpro_site_river_location_impute
+check_correspondance <- sep_biodata |> 
+  select(erin_stock_of_origin_impute, enpro_site_river_location_impute) |> 
+  filter(!is.na(erin_stock_of_origin_impute)) |> 
+  mutate(diff = ifelse(erin_stock_of_origin_impute == enpro_site_river_location_impute,
                        "same", "diff")) #|> 
   # distinct() |> filter(diff == T)
 
@@ -246,53 +241,68 @@ check_correspondance |>
   distinct(diff, n_pair) |> 
   pivot_wider(values_from = n_pair, names_from = diff) |> 
   mutate(p_diff = 100*(diff/sum(same, diff)))
-#' `stock_of_origin_impute` and `site_river_location_impute` differ in ~5.19% of 
-#' observations with values for both variables.
 
+#' `erin_stock_of_origin_impute` and `enpro_site_river_location_impute` differ in ~5.19% of 
+#' observations with values for both variables.
+#' 
 #' Assuming that all fish will return to their home waterbody, location where 
-#' fish were sampled, `site_river_location_impute`, used to fill `NA` values in
-#' `stock_of_origin_impute` to create `stock_impute`.
-sep_biodata_work <- sep_biodata_work |>
-  mutate(stock_impute_flag = ifelse(is.na(stock_of_origin_impute),
+#' fish were sampled, `enpro_site_river_location_impute`, used to fill `NA` 
+#' values in `erin_stock_of_origin_impute` to create `stock_impute`.
+#' 
+#' A new variable, `stock_impute_flag`, will be used to indicate which values 
+#' for `stock_impute` are real and imputed using the values 'actual' and
+#' 'imputed' respectively.
+
+sep_biodata_work <- sep_biodata |>
+  mutate(stock_impute_flag = ifelse(is.na(erin_stock_of_origin_impute),
                                        "imputed",
                                        "actual"),
-         stock_impute = ifelse(is.na(stock_of_origin_impute),
-                                        site_river_location_impute, 
-                                        stock_of_origin_impute))
+         stock_impute = ifelse(is.na(erin_stock_of_origin_impute),
+                                        enpro_site_river_location_impute, 
+                                        erin_stock_of_origin_impute))
 
 sep_biodata_work |> 
   filter(is.na(stock_impute)) |> nrow()
 sep_biodata_work$stock_impute_flag |> table()
 
 ### Impute final_use_distribution ----
-unique(sep_biodata_work$final_use_distribution)
+unique(sep_biodata_work$enpro_final_use_distribution)
 
 sep_biodata_work <- sep_biodata_work |> 
   mutate(final_use_distribution_impute = case_when(
-    final_use_distribution == "Natural Spawners" ~ "Natural Spawner",
-    final_use_distribution == "Not Applicable" ~ NA,
-    final_use_distribution == "Unknown" ~ NA,
-    TRUE ~ final_use_distribution
+    enpro_final_use_distribution == "Natural Spawners" ~ "Natural Spawner",
+    enpro_final_use_distribution == "Not Applicable" ~ NA,
+    enpro_final_use_distribution == "Unknown" ~ NA,
+    TRUE ~ enpro_final_use_distribution
   ))
+
+unique(sep_biodata_work$final_use_distribution_impute)
 
 
 ### Impute post_orbital_hypural_poh ----
-unique(sep_biodata_work$post_orbital_hypural_poh)
-typeof(sep_biodata_work$post_orbital_hypural_poh)
-sort(unique(sep_biodata_work$post_orbital_hypural_poh))
+### Check data type
+typeof(sep_biodata_work$enpro_post_orbital_hypural_poh)
+### Check for observations with NA values
+sep_biodata_work$enpro_post_orbital_hypural_poh |> table(useNA = "ifany")
 
 
 ### Impute ocean_age ----
-#' "ocean_age" estimated using the following protocol:
+#' 'ocean_age' is taken from resolved_age. However, this variable contains many 
+#' `NA` values and some errors in Cowichan R data. First, erroneous data from
+#' Cowichan R were corrected, then `NA` values were replaced with:
+#' 1. Values from 'age_gr' (Gilbert-Rich age) and
+#' 2. Age in the Gilbert-Rich format, back-calculated as 'CWT_age'
+#' 
 #' 1. Fix errors in resolved_age for Cowichan R data
-#' 2. Fill gaps in resolved_age with age_gr (Gilbert-rich)
-#' 3. Estimate freshwater age using sep_biodata_worka on life stage at release provided by ENPRO (SMOLT OR YearLING)
-#' 4. Estimate total age as the difference between brood Year and sample Year
+#' 2. Replace NA values in resolved_age with corresponding values for age_gr 
+#'    (Gilbert-Rich age)
+#' 3. Estimate freshwater age using sep_biodata_work on life stage at release provided by ENPRO (SMOLT OR YearLING)
+#' 4. Estimate total age as the difference between brood year and sample year
 #' 5. Combine total and freshwater age to produce CWT age and clean up to remove erroneous results
 #' 6. Backfill resolved age with CWT age
 #' 7. clean up ocean age
 
-# 1. clean up Resolved Age
+# 1. Fix errors in resolved_age
 # General
 sep_biodata_work$Resolved_Age_clean <- sep_biodata_work$`RESOLVED AGE`
 sort(unique(sep_biodata_work$Resolved_Age_clean))
@@ -410,7 +420,7 @@ sep_biodata_work$Database <- "EnPro"
 
 # Choose columns ####
 cnbiodata_clean <- sep_biodata_work |>
-  select(ID, Sample_Date_Start_clean, Month, Year_clean, site_river_location_impute, 
+  select(ID, Sample_Date_Start_clean, Month, Year_clean, enpro_site_river_location_impute, 
          stock_impute, sex_final_impute, POHL_clean, Ocean_Age, 
          Database)
 
@@ -435,10 +445,10 @@ names(kit_dat2)
 unique(kit_dat$ID)
 unique(kit_dat2$ID)
 
-colnames(kit_dat) <- c("ID", "Year_clean", "site_river_location_impute", "Tag_code",
+colnames(kit_dat) <- c("ID", "Year_clean", "enpro_site_river_location_impute", "Tag_code",
                     "SEX...FINAL", "Age", "POHL")
 
-colnames(kit_dat2) <- c("ID", "Year_clean", "site_river_location_impute", "Tag_code",
+colnames(kit_dat2) <- c("ID", "Year_clean", "enpro_site_river_location_impute", "Tag_code",
                      "SEX...FINAL", "Age", "POHL")
 
 kit_dat$Age <- as.character(kit_dat$Age)
@@ -487,8 +497,8 @@ kit_dat$Life_Stage_clean[kit_dat$SEX...FINAL == "F"] <- "Adult"
 kit_dat$Life_Stage_clean[kit_dat$SEX...FINAL == "M"] <- "Adult"
 
 # Stock ####
-kit_dat$site_river_location_impute <- "Kitimat R"
-kit_dat$stock_impute <- kit_dat$site_river_location_impute
+kit_dat$enpro_site_river_location_impute <- "Kitimat R"
+kit_dat$stock_impute <- kit_dat$enpro_site_river_location_impute
 
 # Database ####
 kit_dat$Database <- "Kitimat R Hatchery"
