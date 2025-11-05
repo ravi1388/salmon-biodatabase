@@ -307,11 +307,11 @@ sep_biodata_work$enpro_post_orbital_hypural_poh |> table(useNA = "ifany")
 sep_biodata_work$enpro_resolved_age |> unique()
 sep_biodata_work <- sep_biodata_work |> 
   # General
-  mutate(resolved_age_impute = case_when(
-    enpro_resolved_age == "Reading Error" ~ NA,
-    enpro_resolved_age == "No Age" ~ NA,
-    enpro_resolved_age == "" ~ NA,
+  mutate(resolved_age_impute = ifelse(
+    enpro_resolved_age %in% c("Reading Error", "No Age", ""), 
+    NA, enpro_resolved_age),
     # Cowichan R Project errors - 2007
+    resolved_age_impute = case_when(
     enpro_resolved_age == "01" & 
       enpro_year == 2007 & 
       enpro_project == "Cowichan River River Assessment" ~ "21",
@@ -339,31 +339,39 @@ sep_biodata_work <- sep_biodata_work |>
     enpro_resolved_age == "4" & 
       enpro_year == 2015 & 
       enpro_project == "Cowichan River River Assessment" ~ "41",
-    TRUE ~ enpro_resolved_age))
+    TRUE ~ resolved_age_impute))
 
 
-# 2. Fill gaps in Resolved Age with Gilbert Rich Ages from PADs
-sep_biodata_work$enpro_age_gr_clean <- sep_biodata_work$enpro_age_gr
-sort(unique(sep_biodata_work$enpro_age_gr_clean))
-sep_biodata_work$Age_R_GR <- ifelse(is.na(sep_biodata_work$resolved_age_impute), 
-                             sep_biodata_work$enpro_age_gr_clean, sep_biodata_work$resolved_age_impute)
-sort(unique(sep_biodata_work$Age_R_GR))
+#### Fill gaps in 'enpro_resolved_age' ----
 
-unique(sep_biodata_work[,c("Age_GR_clean", "resolved_age_impute", "Age_R_GR")]) |> 
-  print(n=96)
+#### Using 'age_gr'
+sep_biodata_work$resolved_age_impute |> unique()
+sep_biodata_work$enpro_age_gr |> unique()
 
-# 3. Estimate freshwater age
-# clean up ENPRO: Smolt or Yearling (Freshwater age)
-sep_biodata_work$Smolt_Yearling_clean <- sep_biodata_work$`ENPRO: SMOLT OR YEARLING`
-unique(sep_biodata_work$Smolt_Yearling_clean)
-sep_biodata_work$Smolt_Yearling_clean[sep_biodata_work$`ENPRO: SMOLT OR YEARLING`==""] <- NA
-sep_biodata_work$Smolt_Yearling_clean[sep_biodata_work$`ENPRO: SMOLT OR YEARLING`=="Error"] <- NA
-sep_biodata_work$Smolt_Yearling_clean[sep_biodata_work$`ENPRO: SMOLT OR YEARLING`=="#N/A"] <- NA
-sep_biodata_work$Smolt_Yearling_clean[sep_biodata_work$`ENPRO: SMOLT OR YEARLING`=="Missing Data"] <- NA
-sep_biodata_work$Smolt_Yearling_clean <- as.numeric(sep_biodata_work$Smolt_Yearling_clean)
-unique(sep_biodata_work$Smolt_Yearling_clean)
+sep_biodata_work <- sep_biodata_work |> 
+  mutate(resolved_age_impute = ifelse(is.na(resolved_age_impute), 
+                                      enpro_age_gr, 
+                                      resolved_age_impute))
 
-# 4. Estimate Total age
+sep_biodata_work$resolved_age_impute |> unique() |> sort()
+
+#### Using 'cwt_age'
+#' Reconstruct 'cwt_age' (Gilbert-Rich age):
+#' 1. Estimate freshwater age
+#' 2. Estimate total age
+#' 3. Combine into single value
+
+##### 1. Estimate freshwater age from 'enpro_smolt_or_yearling'
+sep_biodata_work$enpro_smolt_or_yearling |> unique()
+
+sep_biodata_work <- sep_biodata_work |> 
+  mutate(age_fw_impute = ifelse(
+    enpro_smolt_or_yearling %in% c("", "Error", "#N/A", "Missing Data"),
+    NA, as.numeric(enpro_smolt_or_yearling)))
+
+sep_biodata_work |> distinct(enpro_smolt_or_yearling, age_fw_impute)
+
+##### 2. Estimate Total age as difference between 'enpro_year' and 'enpro_brood_year'
 sep_biodata_work$Total_Age <- sep_biodata_work$enpro_year - sep_biodata_work$BROOD_YEAR
 
 # 5. Combine freshwater and total age to estimate CWT age, clean up result and backfill resolved age with CWT age
@@ -372,14 +380,14 @@ unique(sep_biodata_work$CWT_Age)
 sep_biodata_work$CWT_Age <- ifelse(grepl("NA", sep_biodata_work$CWT_Age), NA, sep_biodata_work$CWT_Age)
 unique(sep_biodata_work$CWT_Age)
 
-sep_biodata_work$Ocean_Age <- ifelse(is.na(sep_biodata_work$Age_R_GR), 
-                             sep_biodata_work$CWT_Age, sep_biodata_work$Age_R_GR)
+sep_biodata_work$Ocean_Age <- ifelse(is.na(sep_biodata_work$enpro_resolved_age), 
+                             sep_biodata_work$CWT_Age, sep_biodata_work$enpro_resolved_age)
 unique(sep_biodata_work$Ocean_Age)
 
 check_age <- sep_biodata_work[,c("CWT_Age", "Age_R_GR", "Ocean_Age")] |> 
   unique()
 check_age$check_age <- ifelse(check_age$CWT_Age == check_age$Ocean_Age &
-                                check_age$CWT_Age != check_age$Age_R_GR,
+                                check_age$CWT_Age != check_age$enpro_resolved_age,
                               T, F)
 
 # 7. clean up Ocean Age
