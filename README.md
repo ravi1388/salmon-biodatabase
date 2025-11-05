@@ -59,7 +59,9 @@ The core business logic package that handles data quality and transformation.
     * **Packages:** Heavily rely on the **`tidyverse`** (`dplyr`, `stringr`).
     * **Function Design:** Functions should be **pipe-friendly** (`data.frame` $\to$ `data.frame`).
     * **Example Logic Flow:**
-        $$\text{read\_raw\_data() } \to \text{ clean\_metrics() } \to \text{ standardize\_units() }$$
+        ```
+        read_raw_data() -> clean_metrics() -> standardize_units()
+        ```
     * **DB Interaction:** Use the **`DBI`** package for consistent database connections. Abstract connections into a helper function, e.g., `connect_sockeye()`.
     * **Quality Control:** **Unit testing** using **`testthat`** is paramount for ensuring data integrity during cleaning.
 
