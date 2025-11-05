@@ -19,14 +19,12 @@ library(janitor)
 
 # Data cleaning ----
 
-## SEP data - ENPRO & ERIN ----
+## SEP data - ENPRO ----
 ## Load data
 # enpro_work <- readxl::read_xlsx("data-raw/enpro/Kent_AllChinook_BiodataDB.xlsx")
 # cols_def <- readxl::read_xlsx("data-raw/meta/biodata_column_meanings.xlsx")
-# erin_dat <- readxl::read_xlsx("data-raw/meta/erin_thermalmark.xlsx")
 
 ### Check for dupes ----
-#### ENPRO
 enpro_work <- clean_names(enpro_dat)
 
 names(enpro_work) |> sort()
@@ -58,23 +56,97 @@ enpro_work <- enpro_work |>
   filter(!id %in% enpro_dupe_ids) |> 
   bind_rows(keep_rows)
 
+
+### Impute adipose_fin_clip ----
+enpro_work$adipose_fin_clip |> tolower() |> unique() |> sort()
+
+enpro_work <- enpro_work |> 
+  mutate(adipose_fin_clip_impute = adipose_fin_clip |> tolower(),
+         adipose_fin_clip_impute = case_when(
+           adipose_fin_clip_impute %in% c("ad", "yes", "y", "rv", "adrv") ~ "yes",
+           adipose_fin_clip_impute %in% c("unch", "adlv", "no", "n", "nomk") ~ "no"))
+
+unique(enpro_work$adipose_fin_clip_impute)
+
+
+### Impute sex_final ----
+enpro_work$sex_final |> tolower() |>  unique() |> sort()
+
+enpro_work <- enpro_work |> 
+  mutate(sex_final_impute = sex_final |> tolower(),
+         sex_final_impute = case_when(
+           sex_final_impute %in% c("unspecified", "unspecified", "undetermined", "u/k") ~ "unknown",
+           TRUE ~ sex_final_impute))
+
+enpro_work$sex_final_impute |> tolower() |>  unique() |> sort()
+
+
+### Impute site_river_location ----
+sort(unique(enpro_work$site_river_location))
+
+#### Add abbreviations for River, Creek, Cove, Lower and Upper
+enpro_work <- enpro_work |> 
+  mutate(site_river_location_impute = str_to_title(site_river_location),
+         site_river_location_impute = str_replace(site_river_location_impute, "River", "R"),
+         site_river_location_impute = str_replace(site_river_location_impute, "Creek", "Cr"),
+         site_river_location_impute = str_replace(site_river_location_impute, "Cove", "Cv"),
+         site_river_location_impute = str_replace(site_river_location_impute, "Lower", "Low"),
+         site_river_location_impute = str_replace(site_river_location_impute, "Upper", "Up"))
+
+sort(unique(enpro_work$site_river_location_impute))
+
+#### Consolidate names:
+#' "Atnarko R Low", "Atnarko R Mid" & "Atnarko R Up" into "Atnarko R"
+#' "Tsu-Ma_Uss" & "Somass R" to "Somass R"
+enpro_work <- enpro_work |> 
+  mutate(site_river_location_impute = case_when(
+    site_river_location_impute %in% c("Atnarko R Low", "Atnarko R Mid", "Atnarko R Up") ~ "Atnarko R",
+    site_river_location_impute == "Tsu-Ma_uss" ~ "Somass R",
+    TRUE ~ site_river_location_impute))
+
+sort(unique(enpro_work$site_river_location_impute))
+rm(dupes_enpro, keep_rows, enpro_dupe_ids)
+
+## SEP data - ERIN ----
+## Load data
+# erin_dat <- readxl::read_xlsx("data-raw/meta/erin_thermalmark.xlsx")
 erin_work <- erin_dat |> clean_names()
 
-#### ERIN
-check_stock <- erin_work |> 
+### Check for dupes ----
+dupes_erin <- erin_work |> 
   select(id, stock_of_origin) |> 
   filter(!is.na(id)) |> 
   janitor::get_dupes()
 
+### Impute stock_of_origin ----
+sort(unique(erin_work$stock_of_origin))
 
-### Get matching observations from ERIN and ENPRO tables ----
+#### Consolidate values in stock_of_origin
+#' Convert all "" values to NA
+#' Combine "Atnarko R Low", "Atnarko R Up" & "Atnarko R" into "Atnarko R"
+#' Combine "First Lk/GSVI" & "Nanaimo R" into "Namaimo R"
+erin_work <- erin_work |> 
+  mutate(stock_of_origin_impute = str_trim(stock_of_origin),
+         stock_of_origin_impute = case_when(
+           stock_of_origin_impute == "First Lk/GSVI" ~ "Nanaimo R",
+           stock_of_origin_impute %in% c("Atnarko R Low", "Atnarko R Up") ~ "Atnarko R",
+           stock_of_origin_impute == "" ~ NA,
+           TRUE ~ stock_of_origin_impute
+         ))
+
+erin_work |> distinct(stock_of_origin, stock_of_origin_impute) |> 
+  mutate(diff = ifelse(stock_of_origin_impute != stock_of_origin, T, F)) |> 
+  filter(diff == T)
+# print(n=100)
+
+
+#### Reduce ERIN to its unique variables and foreign key 'id'
 names_enpro <- names(enpro_work)
 names_erin <- names(erin_work)
 match_names <- intersect(names_enpro, names_erin)
 setdiff(names_enpro, match_names)
-#' ERIN contains all but 4 of the columns from ENPRO
+#' ERIN contains all but 7 of the columns from ENPRO
 
-#### Reduce ERIN to its unique variables and foreign key 'id'
 #' Tag all untagged ENPRO variables
 names_enpro <- purrr::modify(names_enpro, \(x) {
   if(!grepl('enpro', x) & x != 'id') {
@@ -113,90 +185,28 @@ erin_work <- erin_work |>
   select(all_of(names_erin))
 names(erin_work)
 
-#' Execute join to get common observations
-sep_dat <- erin_work |>
+
+## SEP Biodata ----
+### Create SEP Biodata table ----
+#' Join ERIN and ENPRO tables to get common observations
+sep_biodata <- erin_work |>
   right_join(enpro_work, 
              by = "id")
 
-### adipose_fin_clip_impute ----
-sep_dat$enpro_adipose_fin_clip |> tolower() |> unique() |> sort()
+### Clear unneeded variables
+rm(dupes_erin, match_names, names_enpro, names_erin)
 
-sep_dat <- sep_dat |> 
-  mutate(adipose_fin_clip_impute = enpro_adipose_fin_clip |> tolower(),
-         adipose_fin_clip_impute = case_when(
-           adipose_fin_clip_impute %in% c("ad", "yes", "y", "rv", "adrv") ~ "yes",
-           adipose_fin_clip_impute %in% c("unch", "adlv", "no", "n", "nomk") ~ "no"))
-
-unique(sep_dat$adipose_fin_clip_impute)
-
-
-### sex_final_impute ----
-sep_dat$enpro_sex_final |> tolower() |>  unique() |> sort()
-
-sep_dat <- sep_dat |> 
-  mutate(sex_final_impute = enpro_sex_final |> tolower(),
-         sex_final_impute = case_when(
-           sex_final_impute %in% c("unspecified", "unspecified", "undetermined", "u/k") ~ "unknown",
-           TRUE ~ sex_final_impute))
-
-sep_dat$sex_final_impute |> tolower() |>  unique() |> sort()
-
-### stock_of_origin_impute ----
-sort(unique(sep_dat$erin_stock_of_origin))
-
-#### Consolidate values in stock_of_origin
-#' Convert all "" values to NA
-#' Combine "Atnarko R Low", "Atnarko R Up" & "Atnarko R" into "Atnarko R"
-#' Combine "First Lk/GSVI" & "Nanaimo R" into "Namaimo R"
-sep_dat <- sep_dat |> 
-  mutate(stock_of_origin_impute = str_trim(erin_stock_of_origin),
-         stock_of_origin_impute = case_when(
-           stock_of_origin_impute == "First Lk/GSVI" ~ "Nanaimo R",
-           stock_of_origin_impute %in% c("Atnarko R Low", "Atnarko R Up") ~ "Atnarko R",
-           stock_of_origin_impute == "" ~ NA,
-           TRUE ~ stock_of_origin_impute
-         ))
-
-sep_dat |> distinct(erin_stock_of_origin, stock_of_origin_impute) |> 
-  mutate(diff = ifelse(stock_of_origin_impute != erin_stock_of_origin, T, F)) |> 
-  filter(diff == T)
-  # print(n=100)
-
-
-### site_river_location_impute ----
-sort(unique(sep_dat$enpro_site_river_location))
-
-#### Add abbreviations for River, Creek, Lower and Upper
-sep_dat <- sep_dat |> 
-  mutate(site_river_location_impute = str_to_title(enpro_site_river_location),
-         site_river_location_impute = str_replace(site_river_location_impute, "River", "R"),
-         site_river_location_impute = str_replace(site_river_location_impute, "Creek", "Cr"),
-         site_river_location_impute = str_replace(site_river_location_impute, "Lower", "Low"),
-         site_river_location_impute = str_replace(site_river_location_impute, "Upper", "Up"),
-         site_river_location_impute = str_replace(site_river_location_impute, "Cove", "Cv"))
-
-sort(unique(sep_dat$site_river_location_impute))
-
-#### Consolidate names:
-#' "Atnarko R Low", "Atnarko R Mid" & "Atnarko R Up" into "Atnarko R"
-#' "Tsu-Ma_Uss" & "Somass R" to "Somass R"
-sep_dat <- sep_dat |> 
-  mutate(site_river_location_impute = case_when(
-    site_river_location_impute %in% c("Atnarko R Low", "Atnarko R Mid", "Atnarko R Up") ~ "Atnarko R",
-    site_river_location_impute == "Tsu-Ma_uss" ~ "Somass R",
-    TRUE ~ site_river_location_impute))
-
-sort(unique(sep_dat$site_river_location_impute))
-
-### Fill gaps in `stock_of_origin_impute` using `site_river_location_impute` ----
-#' After standardizing both variables for uniformity,
+### Impute 'stock' ----
+#' Use `stock_of_origin_impute` with NA values replaced with those from 
+#' `site_river_location_impute`.
 #' 
+#' After standardizing both for uniformity below: 
 #' - *~60%* of observations have `NA` values for `stock_of_origin_impute`
 #' - The correspondence rate between `stock_of_origin_impute` and 
 #'   `site_river_location_impute` is *~94.8%*
 
 #### Check percent of observations with NA stock_of_origin_impute
-sep_dat |> 
+sep_biodata |> 
   group_by(stock_of_origin_impute) |> 
   summarise(n_obs_stk = n()) |> 
   ungroup() |> 
@@ -204,10 +214,10 @@ sep_dat |>
          p_obs_stk = 100*(n_obs_stk/n_obs_all)) |> 
   arrange(desc(p_obs_stk)) |> 
   print(n = 100)
-#' ~60% of observations have NA values for stock of origin
+#' ~60% of observations have NA values for stock_of_origin
 
 #### Standardize values for `stock_of_origin_impute` & `site_river_location_impute`
-sep_dat <- sep_dat |> 
+sep_biodata_work <- sep_biodata_work |> 
   #' `stock_of_origin_impute`
   mutate(stock_of_origin_impute = case_when(grepl("Qual", stock_of_origin_impute) ~ "B+L Qualicum R",
                                             grepl("Capilano\\+Chill", stock_of_origin_impute) ~ "Capilano R",
@@ -223,7 +233,7 @@ sep_dat <- sep_dat |>
 
 
 #### Check correspondence between stock_of_origin_impute and site_river_location_impute
-check_correspondance <- sep_dat |> 
+check_correspondance <- sep_biodata_work |> 
   select(stock_of_origin_impute, site_river_location_impute) |> 
   filter(!is.na(stock_of_origin_impute)) |> 
   mutate(diff = ifelse(stock_of_origin_impute == site_river_location_impute,
@@ -241,19 +251,23 @@ check_correspondance |>
 
 #' Assuming that all fish will return to their home waterbody, location where 
 #' fish were sampled, `site_river_location_impute`, used to fill `NA` values in
-#' `stock_of_origin_impute`.
-sep_dat <- sep_dat |>
-  mutate(stock_of_origin_impute = ifelse(is.na(stock_of_origin_impute),
+#' `stock_of_origin_impute` to create `stock_impute`.
+sep_biodata_work <- sep_biodata_work |>
+  mutate(stock_impute_flag = ifelse(is.na(stock_of_origin_impute),
+                                       "imputed",
+                                       "actual"),
+         stock_impute = ifelse(is.na(stock_of_origin_impute),
                                         site_river_location_impute, 
                                         stock_of_origin_impute))
 
-sep_dat |> 
-  filter(is.na(stock_of_origin_impute)) |> nrow()
+sep_biodata_work |> 
+  filter(is.na(stock_impute)) |> nrow()
+sep_biodata_work$stock_impute_flag |> table()
 
-### final_use_distribution ----
-unique(sep_dat$final_use_distribution)
+### Impute final_use_distribution ----
+unique(sep_biodata_work$final_use_distribution)
 
-sep_dat <- sep_dat |> 
+sep_biodata_work <- sep_biodata_work |> 
   mutate(final_use_distribution_impute = case_when(
     final_use_distribution == "Natural Spawners" ~ "Natural Spawner",
     final_use_distribution == "Not Applicable" ~ NA,
@@ -262,17 +276,17 @@ sep_dat <- sep_dat |>
   ))
 
 
-### post_orbital_hypural_poh ----
-unique(sep_dat$post_orbital_hypural_poh)
-typeof(sep_dat$post_orbital_hypural_poh)
-sort(unique(sep_dat$post_orbital_hypural_poh))
+### Impute post_orbital_hypural_poh ----
+unique(sep_biodata_work$post_orbital_hypural_poh)
+typeof(sep_biodata_work$post_orbital_hypural_poh)
+sort(unique(sep_biodata_work$post_orbital_hypural_poh))
 
 
-### ocean_age ----
+### Impute ocean_age ----
 #' "ocean_age" estimated using the following protocol:
 #' 1. Fix errors in resolved_age for Cowichan R data
 #' 2. Fill gaps in resolved_age with age_gr (Gilbert-rich)
-#' 3. Estimate freshwater age using sep_data on life stage at release provided by ENPRO (SMOLT OR YearLING)
+#' 3. Estimate freshwater age using sep_biodata_worka on life stage at release provided by ENPRO (SMOLT OR YearLING)
 #' 4. Estimate total age as the difference between brood Year and sample Year
 #' 5. Combine total and freshwater age to produce CWT age and clean up to remove erroneous results
 #' 6. Backfill resolved age with CWT age
@@ -280,130 +294,130 @@ sort(unique(sep_dat$post_orbital_hypural_poh))
 
 # 1. clean up Resolved Age
 # General
-sep_dat$Resolved_Age_clean <- sep_dat$`RESOLVED AGE`
-sort(unique(sep_dat$Resolved_Age_clean))
-sep_dat$Resolved_Age_clean[sep_dat$`RESOLVED AGE`=="Reading Error"] <- NA
-sep_dat$Resolved_Age_clean[sep_dat$`RESOLVED AGE`=="No Age"] <- NA
-sep_dat$Resolved_Age_clean[sep_dat$`RESOLVED AGE`==""] <- NA
+sep_biodata_work$Resolved_Age_clean <- sep_biodata_work$`RESOLVED AGE`
+sort(unique(sep_biodata_work$Resolved_Age_clean))
+sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="Reading Error"] <- NA
+sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="No Age"] <- NA
+sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`==""] <- NA
 
 # Cowichan R Proj Age Errors
-sep_dat$Year_clean <- sep_dat$YEAR
-sep_dat$Resolved_Age_clean[sep_dat$`RESOLVED AGE`=="01" &
-                                sep_dat$Year_clean==2007 &
-                                sep_dat$PROJECT=="Cowichan River River Assessment"] <- "21"
-sep_dat$Resolved_Age_clean[sep_dat$`RESOLVED AGE`=="02" &
-                                sep_dat$Year_clean==2007 &
-                                sep_dat$PROJECT=="Cowichan River River Assessment"] <- "31"
-sep_dat$Resolved_Age_clean[sep_dat$`RESOLVED AGE`=="03" &
-                                sep_dat$Year_clean==2007 &
-                                sep_dat$PROJECT=="Cowichan River River Assessment"] <- "41"
-sep_dat$Resolved_Age_clean[sep_dat$`RESOLVED AGE`=="03" &
-                                sep_dat$Year_clean==2007 &
-                                sep_dat$PROJECT=="Cowichan River River Assessment" &
-                                sep_dat$AGE_GR=="1M"] <- "21"
-sep_dat$Resolved_Age_clean[sep_dat$`RESOLVED AGE`=="2" &
-                                sep_dat$Year_clean==2012 &
-                                sep_dat$PROJECT=="Cowichan River River Assessment"] <- "21"
-sep_dat$Resolved_Age_clean[sep_dat$`RESOLVED AGE`=="3" &
-                                sep_dat$Year_clean==2015 &
-                                sep_dat$PROJECT=="Cowichan River River Assessment"] <- "31"
-sep_dat$Resolved_Age_clean[sep_dat$`RESOLVED AGE`=="4" &
-                                sep_dat$Year_clean==2015 &
-                                sep_dat$PROJECT=="Cowichan River River Assessment"] <- "41"
-sep_dat$Resolved_Age_clean[sep_dat$`RESOLVED AGE`=="5" &
-                                sep_dat$Year_clean==2012 &
-                                sep_dat$PROJECT=="Cowichan River River Assessment"] <- "51"
+sep_biodata_work$Year_clean <- sep_biodata_work$YEAR
+sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="01" &
+                                sep_biodata_work$Year_clean==2007 &
+                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "21"
+sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="02" &
+                                sep_biodata_work$Year_clean==2007 &
+                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "31"
+sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="03" &
+                                sep_biodata_work$Year_clean==2007 &
+                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "41"
+sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="03" &
+                                sep_biodata_work$Year_clean==2007 &
+                                sep_biodata_work$PROJECT=="Cowichan River River Assessment" &
+                                sep_biodata_work$AGE_GR=="1M"] <- "21"
+sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="2" &
+                                sep_biodata_work$Year_clean==2012 &
+                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "21"
+sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="3" &
+                                sep_biodata_work$Year_clean==2015 &
+                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "31"
+sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="4" &
+                                sep_biodata_work$Year_clean==2015 &
+                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "41"
+sep_biodata_work$Resolved_Age_clean[sep_biodata_work$`RESOLVED AGE`=="5" &
+                                sep_biodata_work$Year_clean==2012 &
+                                sep_biodata_work$PROJECT=="Cowichan River River Assessment"] <- "51"
 
 # 2. Fill gaps in Resolved Age with Gilbert Rich Ages from PADs
-sep_dat$Age_GR_clean <- sep_dat$AGE_GR
-sort(unique(sep_dat$Age_GR_clean))
-sep_dat$Age_R_GR <- ifelse(is.na(sep_dat$Resolved_Age_clean), 
-                             sep_dat$Age_GR_clean, sep_dat$Resolved_Age_clean)
-sort(unique(sep_dat$Age_R_GR))
+sep_biodata_work$Age_GR_clean <- sep_biodata_work$AGE_GR
+sort(unique(sep_biodata_work$Age_GR_clean))
+sep_biodata_work$Age_R_GR <- ifelse(is.na(sep_biodata_work$Resolved_Age_clean), 
+                             sep_biodata_work$Age_GR_clean, sep_biodata_work$Resolved_Age_clean)
+sort(unique(sep_biodata_work$Age_R_GR))
 
-unique(sep_dat[,c("Age_GR_clean", "Resolved_Age_clean", "Age_R_GR")]) |> 
+unique(sep_biodata_work[,c("Age_GR_clean", "Resolved_Age_clean", "Age_R_GR")]) |> 
   print(n=96)
 
 # 3. Estimate freshwater age
 # clean up ENPRO: Smolt or Yearling (Freshwater age)
-sep_dat$Smolt_Yearling_clean <- sep_dat$`ENPRO: SMOLT OR YEARLING`
-unique(sep_dat$Smolt_Yearling_clean)
-sep_dat$Smolt_Yearling_clean[sep_dat$`ENPRO: SMOLT OR YEARLING`==""] <- NA
-sep_dat$Smolt_Yearling_clean[sep_dat$`ENPRO: SMOLT OR YEARLING`=="Error"] <- NA
-sep_dat$Smolt_Yearling_clean[sep_dat$`ENPRO: SMOLT OR YEARLING`=="#N/A"] <- NA
-sep_dat$Smolt_Yearling_clean[sep_dat$`ENPRO: SMOLT OR YEARLING`=="Missing Data"] <- NA
-sep_dat$Smolt_Yearling_clean <- as.numeric(sep_dat$Smolt_Yearling_clean)
-unique(sep_dat$Smolt_Yearling_clean)
+sep_biodata_work$Smolt_Yearling_clean <- sep_biodata_work$`ENPRO: SMOLT OR YEARLING`
+unique(sep_biodata_work$Smolt_Yearling_clean)
+sep_biodata_work$Smolt_Yearling_clean[sep_biodata_work$`ENPRO: SMOLT OR YEARLING`==""] <- NA
+sep_biodata_work$Smolt_Yearling_clean[sep_biodata_work$`ENPRO: SMOLT OR YEARLING`=="Error"] <- NA
+sep_biodata_work$Smolt_Yearling_clean[sep_biodata_work$`ENPRO: SMOLT OR YEARLING`=="#N/A"] <- NA
+sep_biodata_work$Smolt_Yearling_clean[sep_biodata_work$`ENPRO: SMOLT OR YEARLING`=="Missing Data"] <- NA
+sep_biodata_work$Smolt_Yearling_clean <- as.numeric(sep_biodata_work$Smolt_Yearling_clean)
+unique(sep_biodata_work$Smolt_Yearling_clean)
 
 # 4. Estimate Total age
-sep_dat$Total_Age <- sep_dat$Year_clean - sep_dat$BROOD_YEAR
+sep_biodata_work$Total_Age <- sep_biodata_work$Year_clean - sep_biodata_work$BROOD_YEAR
 
 # 5. Combine freshwater and total age to estimate CWT age, clean up result and backfill resolved age with CWT age
-sep_dat$CWT_Age <- paste0(sep_dat$Total_Age, sep_dat$Smolt_Yearling_clean)
-unique(sep_dat$CWT_Age)
-sep_dat$CWT_Age <- ifelse(grepl("NA", sep_dat$CWT_Age), NA, sep_dat$CWT_Age)
-unique(sep_dat$CWT_Age)
+sep_biodata_work$CWT_Age <- paste0(sep_biodata_work$Total_Age, sep_biodata_work$Smolt_Yearling_clean)
+unique(sep_biodata_work$CWT_Age)
+sep_biodata_work$CWT_Age <- ifelse(grepl("NA", sep_biodata_work$CWT_Age), NA, sep_biodata_work$CWT_Age)
+unique(sep_biodata_work$CWT_Age)
 
-sep_dat$Ocean_Age <- ifelse(is.na(sep_dat$Age_R_GR), 
-                             sep_dat$CWT_Age, sep_dat$Age_R_GR)
-unique(sep_dat$Ocean_Age)
+sep_biodata_work$Ocean_Age <- ifelse(is.na(sep_biodata_work$Age_R_GR), 
+                             sep_biodata_work$CWT_Age, sep_biodata_work$Age_R_GR)
+unique(sep_biodata_work$Ocean_Age)
 
-check_age <- sep_dat[,c("CWT_Age", "Age_R_GR", "Ocean_Age")] |> 
+check_age <- sep_biodata_work[,c("CWT_Age", "Age_R_GR", "Ocean_Age")] |> 
   unique()
 check_age$check_age <- ifelse(check_age$CWT_Age == check_age$Ocean_Age &
                                 check_age$CWT_Age != check_age$Age_R_GR,
                               T, F)
 
 # 7. clean up Ocean Age
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="21"] <- "Ocean-1"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="32"] <- "Ocean-1"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="43"] <- "Ocean-1"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="31"] <- "Ocean-2"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="42"] <- "Ocean-2"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="53"] <- "Ocean-2"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="41"] <- "Ocean-3"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="52"] <- "Ocean-3"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="63"] <- "Ocean-3"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="51"] <- "Ocean-4"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="62"] <- "Ocean-4"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="61"] <- "Ocean-5"
-sep_dat$Ocean_Age[sep_dat$Ocean_Age=="71"] <- "Ocean-6"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="21"] <- "Ocean-1"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="32"] <- "Ocean-1"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="43"] <- "Ocean-1"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="31"] <- "Ocean-2"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="42"] <- "Ocean-2"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="53"] <- "Ocean-2"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="41"] <- "Ocean-3"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="52"] <- "Ocean-3"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="63"] <- "Ocean-3"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="51"] <- "Ocean-4"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="62"] <- "Ocean-4"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="61"] <- "Ocean-5"
+sep_biodata_work$Ocean_Age[sep_biodata_work$Ocean_Age=="71"] <- "Ocean-6"
 
 # Corrections based on jack lengths
-sep_dat$Ocean_Age[sep_dat$sex_final_impute=="Male" &
-                        sep_dat$POHL_clean<500] <- "Ocean-1"
-sep_dat$Ocean_Age[sep_dat$sex_final_impute=="Male" &
-                        sep_dat$Ocean_Age=="21" &
-                        sep_dat$POHL_clean>500] <- "Ocean-2"
+sep_biodata_work$Ocean_Age[sep_biodata_work$sex_final_impute=="Male" &
+                        sep_biodata_work$POHL_clean<500] <- "Ocean-1"
+sep_biodata_work$Ocean_Age[sep_biodata_work$sex_final_impute=="Male" &
+                        sep_biodata_work$Ocean_Age=="21" &
+                        sep_biodata_work$POHL_clean>500] <- "Ocean-2"
 
 
-# Date -------------------------------------------------------------------------
-unique(sep_dat$SAMPLE_START_DATE)
-sep_dat$Sample_Date_Start_clean <- sapply(sep_dat$SAMPLE_START_DATE, function(x) {
+# Impute Date -------------------------------------------------------------------------
+unique(sep_biodata_work$SAMPLE_START_DATE)
+sep_biodata_work$Sample_Date_Start_clean <- sapply(sep_biodata_work$SAMPLE_START_DATE, function(x) {
   strsplit(x, "T")[[1]][1]
 })
-sep_dat$Sample_Date_Start_clean <- as.Date(sep_dat$Sample_Date_Start_clean)
-sep_dat$Month <- lubridate::month(sep_dat$Sample_Date_Start_clean)
+sep_biodata_work$Sample_Date_Start_clean <- as.Date(sep_biodata_work$Sample_Date_Start_clean)
+sep_biodata_work$Month <- lubridate::month(sep_biodata_work$Sample_Date_Start_clean)
 
 
-# Sample Source ####
-sep_dat$Sample_Source_clean <- sep_dat$SAMPLE_SOURCE1
-unique(sep_dat$Sample_Source_clean)
+# Impute Sample Source ####
+sep_biodata_work$Sample_Source_clean <- sep_biodata_work$SAMPLE_SOURCE1
+unique(sep_biodata_work$Sample_Source_clean)
 
 # Database ####
-sep_dat$Database <- "EnPro"
+sep_biodata_work$Database <- "EnPro"
 
 
 # Choose columns ####
-cnbiodata_clean <- sep_dat |>
+cnbiodata_clean <- sep_biodata_work |>
   select(ID, Sample_Date_Start_clean, Month, Year_clean, site_river_location_impute, 
-         stock_of_origin_impute, sex_final_impute, POHL_clean, Ocean_Age, 
+         stock_impute, sex_final_impute, POHL_clean, Ocean_Age, 
          Database)
 
 
-write.csv(sep_dat, "data-raw/clean/enpro_clean.csv")
+write.csv(sep_biodata_work, "data-raw/clean/enpro_clean.csv")
 
-rm(sep_dat)
+rm(sep_biodata_work)
 
 
 #------------------------------------------------------------------------------#
@@ -474,7 +488,7 @@ kit_dat$Life_Stage_clean[kit_dat$SEX...FINAL == "M"] <- "Adult"
 
 # Stock ####
 kit_dat$site_river_location_impute <- "Kitimat R"
-kit_dat$stock_of_origin_impute <- kit_dat$site_river_location_impute
+kit_dat$stock_impute <- kit_dat$site_river_location_impute
 
 # Database ####
 kit_dat$Database <- "Kitimat R Hatchery"
