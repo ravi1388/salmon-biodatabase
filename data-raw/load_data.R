@@ -1,3 +1,5 @@
+# Create `kokanee` data object ----
+
 library(tidyverse)
 library(readxl)
 

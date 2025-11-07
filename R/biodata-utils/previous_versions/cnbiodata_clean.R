@@ -20,9 +20,9 @@ library(lubridate)
 
 # Data cleaning ----
 
-#-----------------------#
-## SEP data - ENPRO ----
-#-----------------------#
+#------------------#
+## SEP - ENPRO ----
+#------------------#
 
 ## Load data
 # enpro_dat <- readxl::read_xlsx("data/kokanee/SEP/SEP_ENPRO_CN.xlsx")
@@ -117,12 +117,12 @@ sort(unique(enpro_work$site_river_location_impute))
 rm(dupes_enpro, keep_rows, enpro_dupe_ids)
 
 
-#-------------------------------------------#
-## SEP data - Otolith/Thermal Mark Data ----
-#-------------------------------------------#
+#--------------------------------------#
+## SEP - Otolith/Thermal Mark Data ----
+#--------------------------------------#
 
 ## Load data
-# oto_dat <- readxl::read_xlsx("data/kokanee/enpro/otolith_thermal mark.xlsx")
+# oto_dat <- readxl::read_xlsx("data/kokanee/SEP/SEP_OTO_THERM_CN.xlsx")
 oto_work <- oto_dat |> clean_names()
 
 ### Check for dupes ----
@@ -405,6 +405,8 @@ sep_biodata_work <- sep_biodata_work |>
     TRUE ~ NA))
 
 sep_biodata_work$ocean_age |> table(useNA = "ifany")
+#' 1-ocean 2-ocean 3-ocean 4-ocean 5-ocean 6-ocean    <NA> 
+#'   21166   52567   68741   21049     454       1   96304
 
 ### Corrections based on jack lengths
 #' Jacks are male Chinook salmon that have returned to spawn after spending only
@@ -423,6 +425,8 @@ sep_biodata_work <- sep_biodata_work |>
     TRUE ~ ocean_age))
 
 sep_biodata_work$ocean_age |> table(useNA = "ifany")
+#' 1-ocean 2-ocean 3-ocean 4-ocean 5-ocean 6-ocean    <NA> 
+#'   21166   52567   68741   21049     454       1   96304 
 
 
 ### Impute 'sample_date' ----
@@ -451,7 +455,7 @@ sep_biodata_final <- sep_biodata_work |>
          sex_final_impute = enpro_sex_final_impute, 
          pohl = enpro_post_orbital_hypural_poh, ocean_age, 
          adipose_fin_clip_impute = enpro_adipose_fin_clip_impute, 
-         final_use_distribution_impute = enpro_final_use_distribution_impute) |> 
+         final_use_distribution_impute = enpro_final_use_distribution) |> 
   mutate(tbl_name = "sep_biodata")
 
 # Add to main database
