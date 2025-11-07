@@ -25,8 +25,8 @@ library(lubridate)
 #-----------------------#
 
 ## Load data
-# enpro_work <- readxl::read_xlsx("data/kokanee/enpro/Kent_AllChinook_BiodataDB.xlsx")
-# cols_def <- readxl::read_xlsx("data/kokanee/enpro/meta/biodata_column_meanings.xlsx")
+# enpro_dat <- readxl::read_xlsx("data/kokanee/SEP/SEP_ENPRO_CN.xlsx")
+# enpro_meta <- readxl::read_xlsx("data/kokanee/SEP/SEP_ENPRO_CN_METADATA.xlsx")
 
 ### Check for dupes ----
 enpro_work <- clean_names(enpro_dat)
