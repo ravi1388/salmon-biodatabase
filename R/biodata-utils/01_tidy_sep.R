@@ -467,7 +467,7 @@ sockeye <- list(sep_biodata = sep_biodata_final)
 
 # Save files
 dest <- "data/sockeye/SEP_BIODATA.csv"
-write.csv(sep_biodata_final, "data-raw/sockeye/SEP_BIODATA.csv")
+write.csv(sep_biodata_final, dest)
 dest <- "data/sockeye/SEP_BIODATA.Rdata"
 save(sockeye, file = dest)
 
