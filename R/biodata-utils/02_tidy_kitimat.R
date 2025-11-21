@@ -21,12 +21,12 @@ library(lubridate)
 # Load data ----
 # load("./data/kokanee/kokanee.Rdata")
 
-path <- "data/kokanee/KITIMAT/KITIMAT_CN_1.csv"
-kit_dat <- read.csv(path) |>
-  clean_names()
-path <- "data/kokanee/KITIMAT/KITIMAT_CN_2.csv"
-kit_dat2 <- read.csv(path) |>
-  clean_names()
+# path <- "data/kokanee/KITIMAT/KITIMAT_CN_1.csv"
+# kit_dat <- read.csv(path) |>
+#   clean_names()
+# path <- "data/kokanee/KITIMAT/KITIMAT_CN_2.csv"
+# kit_dat2 <- read.csv(path) |>
+#   clean_names()
 
 # Data cleaning ----
 
