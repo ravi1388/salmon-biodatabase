@@ -17,6 +17,8 @@ library(purrr)
 library(janitor)
 library(lubridate)
 
+source("R/kokanee/kokanee.R")
+
 # Load data ----
 
 # load("./data/kokanee/kokanee.Rdata")

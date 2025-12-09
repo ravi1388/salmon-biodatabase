@@ -1,0 +1,2658 @@
+"","id","year","sample_site","tag_code","sex","cwt_age","post_orbital_hypural_poh","scale_age","adipose_fin_clip"
+"1","KIT1",1991,"Kitimat R",NA,"M",2,"337",NA,NA
+"2","KIT2",1991,"Kitimat R",NA,"M",2,"336",NA,NA
+"3","KIT3",1991,"Kitimat R",NA,"M",2,"365",NA,NA
+"4","KIT4",1991,"Kitimat R",NA,"M",3,"527",NA,NA
+"5","KIT5",1991,"Kitimat R",NA,"M",3,"579",NA,NA
+"6","KIT6",1991,"Kitimat R",NA,"M",3,"566",NA,NA
+"7","KIT7",1991,"Kitimat R",NA,"M",3,"494",NA,NA
+"8","KIT8",1991,"Kitimat R",NA,"M",3,"511",NA,NA
+"9","KIT9",1991,"Kitimat R",NA,"M",3,"484",NA,NA
+"10","KIT10",1991,"Kitimat R",NA,"M",3,"477",NA,NA
+"11","KIT11",1991,"Kitimat R",NA,"M",3,"553",NA,NA
+"12","KIT12",1991,"Kitimat R",NA,"M",3,"548",NA,NA
+"13","KIT13",1991,"Kitimat R",NA,"M",3,"545",NA,NA
+"14","KIT14",1991,"Kitimat R",NA,"M",3,"554",NA,NA
+"15","KIT15",1991,"Kitimat R",NA,"M",3,"528",NA,NA
+"16","KIT16",1991,"Kitimat R",NA,"M",3,"555",NA,NA
+"17","KIT17",1991,"Kitimat R",NA,"M",3,"647",NA,NA
+"18","KIT18",1991,"Kitimat R",NA,"M",3,"569",NA,NA
+"19","KIT19",1991,"Kitimat R",NA,"M",3,"515",NA,NA
+"20","KIT20",1991,"Kitimat R",NA,"M",3,"594",NA,NA
+"21","KIT21",1991,"Kitimat R",NA,"F",4,"732",NA,NA
+"22","KIT22",1991,"Kitimat R",NA,"F",4,"698",NA,NA
+"23","KIT23",1991,"Kitimat R",NA,"F",4,"786",NA,NA
+"24","KIT24",1991,"Kitimat R",NA,"F",4,"754",NA,NA
+"25","KIT25",1991,"Kitimat R",NA,"F",4,"779",NA,NA
+"26","KIT26",1991,"Kitimat R",NA,"F",4,"778",NA,NA
+"27","KIT27",1991,"Kitimat R",NA,"F",4,"709",NA,NA
+"28","KIT28",1991,"Kitimat R",NA,"M",4,"717",NA,NA
+"29","KIT29",1991,"Kitimat R",NA,"M",4,"742",NA,NA
+"30","KIT30",1991,"Kitimat R",NA,"F",5,"866",NA,NA
+"31","KIT31",1991,"Kitimat R",NA,"F",5,"824",NA,NA
+"32","KIT32",1991,"Kitimat R",NA,"F",5,"788",NA,NA
+"33","KIT33",1991,"Kitimat R",NA,"F",5,"824",NA,NA
+"34","KIT34",1991,"Kitimat R",NA,"F",5,"855",NA,NA
+"35","KIT35",1991,"Kitimat R",NA,"F",5,"806",NA,NA
+"36","KIT36",1991,"Kitimat R",NA,"F",5,"868",NA,NA
+"37","KIT37",1991,"Kitimat R",NA,"F",5,"785",NA,NA
+"38","KIT38",1991,"Kitimat R",NA,"F",5,"848",NA,NA
+"39","KIT39",1991,"Kitimat R",NA,"F",5,"758",NA,NA
+"40","KIT40",1991,"Kitimat R",NA,"F",5,"741",NA,NA
+"41","KIT41",1991,"Kitimat R",NA,"F",5,"831",NA,NA
+"42","KIT42",1991,"Kitimat R",NA,"F",5,"803",NA,NA
+"43","KIT43",1991,"Hirsch",NA,"F",5,"840",NA,NA
+"44","KIT44",1991,"Hirsch",NA,"F",5,"812",NA,NA
+"45","KIT45",1991,"Hirsch",NA,"F",5,"778",NA,NA
+"46","KIT46",1991,"Hirsch",NA,"F",5,"800",NA,NA
+"47","KIT47",1991,"Hirsch",NA,"F",5,"840",NA,NA
+"48","KIT48",1991,"Hirsch",NA,"F",5,"770",NA,NA
+"49","KIT49",1991,"Hirsch",NA,"F",5,"750",NA,NA
+"50","KIT50",1991,"Hirsch",NA,"F",5,"850",NA,NA
+"51","KIT51",1991,"Hirsch",NA,"F",5,"830",NA,NA
+"52","KIT52",1991,"Hirsch",NA,"F",5,"830",NA,NA
+"53","KIT53",1991,"Hirsch",NA,"F",5,"880",NA,NA
+"54","KIT54",1991,"Hirsch",NA,"F",5,"840",NA,NA
+"55","KIT55",1991,"Hirsch",NA,"F",5,"760",NA,NA
+"56","KIT56",1991,"Hirsch",NA,"F",5,"820",NA,NA
+"57","KIT57",1991,"Hirsch",NA,"F",5,"820",NA,NA
+"58","KIT58",1991,"Kitimat R",NA,"M",5,"812",NA,NA
+"59","KIT59",1991,"Kitimat R",NA,"M",5,"921",NA,NA
+"60","KIT60",1991,"Kitimat R",NA,"M",5,"874",NA,NA
+"61","KIT61",1991,"Kitimat R",NA,"M",5,"914",NA,NA
+"62","KIT62",1991,"Kitimat R",NA,"M",5,"874",NA,NA
+"63","KIT63",1991,"Kitimat R",NA,"M",5,"845",NA,NA
+"64","KIT64",1991,"Kitimat R",NA,"M",5,"769",NA,NA
+"65","KIT65",1991,"Kitimat R",NA,"M",5,"809",NA,NA
+"66","KIT66",1991,"Kitimat R",NA,"M",5,"668",NA,NA
+"67","KIT67",1991,"Kitimat R",NA,"F",6,"713",NA,NA
+"68","KIT68",1992,"Hirsch",NA,"M",2,"370",NA,NA
+"69","KIT69",1992,"Hirsch",NA,"M",2,"315",NA,NA
+"70","KIT70",1992,"Hirsch",NA,"M",2,"372",NA,NA
+"71","KIT71",1992,"Kitimat R",NA,"M",3,"561",NA,NA
+"72","KIT72",1992,"Kitimat R",NA,"M",3,"563",NA,NA
+"73","KIT73",1992,"Kitimat R",NA,"M",3,"554",NA,NA
+"74","KIT74",1992,"Kitimat R",NA,"M",3,"540",NA,NA
+"75","KIT75",1992,"Kitimat R",NA,"M",3,"448",NA,NA
+"76","KIT76",1992,"Kitimat R",NA,"M",3,"499",NA,NA
+"77","KIT77",1992,"Hirsch",NA,"M",3,"590",NA,NA
+"78","KIT78",1992,"Hirsch",NA,"M",3,"520",NA,NA
+"79","KIT79",1992,"Hirsch",NA,"M",3,"540",NA,NA
+"80","KIT80",1992,"Hirsch",NA,"M",3,"554",NA,NA
+"81","KIT81",1992,"Hirsch",NA,"M",3,"561",NA,NA
+"82","KIT82",1992,"Hirsch",NA,"M",3,"522",NA,NA
+"83","KIT83",1992,"Hirsch",NA,"M",3,"530",NA,NA
+"84","KIT84",1992,"Hirsch",NA,"M",3,"600",NA,NA
+"85","KIT85",1992,"Hirsch",NA,"M",3,"482",NA,NA
+"86","KIT86",1992,"Hirsch",NA,"M",3,"550",NA,NA
+"87","KIT87",1992,"Hirsch",NA,"M",3,"520",NA,NA
+"88","KIT88",1992,"Kitimat R",NA,"F",4,"748",NA,NA
+"89","KIT89",1992,"Kitimat R",NA,"F",4,"755",NA,NA
+"90","KIT90",1992,"Kitimat R",NA,"F",4,"740",NA,NA
+"91","KIT91",1992,"Kitimat R",NA,"F",4,"782",NA,NA
+"92","KIT92",1992,"Kitimat R",NA,"F",4,"696",NA,NA
+"93","KIT93",1992,"Kitimat R",NA,"F",4,"800",NA,NA
+"94","KIT94",1992,"Kitimat R",NA,"F",4,"735",NA,NA
+"95","KIT95",1992,"Hirsch",NA,"F",4,"715",NA,NA
+"96","KIT96",1992,"Hirsch",NA,"F",4,"700",NA,NA
+"97","KIT97",1992,"Hirsch",NA,"F",4,"625",NA,NA
+"98","KIT98",1992,"Hirsch",NA,"F",4,"720",NA,NA
+"99","KIT99",1992,"Kitimat R",NA,"M",4,"637",NA,NA
+"100","KIT100",1992,"Kitimat R",NA,"M",4,"741",NA,NA
+"101","KIT101",1992,"Kitimat R",NA,"M",4,"655",NA,NA
+"102","KIT102",1992,"Kitimat R",NA,"M",4,"651",NA,NA
+"103","KIT103",1992,"Kitimat R",NA,"M",4,"643",NA,NA
+"104","KIT104",1992,"Kitimat R",NA,"M",4,"650",NA,NA
+"105","KIT105",1992,"Kitimat R",NA,"M",4,"760",NA,NA
+"106","KIT106",1992,"Kitimat R",NA,"M",4,"600",NA,NA
+"107","KIT107",1992,"Hirsch",NA,"M",4,"660",NA,NA
+"108","KIT108",1992,"Hirsch",NA,"M",4,"640",NA,NA
+"109","KIT109",1992,"Hirsch",NA,"M",4,"710",NA,NA
+"110","KIT110",1992,"Hirsch",NA,"M",4,"690",NA,NA
+"111","KIT111",1992,"Hirsch",NA,"M",4,"670",NA,NA
+"112","KIT112",1992,"Hirsch",NA,"M",4,"675",NA,NA
+"113","KIT113",1992,"Hirsch",NA,"M",4,"680",NA,NA
+"114","KIT114",1992,"Hirsch",NA,"M",4,"640",NA,NA
+"115","KIT115",1992,"Hirsch",NA,"M",4,"710",NA,NA
+"116","KIT116",1992,"Hirsch",NA,"M",4,"642",NA,NA
+"117","KIT117",1992,"Hirsch",NA,"M",4,"791",NA,NA
+"118","KIT118",1992,"Hirsch",NA,"M",4,"610",NA,NA
+"119","KIT119",1992,"Hirsch",NA,"M",4,"728",NA,NA
+"120","KIT120",1992,"Hirsch",NA,"M",4,"660",NA,NA
+"121","KIT121",1992,"Hirsch",NA,"M",4,"690",NA,NA
+"122","KIT122",1992,"Hirsch",NA,"M",4,"595",NA,NA
+"123","KIT123",1992,"Kitimat R",NA,"F",5,"810",NA,NA
+"124","KIT124",1992,"Kitimat R",NA,"F",5,"836",NA,NA
+"125","KIT125",1992,"Kitimat R",NA,"F",5,"795",NA,NA
+"126","KIT126",1992,"Kitimat R",NA,"F",5,"700",NA,NA
+"127","KIT127",1992,"Kitimat R",NA,"F",5,"790",NA,NA
+"128","KIT128",1992,"Hirsch",NA,"F",5,"772",NA,NA
+"129","KIT129",1992,"Hirsch",NA,"F",5,"835",NA,NA
+"130","KIT130",1992,"Hirsch",NA,"M",5,"690",NA,NA
+"131","KIT131",1993,"Kitimat R",NA,"M",2,"385",NA,NA
+"132","KIT132",1993,"Hirsch",NA,"M",2,"495",NA,NA
+"133","KIT133",1993,"Hirsch",NA,"M",2,"310",NA,NA
+"134","KIT134",1993,"Kitimat R",NA,"M",3,"550",NA,NA
+"135","KIT135",1993,"Kitimat R",NA,"M",3,"525",NA,NA
+"136","KIT136",1993,"Kitimat R",NA,"M",3,"555",NA,NA
+"137","KIT137",1993,"Hirsch",NA,"M",3,"665",NA,NA
+"138","KIT138",1993,"Hirsch",NA,"M",3,"560",NA,NA
+"139","KIT139",1993,"Hirsch",NA,"M",3,"568",NA,NA
+"140","KIT140",1993,"Kitimat R",NA,"F",4,"716",NA,NA
+"141","KIT141",1993,"Kitimat R",NA,"F",4,"712",NA,NA
+"142","KIT142",1993,"Kitimat R",NA,"F",4,"800",NA,NA
+"143","KIT143",1993,"Kitimat R",NA,"F",4,"754",NA,NA
+"144","KIT144",1993,"Kitimat R",NA,"F",4,"741",NA,NA
+"145","KIT145",1993,"Kitimat R",NA,"F",4,"740",NA,NA
+"146","KIT146",1993,"Kitimat R",NA,"F",4,"743",NA,NA
+"147","KIT147",1993,"Kitimat R",NA,"M",4,"723",NA,NA
+"148","KIT148",1993,"Kitimat R",NA,"M",4,"683",NA,NA
+"149","KIT149",1993,"Kitimat R",NA,"M",4,"675",NA,NA
+"150","KIT150",1993,"Kitimat R",NA,"M",4,"702",NA,NA
+"151","KIT151",1993,"Kitimat R",NA,"M",4,"682",NA,NA
+"152","KIT152",1993,"Kitimat R",NA,"M",4,"752",NA,NA
+"153","KIT153",1993,"Kitimat R",NA,"M",4,"748",NA,NA
+"154","KIT154",1993,"Kitimat R",NA,"M",4,"718",NA,NA
+"155","KIT155",1993,"Kitimat R",NA,"M",4,"719",NA,NA
+"156","KIT156",1993,"Kitimat R",NA,"M",4,"656",NA,NA
+"157","KIT157",1993,"Kitimat R",NA,"M",4,"659",NA,NA
+"158","KIT158",1993,"Hirsch",NA,"M",4,"750",NA,NA
+"159","KIT159",1993,"Hirsch",NA,"M",4,"767",NA,NA
+"160","KIT160",1993,"Hirsch",NA,"M",4,"656",NA,NA
+"161","KIT161",1993,"Hirsch",NA,"M",4,"760",NA,NA
+"162","KIT162",1993,"Kitimat R",NA,"F",5,"800",NA,NA
+"163","KIT163",1993,"Kitimat R",NA,"F",5,"832",NA,NA
+"164","KIT164",1993,"Kitimat R",NA,"F",5,"819",NA,NA
+"165","KIT165",1993,"Kitimat R",NA,"F",5,"804",NA,NA
+"166","KIT166",1993,"Kitimat R",NA,"F",5,"805",NA,NA
+"167","KIT167",1993,"Kitimat R",NA,"F",5,"812",NA,NA
+"168","KIT168",1993,"Kitimat R",NA,"F",5,"844",NA,NA
+"169","KIT169",1993,"Kitimat R",NA,"F",5,"796",NA,NA
+"170","KIT170",1993,"Kitimat R",NA,"F",5,"826",NA,NA
+"171","KIT171",1993,"Kitimat R",NA,"F",5,"885",NA,NA
+"172","KIT172",1993,"Hirsch",NA,"F",5,"824",NA,NA
+"173","KIT173",1993,"Hirsch",NA,"F",5,"748",NA,NA
+"174","KIT174",1993,"Hirsch",NA,"F",5,"785",NA,NA
+"175","KIT175",1993,"Hirsch",NA,"F",5,"760",NA,NA
+"176","KIT176",1993,"Hirsch",NA,"F",5,"827",NA,NA
+"177","KIT177",1993,"Hirsch",NA,"F",5,"790",NA,NA
+"178","KIT178",1993,"Hirsch",NA,"F",5,"775",NA,NA
+"179","KIT179",1993,"Hirsch",NA,"F",5,"890",NA,NA
+"180","KIT180",1993,"Hirsch",NA,"F",5,"844",NA,NA
+"181","KIT181",1993,"Hirsch",NA,"F",5,"770",NA,NA
+"182","KIT182",1993,"Kitimat R",NA,"M",5,"751",NA,NA
+"183","KIT183",1993,"Kitimat R",NA,"M",5,"880",NA,NA
+"184","KIT184",1993,"Kitimat R",NA,"M",5,"735",NA,NA
+"185","KIT185",1993,"Kitimat R",NA,"M",5,"733",NA,NA
+"186","KIT186",1993,"Kitimat R",NA,"M",5,"775",NA,NA
+"187","KIT187",1993,"Kitimat R",NA,"M",5,"819",NA,NA
+"188","KIT188",1993,"Kitimat R",NA,"M",5,"812",NA,NA
+"189","KIT189",1993,"Kitimat R",NA,"M",5,"854",NA,NA
+"190","KIT190",1993,"Hirsch",NA,"M",5,"763",NA,NA
+"191","KIT191",1993,"Hirsch",NA,"M",5,"830",NA,NA
+"192","KIT192",1993,"Hirsch",NA,"M",5,"900",NA,NA
+"193","KIT193",1994,"Kitimat R",NA,"M",2,"337",NA,NA
+"194","KIT194",1994,"Hirsch",NA,"M",2,"396",NA,NA
+"195","KIT195",1994,"Kitimat R",NA,"M",3,"538",NA,NA
+"196","KIT196",1994,"Kitimat R",NA,"M",3,"590",NA,NA
+"197","KIT197",1994,"Kitimat R",NA,"M",3,"531",NA,NA
+"198","KIT198",1994,"Hirsch",NA,"M",3,"560",NA,NA
+"199","KIT199",1994,"Hirsch",NA,"M",3,"526",NA,NA
+"200","KIT200",1994,"Hirsch",NA,"M",3,"573",NA,NA
+"201","KIT201",1994,"Hirsch",NA,"M",3,"552",NA,NA
+"202","KIT202",1994,"Hirsch",NA,"M",3,"577",NA,NA
+"203","KIT203",1994,"Hirsch",NA,"M",3,"559",NA,NA
+"204","KIT204",1994,"Hirsch",NA,"M",3,"598",NA,NA
+"205","KIT205",1994,"Hirsch",NA,"M",3,"570",NA,NA
+"206","KIT206",1994,"Hirsch",NA,"M",3,"510",NA,NA
+"207","KIT207",1994,"Kitimat R",NA,"F",4,"699",NA,NA
+"208","KIT208",1994,"Kitimat R",NA,"F",4,"778",NA,NA
+"209","KIT209",1994,"Kitimat R",NA,"F",4,"754",NA,NA
+"210","KIT210",1994,"Kitimat R",NA,"F",4,"762",NA,NA
+"211","KIT211",1994,"Hirsch",NA,"F",4,"696",NA,NA
+"212","KIT212",1994,"Hirsch",NA,"F",4,"743",NA,NA
+"213","KIT213",1994,"Hirsch",NA,"F",4,"734",NA,NA
+"214","KIT214",1994,"Hirsch",NA,"F",4,"683",NA,NA
+"215","KIT215",1994,"Hirsch",NA,"F",4,"715",NA,NA
+"216","KIT216",1994,"Hirsch",NA,"F",4,"703",NA,NA
+"217","KIT217",1994,"Kitimat R",NA,"M",4,"771",NA,NA
+"218","KIT218",1994,"Kitimat R",NA,"M",4,"757",NA,NA
+"219","KIT219",1994,"Kitimat R",NA,"M",4,"732",NA,NA
+"220","KIT220",1994,"Kitimat R",NA,"M",4,"657",NA,NA
+"221","KIT221",1994,"Hirsch",NA,"M",4,"707",NA,NA
+"222","KIT222",1994,"Hirsch",NA,"M",4,"747",NA,NA
+"223","KIT223",1994,"Hirsch",NA,"M",4,"784",NA,NA
+"224","KIT224",1994,"Hirsch",NA,"M",4,"732",NA,NA
+"225","KIT225",1994,"Hirsch",NA,"M",4,"567",NA,NA
+"226","KIT226",1994,"Hirsch",NA,"M",4,"708",NA,NA
+"227","KIT227",1994,"Hirsch",NA,"M",4,"725",NA,NA
+"228","KIT228",1994,"Hirsch",NA,"M",4,"783",NA,NA
+"229","KIT229",1994,"Hirsch",NA,"M",4,"663",NA,NA
+"230","KIT230",1994,"Hirsch",NA,"M",4,"744",NA,NA
+"231","KIT231",1994,"Hirsch",NA,"M",4,"764",NA,NA
+"232","KIT232",1994,"Hirsch",NA,"M",4,"656",NA,NA
+"233","KIT233",1994,"Kitimat R",NA,"F",5,"773",NA,NA
+"234","KIT234",1994,"Kitimat R",NA,"F",5,"784",NA,NA
+"235","KIT235",1994,"Kitimat R",NA,"F",5,"798",NA,NA
+"236","KIT236",1994,"Kitimat R",NA,"F",5,"827",NA,NA
+"237","KIT237",1994,"Kitimat R",NA,"F",5,"764",NA,NA
+"238","KIT238",1994,"Kitimat R",NA,"F",5,"796",NA,NA
+"239","KIT239",1994,"Kitimat R",NA,"F",5,"801",NA,NA
+"240","KIT240",1994,"Kitimat R",NA,"F",5,"871",NA,NA
+"241","KIT241",1994,"Kitimat R",NA,"F",5,"772",NA,NA
+"242","KIT242",1994,"Kitimat R",NA,"F",5,"863",NA,NA
+"243","KIT243",1994,"Kitimat R",NA,"F",5,"856",NA,NA
+"244","KIT244",1994,"Hirsch",NA,"F",5,"763",NA,NA
+"245","KIT245",1994,"Hirsch",NA,"F",5,"839",NA,NA
+"246","KIT246",1994,"Hirsch",NA,"F",5,"767",NA,NA
+"247","KIT247",1994,"Hirsch",NA,"F",5,"812",NA,NA
+"248","KIT248",1994,"Hirsch",NA,"F",5,"795",NA,NA
+"249","KIT249",1994,"Hirsch",NA,"F",5,"807",NA,NA
+"250","KIT250",1994,"Hirsch",NA,"F",5,"842",NA,NA
+"251","KIT251",1994,"Hirsch",NA,"F",5,"801",NA,NA
+"252","KIT252",1994,"Hirsch",NA,"F",5,"830",NA,NA
+"253","KIT253",1994,"Hirsch",NA,"F",5,"764",NA,NA
+"254","KIT254",1994,"Hirsch",NA,"F",5,"735",NA,NA
+"255","KIT255",1994,"Hirsch",NA,"F",5,"785",NA,NA
+"256","KIT256",1994,"Kitimat R",NA,"M",5,"808",NA,NA
+"257","KIT257",1994,"Kitimat R",NA,"M",5,"812",NA,NA
+"258","KIT258",1994,"Kitimat R",NA,"M",5,"716",NA,NA
+"259","KIT259",1994,"Kitimat R",NA,"M",5,"827",NA,NA
+"260","KIT260",1994,"Hirsch",NA,"M",5,"738",NA,NA
+"261","KIT261",1994,"Hirsch",NA,"M",5,"758",NA,NA
+"262","KIT262",1994,"Hirsch",NA,"M",5,"821",NA,NA
+"263","KIT263",1994,"Hirsch",NA,"M",5,"735",NA,NA
+"264","KIT264",1994,"Hirsch",NA,"M",5,"865",NA,NA
+"265","KIT265",1994,"Kitimat R",NA,"M",6,"874",NA,NA
+"266","KIT266",1995,"Hirsch",NA,"M",2,"415",NA,NA
+"267","KIT267",1995,"Kitimat R",NA,"M",3,"535",NA,NA
+"268","KIT268",1995,"Kitimat R",NA,"M",3,"553",NA,NA
+"269","KIT269",1995,"Kitimat R",NA,"M",3,"560",NA,NA
+"270","KIT270",1995,"Kitimat R",NA,"M",3,"552",NA,NA
+"271","KIT271",1995,"Kitimat R",NA,"M",3,"562",NA,NA
+"272","KIT272",1995,"Kitimat R",NA,"M",3,"561",NA,NA
+"273","KIT273",1995,"Kitimat R",NA,"M",3,"475",NA,NA
+"274","KIT274",1995,"Kitimat R",NA,"M",3,"543",NA,NA
+"275","KIT275",1995,"Hirsch",NA,"M",3,"536",NA,NA
+"276","KIT276",1995,"Hirsch",NA,"M",3,"635",NA,NA
+"277","KIT277",1995,"Hirsch",NA,"M",3,"570",NA,NA
+"278","KIT278",1995,"Hirsch",NA,"M",3,"570",NA,NA
+"279","KIT279",1995,"Hirsch",NA,"M",3,"559",NA,NA
+"280","KIT280",1995,"Hirsch",NA,"M",3,"561",NA,NA
+"281","KIT281",1995,"Hirsch",NA,"M",3,"540",NA,NA
+"282","KIT282",1995,"Hirsch",NA,"M",3,"550",NA,NA
+"283","KIT283",1995,"Hirsch",NA,"M",3,"585",NA,NA
+"284","KIT284",1995,"Hirsch",NA,"M",3,"580",NA,NA
+"285","KIT285",1995,"Kitimat R",NA,"F",4,"751",NA,NA
+"286","KIT286",1995,"Kitimat R",NA,"F",4,"774",NA,NA
+"287","KIT287",1995,"Kitimat R",NA,"F",4,"712",NA,NA
+"288","KIT288",1995,"Kitimat R",NA,"F",4,"764",NA,NA
+"289","KIT289",1995,"Hirsch",NA,"F",4,"770",NA,NA
+"290","KIT290",1995,"Hirsch",NA,"F",4,"740",NA,NA
+"291","KIT291",1995,"Hirsch",NA,"F",4,"640",NA,NA
+"292","KIT292",1995,"Kitimat R",NA,"M",4,"767",NA,NA
+"293","KIT293",1995,"Kitimat R",NA,"M",4,"707",NA,NA
+"294","KIT294",1995,"Kitimat R",NA,"M",4,"735",NA,NA
+"295","KIT295",1995,"Kitimat R",NA,"M",4,"721",NA,NA
+"296","KIT296",1995,"Kitimat R",NA,"M",4,"672",NA,NA
+"297","KIT297",1995,"Kitimat R",NA,"M",4,"760",NA,NA
+"298","KIT298",1995,"Kitimat R",NA,"M",4,"750",NA,NA
+"299","KIT299",1995,"Hirsch",NA,"M",4,"667",NA,NA
+"300","KIT300",1995,"Hirsch",NA,"M",4,"645",NA,NA
+"301","KIT301",1995,"Hirsch",NA,"M",4,"760",NA,NA
+"302","KIT302",1995,"Hirsch",NA,"M",4,"710",NA,NA
+"303","KIT303",1995,"Hirsch",NA,"M",4,"630",NA,NA
+"304","KIT304",1995,"Hirsch",NA,"M",4,"643",NA,NA
+"305","KIT305",1995,"Hirsch",NA,"M",4,"790",NA,NA
+"306","KIT306",1995,"Kitimat R",NA,"F",5,"832",NA,NA
+"307","KIT307",1995,"Kitimat R",NA,"F",5,"840",NA,NA
+"308","KIT308",1995,"Kitimat R",NA,"F",5,"844",NA,NA
+"309","KIT309",1995,"Kitimat R",NA,"F",5,"747",NA,NA
+"310","KIT310",1995,"Kitimat R",NA,"F",5,"852",NA,NA
+"311","KIT311",1995,"Kitimat R",NA,"F",5,"842",NA,NA
+"312","KIT312",1995,"Kitimat R",NA,"F",5,"768",NA,NA
+"313","KIT313",1995,"Kitimat R",NA,"F",5,"776",NA,NA
+"314","KIT314",1995,"Kitimat R",NA,"F",5,"845",NA,NA
+"315","KIT315",1995,"Kitimat R",NA,"F",5,"739",NA,NA
+"316","KIT316",1995,"Kitimat R",NA,"F",5,"772",NA,NA
+"317","KIT317",1995,"Hirsch",NA,"F",5,"790",NA,NA
+"318","KIT318",1995,"Hirsch",NA,"F",5,"775",NA,NA
+"319","KIT319",1995,"Hirsch",NA,"F",5,"820",NA,NA
+"320","KIT320",1995,"Hirsch",NA,"F",5,"880",NA,NA
+"321","KIT321",1995,"Hirsch",NA,"F",5,"760",NA,NA
+"322","KIT322",1995,"Hirsch",NA,"F",5,"720",NA,NA
+"323","KIT323",1995,"Hirsch",NA,"F",5,"840",NA,NA
+"324","KIT324",1995,"Hirsch",NA,"F",5,"720",NA,NA
+"325","KIT325",1995,"Hirsch",NA,"F",5,"770",NA,NA
+"326","KIT326",1995,"Hirsch",NA,"F",5,"760",NA,NA
+"327","KIT327",1995,"Hirsch",NA,"F",5,"750",NA,NA
+"328","KIT328",1995,"Hirsch",NA,"F",5,"755",NA,NA
+"329","KIT329",1995,"Hirsch",NA,"F",5,"810",NA,NA
+"330","KIT330",1995,"Hirsch",NA,"F",5,"800",NA,NA
+"331","KIT331",1995,"Kitimat R",NA,"M",5,"890",NA,NA
+"332","KIT332",1995,"Kitimat R",NA,"M",5,"809",NA,NA
+"333","KIT333",1995,"Kitimat R",NA,"M",5,"798",NA,NA
+"334","KIT334",1995,"Kitimat R",NA,"M",5,"731",NA,NA
+"335","KIT335",1995,"Kitimat R",NA,"M",5,"690",NA,NA
+"336","KIT336",1995,"Hirsch",NA,"M",5,"810",NA,NA
+"337","KIT337",1995,"Hirsch",NA,"M",5,"745",NA,NA
+"338","KIT338",1995,"Hirsch",NA,"M",5,"750",NA,NA
+"339","KIT339",1995,"Hirsch",NA,"M",5,"775",NA,NA
+"340","KIT340",1995,"Hirsch",NA,"M",5,"830",NA,NA
+"341","KIT341",1995,"Hirsch",NA,"M",5,"825",NA,NA
+"342","KIT342",1996,"Kitimat R",NA,"M",2,"390",NA,NA
+"343","KIT343",1996,"Kitimat R",NA,"M",2,"338",NA,NA
+"344","KIT344",1996,"Kitimat R",NA,"M",2,"363",NA,NA
+"345","KIT345",1996,"Kitimat R",NA,"M",3,"485",NA,NA
+"346","KIT346",1996,"Kitimat R",NA,"M",3,"520",NA,NA
+"347","KIT347",1996,"Kitimat R",NA,"M",3,"550",NA,NA
+"348","KIT348",1996,"Kitimat R",NA,"M",3,"577",NA,NA
+"349","KIT349",1996,"Kitimat R",NA,"M",3,"562",NA,NA
+"350","KIT350",1996,"Kitimat R",NA,"M",3,"555",NA,NA
+"351","KIT351",1996,"Kitimat R",NA,"M",3,"588",NA,NA
+"352","KIT352",1996,"Kitimat R",NA,"M",3,"501",NA,NA
+"353","KIT353",1996,"Kitimat R",NA,"M",3,"547",NA,NA
+"354","KIT354",1996,"Kitimat R",NA,"F",4,"805",NA,NA
+"355","KIT355",1996,"Kitimat R",NA,"F",4,"750",NA,NA
+"356","KIT356",1996,"Kitimat R",NA,"F",4,"780",NA,NA
+"357","KIT357",1996,"Kitimat R",NA,"F",4,"724",NA,NA
+"358","KIT358",1996,"Kitimat R",NA,"F",4,"743",NA,NA
+"359","KIT359",1996,"Kitimat R",NA,"F",4,"707",NA,NA
+"360","KIT360",1996,"Kitimat R",NA,"F",4,"692",NA,NA
+"361","KIT361",1996,"Kitimat R",NA,"F",4,"750",NA,NA
+"362","KIT362",1996,"Hirsch",NA,"F",4,"770",NA,NA
+"363","KIT363",1996,"Kitimat R",NA,"M",4,"765",NA,NA
+"364","KIT364",1996,"Kitimat R",NA,"M",4,"654",NA,NA
+"365","KIT365",1996,"Kitimat R",NA,"M",4,"734",NA,NA
+"366","KIT366",1996,"Kitimat R",NA,"M",4,"672",NA,NA
+"367","KIT367",1996,"Kitimat R",NA,"M",4,"668",NA,NA
+"368","KIT368",1996,"Kitimat R",NA,"M",4,"668",NA,NA
+"369","KIT369",1996,"Kitimat R",NA,"M",4,"706",NA,NA
+"370","KIT370",1996,"Kitimat R",NA,"M",4,"695",NA,NA
+"371","KIT371",1996,"Kitimat R",NA,"M",4,"700",NA,NA
+"372","KIT372",1996,"Kitimat R",NA,"M",4,"669",NA,NA
+"373","KIT373",1996,"Kitimat R",NA,"M",4,"723",NA,NA
+"374","KIT374",1996,"Kitimat R",NA,"M",4,"686",NA,NA
+"375","KIT375",1996,"Kitimat R",NA,"M",4,"764",NA,NA
+"376","KIT376",1996,"Kitimat R",NA,"M",4,"624",NA,NA
+"377","KIT377",1996,"Kitimat R",NA,"M",4,"755",NA,NA
+"378","KIT378",1996,"Hirsch",NA,"M",4,"685",NA,NA
+"379","KIT379",1996,"Hirsch",NA,"M",4,"680",NA,NA
+"380","KIT380",1996,"Hirsch",NA,"M",4,"660",NA,NA
+"381","KIT381",1996,"Kitimat R",NA,"F",5,"775",NA,NA
+"382","KIT382",1996,"Kitimat R",NA,"F",5,"815",NA,NA
+"383","KIT383",1996,"Kitimat R",NA,"F",5,"868",NA,NA
+"384","KIT384",1996,"Kitimat R",NA,"F",5,"831",NA,NA
+"385","KIT385",1996,"Kitimat R",NA,"F",5,"770",NA,NA
+"386","KIT386",1996,"Kitimat R",NA,"F",5,"809",NA,NA
+"387","KIT387",1996,"Kitimat R",NA,"F",5,"859",NA,NA
+"388","KIT388",1996,"Kitimat R",NA,"F",5,"765",NA,NA
+"389","KIT389",1996,"Kitimat R",NA,"F",5,"813",NA,NA
+"390","KIT390",1996,"Kitimat R",NA,"F",5,"774",NA,NA
+"391","KIT391",1996,"Hirsch",NA,"F",5,"835",NA,NA
+"392","KIT392",1996,"Kitimat R",NA,"M",5,"769",NA,NA
+"393","KIT393",1996,"Kitimat R",NA,"M",5,"780",NA,NA
+"394","KIT394",1996,"Kitimat R",NA,"M",5,"777",NA,NA
+"395","KIT395",1996,"Kitimat R",NA,"M",5,"697",NA,NA
+"396","KIT396",1996,"Kitimat R",NA,"M",5,"771",NA,NA
+"397","KIT397",1996,"Kitimat R",NA,"M",5,"790",NA,NA
+"398","KIT398",1996,"Kitimat R",NA,"M",5,"817",NA,NA
+"399","KIT399",1996,"Kitimat R",NA,"M",5,"829",NA,NA
+"400","KIT400",1996,"Hirsch",NA,"M",5,"825",NA,NA
+"401","KIT401",1996,"Hirsch",NA,"M",5,"730",NA,NA
+"402","KIT402",1996,"Kitimat R",NA,"F",6,"785",NA,NA
+"403","KIT403",1997,"Kitimat R",NA,"F",3,"564",NA,NA
+"404","KIT404",1997,"Kitimat R",NA,"M",3,"717",NA,NA
+"405","KIT405",1997,"Kitimat R",NA,"M",3,"581",NA,NA
+"406","KIT406",1997,"Kitimat R",NA,"M",3,"570",NA,NA
+"407","KIT407",1997,"Kitimat R",NA,"M",3,"570",NA,NA
+"408","KIT408",1997,"Kitimat R",NA,"M",3,"515",NA,NA
+"409","KIT409",1997,"Kitimat R",NA,"M",3,"517",NA,NA
+"410","KIT410",1997,"Kitimat R",NA,"M",3,"635",NA,NA
+"411","KIT411",1997,"Hirsch",NA,"M",3,"614",NA,NA
+"412","KIT412",1997,"Hirsch",NA,"M",3,"555",NA,NA
+"413","KIT413",1997,"Hirsch",NA,"M",3,"532",NA,NA
+"414","KIT414",1997,"Hirsch",NA,"M",3,"550",NA,NA
+"415","KIT415",1997,"Hirsch",NA,"M",3,"595",NA,NA
+"416","KIT416",1997,"Kitimat R",NA,"F",4,"770",NA,NA
+"417","KIT417",1997,"Kitimat R",NA,"F",4,"725",NA,NA
+"418","KIT418",1997,"Kitimat R",NA,"F",4,"760",NA,NA
+"419","KIT419",1997,"Kitimat R",NA,"F",4,"708",NA,NA
+"420","KIT420",1997,"Kitimat R",NA,"F",4,"720",NA,NA
+"421","KIT421",1997,"Kitimat R",NA,"F",4,"718",NA,NA
+"422","KIT422",1997,"Kitimat R",NA,"F",4,"725",NA,NA
+"423","KIT423",1997,"Kitimat R",NA,"F",4,"655",NA,NA
+"424","KIT424",1997,"Kitimat R",NA,"F",4,"704",NA,NA
+"425","KIT425",1997,"Kitimat R",NA,"F",4,"700",NA,NA
+"426","KIT426",1997,"Kitimat R",NA,"F",4,"731",NA,NA
+"427","KIT427",1997,"Kitimat R",NA,"F",4,"693",NA,NA
+"428","KIT428",1997,"Kitimat R",NA,"F",4,"725",NA,NA
+"429","KIT429",1997,"Kitimat R",NA,"M",4,"658",NA,NA
+"430","KIT430",1997,"Kitimat R",NA,"M",4,"631",NA,NA
+"431","KIT431",1997,"Kitimat R",NA,"M",4,"737",NA,NA
+"432","KIT432",1997,"Kitimat R",NA,"M",4,"680",NA,NA
+"433","KIT433",1997,"Kitimat R",NA,"M",4,"750",NA,NA
+"434","KIT434",1997,"Hirsch",NA,"M",4,"655",NA,NA
+"435","KIT435",1997,"Hirsch",NA,"M",4,"625",NA,NA
+"436","KIT436",1997,"Hirsch",NA,"M",4,"672",NA,NA
+"437","KIT437",1997,"Kitimat R",NA,"F",5,"830",NA,NA
+"438","KIT438",1997,"Kitimat R",NA,"F",5,"791",NA,NA
+"439","KIT439",1997,"Kitimat R",NA,"F",5,"871",NA,NA
+"440","KIT440",1997,"Kitimat R",NA,"F",5,"860",NA,NA
+"441","KIT441",1997,"Kitimat R",NA,"F",5,"832",NA,NA
+"442","KIT442",1997,"Kitimat R",NA,"F",5,"743",NA,NA
+"443","KIT443",1997,"Kitimat R",NA,"F",5,"890",NA,NA
+"444","KIT444",1997,"Hirsch",NA,"F",5,"815",NA,NA
+"445","KIT445",1997,"Hirsch",NA,"F",5,"805",NA,NA
+"446","KIT446",1997,"Hirsch",NA,"F",5,"801",NA,NA
+"447","KIT447",1997,"Hirsch",NA,"F",5,"806",NA,NA
+"448","KIT448",1997,"Hirsch",NA,"F",5,"783",NA,NA
+"449","KIT449",1997,"Hirsch",NA,"F",5,"805",NA,NA
+"450","KIT450",1997,"Hirsch",NA,"F",5,"795",NA,NA
+"451","KIT451",1997,"Hirsch",NA,"F",5,"830",NA,NA
+"452","KIT452",1997,"Hirsch",NA,"F",5,"770",NA,NA
+"453","KIT453",1997,"Hirsch",NA,"F",5,"783",NA,NA
+"454","KIT454",1997,"Hirsch",NA,"F",5,"795",NA,NA
+"455","KIT455",1997,"Hirsch",NA,"F",5,"727",NA,NA
+"456","KIT456",1997,"Hirsch",NA,"F",5,"803",NA,NA
+"457","KIT457",1997,"Hirsch",NA,"F",5,"800",NA,NA
+"458","KIT458",1997,"Hirsch",NA,"F",5,"800",NA,NA
+"459","KIT459",1997,"Kitimat R",NA,"M",5,"908",NA,NA
+"460","KIT460",1997,"Kitimat R",NA,"M",5,"804",NA,NA
+"461","KIT461",1997,"Kitimat R",NA,"M",5,"838",NA,NA
+"462","KIT462",1997,"Hirsch",NA,"M",5,"805",NA,NA
+"463","KIT463",1997,"Hirsch",NA,"M",5,"616",NA,NA
+"464","KIT464",1997,"Hirsch",NA,"M",5,"670",NA,NA
+"465","KIT465",1997,"Hirsch",NA,"M",5,"805",NA,NA
+"466","KIT466",1997,"Kitimat R",NA,"F",6,"828",NA,NA
+"467","KIT467",1997,"Kitimat R",NA,"F",6,"820",NA,NA
+"468","KIT468",1998,"Kitimat R",NA,"M",2,"358",NA,NA
+"469","KIT469",1998,"Kitimat R",NA,"M",3,"552",NA,NA
+"470","KIT470",1998,"Kitimat R",NA,"M",3,"517",NA,NA
+"471","KIT471",1998,"Kitimat R",NA,"M",3,"627",NA,NA
+"472","KIT472",1998,"Kitimat R",NA,"M",3,"541",NA,NA
+"473","KIT473",1998,"Kitimat R",NA,"M",3,"572",NA,NA
+"474","KIT474",1998,"Kitimat R",NA,"M",3,"565",NA,NA
+"475","KIT475",1998,"Kitimat R",NA,"M",3,"625",NA,NA
+"476","KIT476",1998,"Kitimat R",NA,"M",3,"589",NA,NA
+"477","KIT477",1998,"Hirsch",NA,"M",3,"570",NA,NA
+"478","KIT478",1998,"Kitimat R",NA,"F",4,"765",NA,NA
+"479","KIT479",1998,"Kitimat R",NA,"F",4,"750",NA,NA
+"480","KIT480",1998,"Kitimat R",NA,"F",4,"757",NA,NA
+"481","KIT481",1998,"Kitimat R",NA,"F",4,"793",NA,NA
+"482","KIT482",1998,"Kitimat R",NA,"F",4,"800",NA,NA
+"483","KIT483",1998,"Kitimat R",NA,"F",4,"896",NA,NA
+"484","KIT484",1998,"Kitimat R",NA,"F",4,"754",NA,NA
+"485","KIT485",1998,"Kitimat R",NA,"F",4,"711",NA,NA
+"486","KIT486",1998,"Kitimat R",NA,"F",4,"746",NA,NA
+"487","KIT487",1998,"Kitimat R",NA,"F",4,"771",NA,NA
+"488","KIT488",1998,"Kitimat R",NA,"F",4,"748",NA,NA
+"489","KIT489",1998,"Kitimat R",NA,"F",4,"768",NA,NA
+"490","KIT490",1998,"Kitimat R",NA,"F",4,"729",NA,NA
+"491","KIT491",1998,"Kitimat R",NA,"F",4,"759",NA,NA
+"492","KIT492",1998,"Kitimat R",NA,"F",4,"795",NA,NA
+"493","KIT493",1998,"Kitimat R",NA,"F",4,"754",NA,NA
+"494","KIT494",1998,"Kitimat R",NA,"M",4,"626",NA,NA
+"495","KIT495",1998,"Kitimat R",NA,"M",4,"655",NA,NA
+"496","KIT496",1998,"Kitimat R",NA,"M",4,"793",NA,NA
+"497","KIT497",1998,"Kitimat R",NA,"M",4,"701",NA,NA
+"498","KIT498",1998,"Kitimat R",NA,"M",4,"791",NA,NA
+"499","KIT499",1998,"Kitimat R",NA,"M",4,"824",NA,NA
+"500","KIT500",1998,"Kitimat R",NA,"M",4,"402",NA,NA
+"501","KIT501",1998,"Kitimat R",NA,"M",4,"852",NA,NA
+"502","KIT502",1998,"Kitimat R",NA,"M",4,"662",NA,NA
+"503","KIT503",1998,"Kitimat R",NA,"M",4,"659",NA,NA
+"504","KIT504",1998,"Kitimat R",NA,"M",4,"689",NA,NA
+"505","KIT505",1998,"Kitimat R",NA,"M",4,"798",NA,NA
+"506","KIT506",1998,"Kitimat R",NA,"M",4,"681",NA,NA
+"507","KIT507",1998,"Kitimat R",NA,"M",4,"804",NA,NA
+"508","KIT508",1998,"Kitimat R",NA,"M",4,"675",NA,NA
+"509","KIT509",1998,"Kitimat R",NA,"M",4,"643",NA,NA
+"510","KIT510",1998,"Kitimat R",NA,"M",4,"689",NA,NA
+"511","KIT511",1998,"Hirsch",NA,"M",4,"630",NA,NA
+"512","KIT512",1998,"Hirsch",NA,"M",4,"730",NA,NA
+"513","KIT513",1998,"Hirsch",NA,"M",4,"790",NA,NA
+"514","KIT514",1998,"Hirsch",NA,"M",4,"750",NA,NA
+"515","KIT515",1998,"Kitimat R",NA,"F",5,"765",NA,NA
+"516","KIT516",1998,"Kitimat R",NA,"F",5,"903",NA,NA
+"517","KIT517",1998,"Kitimat R",NA,"F",5,"900",NA,NA
+"518","KIT518",1998,"Kitimat R",NA,"F",5,"910",NA,NA
+"519","KIT519",1998,"Kitimat R",NA,"F",5,"811",NA,NA
+"520","KIT520",1998,"Kitimat R",NA,"F",5,"835",NA,NA
+"521","KIT521",1998,"Kitimat R",NA,"F",5,"856",NA,NA
+"522","KIT522",1998,"Hirsch",NA,"F",5,"960",NA,NA
+"523","KIT523",1998,"Hirsch",NA,"F",5,"740",NA,NA
+"524","KIT524",1998,"Kitimat R",NA,"M",5,"902",NA,NA
+"525","KIT525",1998,"Kitimat R",NA,"M",5,"836",NA,NA
+"526","KIT526",1998,"Kitimat R",NA,"M",5,"851",NA,NA
+"527","KIT527",1998,"Hirsch",NA,"M",6,"930",NA,NA
+"528","KIT528",1999,"Hirsch",NA,"M",2,"365",NA,NA
+"529","KIT529",1999,"Hirsch",NA,"M",2,"320",NA,NA
+"530","KIT530",1999,"Kitimat R",NA,"M",3,"560",NA,NA
+"531","KIT531",1999,"Kitimat R",NA,"M",3,"575",NA,NA
+"532","KIT532",1999,"Kitimat R",NA,"M",3,"595",NA,NA
+"533","KIT533",1999,"Kitimat R",NA,"M",3,"510",NA,NA
+"534","KIT534",1999,"Kitimat R",NA,"M",3,"529",NA,NA
+"535","KIT535",1999,"Kitimat R",NA,"M",3,"502",NA,NA
+"536","KIT536",1999,"Kitimat R",NA,"M",3,"500",NA,NA
+"537","KIT537",1999,"Kitimat R",NA,"M",3,"510",NA,NA
+"538","KIT538",1999,"Kitimat R",NA,"M",3,"540",NA,NA
+"539","KIT539",1999,"Kitimat R",NA,"M",3,"519",NA,NA
+"540","KIT540",1999,"Hirsch",NA,"M",3,"560",NA,NA
+"541","KIT541",1999,"Hirsch",NA,"M",3,"555",NA,NA
+"542","KIT542",1999,"Hirsch",NA,"M",3,"520",NA,NA
+"543","KIT543",1999,"Hirsch",NA,"M",3,"580",NA,NA
+"544","KIT544",1999,"Kitimat R",NA,"F",4,"695",NA,NA
+"545","KIT545",1999,"Kitimat R",NA,"F",4,"689",NA,NA
+"546","KIT546",1999,"Kitimat R",NA,"F",4,"683",NA,NA
+"547","KIT547",1999,"Kitimat R",NA,"F",4,"730",NA,NA
+"548","KIT548",1999,"Kitimat R",NA,"M",4,"795",NA,NA
+"549","KIT549",1999,"Kitimat R",NA,"M",4,"601",NA,NA
+"550","KIT550",1999,"Hirsch",NA,"M",4,"758",NA,NA
+"551","KIT551",1999,"Kitimat R",NA,"F",5,"827",NA,NA
+"552","KIT552",1999,"Kitimat R",NA,"F",5,"789",NA,NA
+"553","KIT553",1999,"Kitimat R",NA,"F",5,"795",NA,NA
+"554","KIT554",1999,"Kitimat R",NA,"F",5,"849",NA,NA
+"555","KIT555",1999,"Kitimat R",NA,"F",5,"760",NA,NA
+"556","KIT556",1999,"Kitimat R",NA,"F",5,"805",NA,NA
+"557","KIT557",1999,"Kitimat R",NA,"F",5,"801",NA,NA
+"558","KIT558",1999,"Kitimat R",NA,"F",5,"863",NA,NA
+"559","KIT559",1999,"Kitimat R",NA,"F",5,"730",NA,NA
+"560","KIT560",1999,"Kitimat R",NA,"F",5,"686",NA,NA
+"561","KIT561",1999,"Kitimat R",NA,"F",5,"858",NA,NA
+"562","KIT562",1999,"Kitimat R",NA,"F",5,"804",NA,NA
+"563","KIT563",1999,"Kitimat R",NA,"F",5,"834",NA,NA
+"564","KIT564",1999,"Kitimat R",NA,"F",5,"809",NA,NA
+"565","KIT565",1999,"Kitimat R",NA,"F",5,"828",NA,NA
+"566","KIT566",1999,"Kitimat R",NA,"F",5,"791",NA,NA
+"567","KIT567",1999,"Hirsch",NA,"F",5,"880",NA,NA
+"568","KIT568",1999,"Hirsch",NA,"F",5,"842",NA,NA
+"569","KIT569",1999,"Kitimat R",NA,"M",5,"911",NA,NA
+"570","KIT570",1999,"Kitimat R",NA,"M",5,"769",NA,NA
+"571","KIT571",1999,"Kitimat R",NA,"M",5,"782",NA,NA
+"572","KIT572",1999,"Kitimat R",NA,"M",5,"832",NA,NA
+"573","KIT573",2000,"Hirsch",NA,"M",2,"335",NA,NA
+"574","KIT574",2000,"Kitimat R",NA,"M",3,"549",NA,NA
+"575","KIT575",2000,"Kitimat R",NA,"M",3,"579",NA,NA
+"576","KIT576",2000,"Kitimat R",NA,"M",3,"605",NA,NA
+"577","KIT577",2000,"Kitimat R",NA,"M",3,"603",NA,NA
+"578","KIT578",2000,"Kitimat R",NA,"M",3,"546",NA,NA
+"579","KIT579",2000,"Kitimat R",NA,"M",3,"495",NA,NA
+"580","KIT580",2000,"Hirsch",NA,"M",3,"550",NA,NA
+"581","KIT581",2000,"Hirsch",NA,"M",3,"568",NA,NA
+"582","KIT582",2000,"Hirsch",NA,"M",3,"540",NA,NA
+"583","KIT583",2000,"Hirsch",NA,"M",3,"560",NA,NA
+"584","KIT584",2000,"Hirsch",NA,"M",3,"540",NA,NA
+"585","KIT585",2000,"Hirsch",NA,"M",3,"570",NA,NA
+"586","KIT586",2000,"Hirsch",NA,"M",3,"580",NA,NA
+"587","KIT587",2000,"Hirsch",NA,"M",3,"610",NA,NA
+"588","KIT588",2000,"Hirsch",NA,"M",3,"570",NA,NA
+"589","KIT589",2000,"Hirsch",NA,"M",3,"545",NA,NA
+"590","KIT590",2000,"Hirsch",NA,"M",3,"555",NA,NA
+"591","KIT591",2000,"Hirsch",NA,"M",3,"570",NA,NA
+"592","KIT592",2000,"Hirsch",NA,"M",3,"505",NA,NA
+"593","KIT593",2000,"Hirsch",NA,"M",3,"535",NA,NA
+"594","KIT594",2000,"Hirsch",NA,"M",3,"585",NA,NA
+"595","KIT595",2000,"Hirsch",NA,"M",3,"540",NA,NA
+"596","KIT596",2000,"Kitimat R",NA,"F",4,"750",NA,NA
+"597","KIT597",2000,"Kitimat R",NA,"F",4,"784",NA,NA
+"598","KIT598",2000,"Kitimat R",NA,"F",4,"742",NA,NA
+"599","KIT599",2000,"Kitimat R",NA,"F",4,"661",NA,NA
+"600","KIT600",2000,"Kitimat R",NA,"F",4,"735",NA,NA
+"601","KIT601",2000,"Kitimat R",NA,"F",4,"644",NA,NA
+"602","KIT602",2000,"Kitimat R",NA,"F",4,"755",NA,NA
+"603","KIT603",2000,"Kitimat R",NA,"F",4,"696",NA,NA
+"604","KIT604",2000,"Kitimat R",NA,"F",4,"720",NA,NA
+"605","KIT605",2000,"Kitimat R",NA,"F",4,"771",NA,NA
+"606","KIT606",2000,"Kitimat R",NA,"F",4,"745",NA,NA
+"607","KIT607",2000,"Kitimat R",NA,"F",4,"783",NA,NA
+"608","KIT608",2000,"Kitimat R",NA,"F",4,"790",NA,NA
+"609","KIT609",2000,"Hirsch",NA,"F",4,"750",NA,NA
+"610","KIT610",2000,"Kitimat R",NA,"M",4,"722",NA,NA
+"611","KIT611",2000,"Kitimat R",NA,"M",4,"695",NA,NA
+"612","KIT612",2000,"Kitimat R",NA,"M",4,"711",NA,NA
+"613","KIT613",2000,"Kitimat R",NA,"M",4,"757",NA,NA
+"614","KIT614",2000,"Kitimat R",NA,"M",4,"749",NA,NA
+"615","KIT615",2000,"Kitimat R",NA,"M",4,"704",NA,NA
+"616","KIT616",2000,"Kitimat R",NA,"M",4,"699",NA,NA
+"617","KIT617",2000,"Kitimat R",NA,"M",4,"709",NA,NA
+"618","KIT618",2000,"Kitimat R",NA,"M",4,"642",NA,NA
+"619","KIT619",2000,"Kitimat R",NA,"M",4,"755",NA,NA
+"620","KIT620",2000,"Kitimat R",NA,"M",4,"721",NA,NA
+"621","KIT621",2000,"Kitimat R",NA,"M",4,"721",NA,NA
+"622","KIT622",2000,"Kitimat R",NA,"M",4,"739",NA,NA
+"623","KIT623",2000,"Kitimat R",NA,"M",4,"721",NA,NA
+"624","KIT624",2000,"Kitimat R",NA,"M",4,"650",NA,NA
+"625","KIT625",2000,"Kitimat R",NA,"M",4,"625",NA,NA
+"626","KIT626",2000,"Kitimat R",NA,"M",4,"630",NA,NA
+"627","KIT627",2000,"Kitimat R",NA,"M",4,"576",NA,NA
+"628","KIT628",2000,"Kitimat R",NA,"M",4,"743",NA,NA
+"629","KIT629",2000,"Kitimat R",NA,"M",4,"765",NA,NA
+"630","KIT630",2000,"Kitimat R",NA,"M",4,"651",NA,NA
+"631","KIT631",2000,"Kitimat R",NA,"M",4,"671",NA,NA
+"632","KIT632",2000,"Kitimat R",NA,"M",4,"688",NA,NA
+"633","KIT633",2000,"Kitimat R",NA,"M",4,"719",NA,NA
+"634","KIT634",2000,"Kitimat R",NA,"M",4,"668",NA,NA
+"635","KIT635",2000,"Kitimat R",NA,"M",4,"655",NA,NA
+"636","KIT636",2000,"Hirsch",NA,"M",4,"822",NA,NA
+"637","KIT637",2000,"Kitimat R",NA,"F",5,"771",NA,NA
+"638","KIT638",2000,"Kitimat R",NA,"F",5,"810",NA,NA
+"639","KIT639",2000,"Kitimat R",NA,"F",5,"823",NA,NA
+"640","KIT640",2000,"Kitimat R",NA,"F",5,"790",NA,NA
+"641","KIT641",2000,"Hirsch",NA,"F",5,"750",NA,NA
+"642","KIT642",2000,"Hirsch",NA,"F",5,"830",NA,NA
+"643","KIT643",2000,"Kitimat R",NA,"M",5,"829",NA,NA
+"644","KIT644",2000,"Kitimat R",NA,"M",5,"641",NA,NA
+"645","KIT645",2000,"Kitimat R",NA,"F",7,"832",NA,NA
+"646","KIT646",2001,"Kitimat R",NA,"M",2,"320",NA,NA
+"647","KIT647",2001,"Hirsch",NA,"M",2,"395",NA,NA
+"648","KIT648",2001,"Kitimat R",NA,"M",3,"590",NA,NA
+"649","KIT649",2001,"Kitimat R",NA,"M",3,"600",NA,NA
+"650","KIT650",2001,"Kitimat R",NA,"M",3,"541",NA,NA
+"651","KIT651",2001,"Hirsch",NA,"M",3,"575",NA,NA
+"652","KIT652",2001,"Hirsch",NA,"M",3,"470",NA,NA
+"653","KIT653",2001,"Hirsch",NA,"M",3,"500",NA,NA
+"654","KIT654",2001,"Hirsch",NA,"M",3,"525",NA,NA
+"655","KIT655",2001,"Hirsch",NA,"M",3,"575",NA,NA
+"656","KIT656",2001,"Hirsch",NA,"M",3,"525",NA,NA
+"657","KIT657",2001,"Kitimat R",NA,"F",4,"733",NA,NA
+"658","KIT658",2001,"Kitimat R",NA,"F",4,"731",NA,NA
+"659","KIT659",2001,"Kitimat R",NA,"F",4,"672",NA,NA
+"660","KIT660",2001,"Kitimat R",NA,"F",4,"730",NA,NA
+"661","KIT661",2001,"Hirsch",NA,"F",4,"705",NA,NA
+"662","KIT662",2001,"Hirsch",NA,"F",4,"790",NA,NA
+"663","KIT663",2001,"Hirsch",NA,"F",4,"665",NA,NA
+"664","KIT664",2001,"Hirsch",NA,"F",4,"675",NA,NA
+"665","KIT665",2001,"Hirsch",NA,"F",4,"675",NA,NA
+"666","KIT666",2001,"Kitimat R",NA,"M",4,"705",NA,NA
+"667","KIT667",2001,"Kitimat R",NA,"M",4,"577",NA,NA
+"668","KIT668",2001,"Kitimat R",NA,"M",4,"572",NA,NA
+"669","KIT669",2001,"Kitimat R",NA,"M",4,"751",NA,NA
+"670","KIT670",2001,"Hirsch",NA,"M",4,"625",NA,NA
+"671","KIT671",2001,"Hirsch",NA,"M",4,"650",NA,NA
+"672","KIT672",2001,"Hirsch",NA,"M",4,"712",NA,NA
+"673","KIT673",2001,"Hirsch",NA,"M",4,"705",NA,NA
+"674","KIT674",2001,"Hirsch",NA,"M",4,"500",NA,NA
+"675","KIT675",2001,"Hirsch",NA,"M",4,"520",NA,NA
+"676","KIT676",2001,"Hirsch",NA,"M",4,"515",NA,NA
+"677","KIT677",2001,"Hirsch",NA,"M",4,"740",NA,NA
+"678","KIT678",2001,"Kitimat R",NA,"F",5,"795",NA,NA
+"679","KIT679",2001,"Kitimat R",NA,"F",5,"800",NA,NA
+"680","KIT680",2001,"Kitimat R",NA,"F",5,"845",NA,NA
+"681","KIT681",2001,"Kitimat R",NA,"F",5,"906",NA,NA
+"682","KIT682",2001,"Kitimat R",NA,"F",5,"774",NA,NA
+"683","KIT683",2001,"Kitimat R",NA,"F",5,"752",NA,NA
+"684","KIT684",2001,"Kitimat R",NA,"F",5,"758",NA,NA
+"685","KIT685",2001,"Kitimat R",NA,"F",5,"852",NA,NA
+"686","KIT686",2001,"Kitimat R",NA,"F",5,"810",NA,NA
+"687","KIT687",2001,"Kitimat R",NA,"F",5,"857",NA,NA
+"688","KIT688",2001,"Kitimat R",NA,"F",5,"856",NA,NA
+"689","KIT689",2001,"Kitimat R",NA,"F",5,"850",NA,NA
+"690","KIT690",2001,"Hirsch",NA,"F",5,"740",NA,NA
+"691","KIT691",2001,"Hirsch",NA,"F",5,"760",NA,NA
+"692","KIT692",2001,"Hirsch",NA,"F",5,"818",NA,NA
+"693","KIT693",2001,"Hirsch",NA,"F",5,"850",NA,NA
+"694","KIT694",2001,"Kitimat R",NA,"M",5,"849",NA,NA
+"695","KIT695",2001,"Kitimat R",NA,"M",5,"887",NA,NA
+"696","KIT696",2001,"Kitimat R",NA,"M",5,"820",NA,NA
+"697","KIT697",2001,"Kitimat R",NA,"M",5,"767",NA,NA
+"698","KIT698",2002,"Hirsch",NA,"M",2,"310",NA,NA
+"699","KIT699",2002,"Kitimat R",NA,"M",3,"730",NA,NA
+"700","KIT700",2002,"Kitimat R",NA,"M",3,"630",NA,NA
+"701","KIT701",2002,"Kitimat R",NA,"M",3,"509",NA,NA
+"702","KIT702",2002,"Kitimat R",NA,"M",3,"553",NA,NA
+"703","KIT703",2002,"Kitimat R",NA,"M",3,"466",NA,NA
+"704","KIT704",2002,"Kitimat R",NA,"M",3,"533",NA,NA
+"705","KIT705",2002,"Kitimat R",NA,"M",3,"452",NA,NA
+"706","KIT706",2002,"Kitimat R",NA,"M",3,"502",NA,NA
+"707","KIT707",2002,"Kitimat R",NA,"M",3,"548",NA,NA
+"708","KIT708",2002,"Kitimat R",NA,"M",3,"507",NA,NA
+"709","KIT709",2002,"Hirsch",NA,"M",3,"570",NA,NA
+"710","KIT710",2002,"Hirsch",NA,"M",3,"580",NA,NA
+"711","KIT711",2002,"Hirsch",NA,"M",3,"563",NA,NA
+"712","KIT712",2002,"Hirsch",NA,"M",3,"610",NA,NA
+"713","KIT713",2002,"Hirsch",NA,"M",3,"550",NA,NA
+"714","KIT714",2002,"Kitimat R",NA,"F",4,"754",NA,NA
+"715","KIT715",2002,"Kitimat R",NA,"F",4,"746",NA,NA
+"716","KIT716",2002,"Kitimat R",NA,"F",4,"775",NA,NA
+"717","KIT717",2002,"Kitimat R",NA,"F",4,"762",NA,NA
+"718","KIT718",2002,"Kitimat R",NA,"F",4,"745",NA,NA
+"719","KIT719",2002,"Kitimat R",NA,"F",4,"744",NA,NA
+"720","KIT720",2002,"Kitimat R",NA,"F",4,"736",NA,NA
+"721","KIT721",2002,"Kitimat R",NA,"F",4,"734",NA,NA
+"722","KIT722",2002,"Kitimat R",NA,"F",4,"745",NA,NA
+"723","KIT723",2002,"Kitimat R",NA,"F",4,"788",NA,NA
+"724","KIT724",2002,"Kitimat R",NA,"F",4,"701",NA,NA
+"725","KIT725",2002,"Kitimat R",NA,"F",4,"748",NA,NA
+"726","KIT726",2002,"Kitimat R",NA,"F",4,"714",NA,NA
+"727","KIT727",2002,"Kitimat R",NA,"F",4,"761",NA,NA
+"728","KIT728",2002,"Kitimat R",NA,"F",4,"743",NA,NA
+"729","KIT729",2002,"Kitimat R",NA,"F",4,"718",NA,NA
+"730","KIT730",2002,"Kitimat R",NA,"F",4,"730",NA,NA
+"731","KIT731",2002,"Hirsch",NA,"F",4,"754",NA,NA
+"732","KIT732",2002,"Hirsch",NA,"F",4,"730",NA,NA
+"733","KIT733",2002,"Kitimat R",NA,"M",4,"658",NA,NA
+"734","KIT734",2002,"Kitimat R",NA,"M",4,"706",NA,NA
+"735","KIT735",2002,"Kitimat R",NA,"M",4,"546",NA,NA
+"736","KIT736",2002,"Kitimat R",NA,"M",4,"803",NA,NA
+"737","KIT737",2002,"Kitimat R",NA,"M",4,"804",NA,NA
+"738","KIT738",2002,"Kitimat R",NA,"M",4,"685",NA,NA
+"739","KIT739",2002,"Kitimat R",NA,"M",4,"681",NA,NA
+"740","KIT740",2002,"Kitimat R",NA,"M",4,"796",NA,NA
+"741","KIT741",2002,"Kitimat R",NA,"M",4,"729",NA,NA
+"742","KIT742",2002,"Hirsch",NA,"M",4,"860",NA,NA
+"743","KIT743",2002,"Hirsch",NA,"M",4,"775",NA,NA
+"744","KIT744",2002,"Hirsch",NA,"M",4,"720",NA,NA
+"745","KIT745",2002,"Hirsch",NA,"M",4,"733",NA,NA
+"746","KIT746",2002,"Hirsch",NA,"M",4,"820",NA,NA
+"747","KIT747",2002,"Kitimat R",NA,"F",5,"800",NA,NA
+"748","KIT748",2002,"Kitimat R",NA,"F",5,"815",NA,NA
+"749","KIT749",2002,"Kitimat R",NA,"F",5,"828",NA,NA
+"750","KIT750",2002,"Kitimat R",NA,"F",5,"825",NA,NA
+"751","KIT751",2002,"Kitimat R",NA,"F",5,"776",NA,NA
+"752","KIT752",2002,"Hirsch",NA,"F",5,"831",NA,NA
+"753","KIT753",2002,"Hirsch",NA,"F",5,"760",NA,NA
+"754","KIT754",2002,"Hirsch",NA,"F",5,"740",NA,NA
+"755","KIT755",2002,"Hirsch",NA,"F",5,"801",NA,NA
+"756","KIT756",2002,"Hirsch",NA,"F",5,"790",NA,NA
+"757","KIT757",2002,"Hirsch",NA,"F",5,"738",NA,NA
+"758","KIT758",2002,"Hirsch",NA,"F",5,"785",NA,NA
+"759","KIT759",2002,"Hirsch",NA,"F",5,"767",NA,NA
+"760","KIT760",2002,"Kitimat R",NA,"M",5,"780",NA,NA
+"761","KIT761",2002,"Hirsch",NA,"M",5,"857",NA,NA
+"762","KIT762",2003,"Kitimat R",NA,"M",2,"354",NA,NA
+"763","KIT763",2003,"Hirsch",NA,"M",2,"380",NA,NA
+"764","KIT764",2003,"Hirsch",NA,"M",2,"385",NA,NA
+"765","KIT765",2003,"Hirsch",NA,"M",3,"510",NA,NA
+"766","KIT766",2003,"Hirsch",NA,"M",3,"540",NA,NA
+"767","KIT767",2003,"Hirsch",NA,"M",3,"535",NA,NA
+"768","KIT768",2003,"Hirsch",NA,"M",3,"525",NA,NA
+"769","KIT769",2003,"Kitimat R",NA,"F",4,"711",NA,NA
+"770","KIT770",2003,"Kitimat R",NA,"F",4,"750",NA,NA
+"771","KIT771",2003,"Kitimat R",NA,"F",4,"705",NA,NA
+"772","KIT772",2003,"Kitimat R",NA,"F",4,"680",NA,NA
+"773","KIT773",2003,"Kitimat R",NA,"F",4,"731",NA,NA
+"774","KIT774",2003,"Kitimat R",NA,"F",4,"730",NA,NA
+"775","KIT775",2003,"Kitimat R",NA,"F",4,"732",NA,NA
+"776","KIT776",2003,"Kitimat R",NA,"F",4,"703",NA,NA
+"777","KIT777",2003,"Kitimat R",NA,"F",4,"655",NA,NA
+"778","KIT778",2003,"Kitimat R",NA,"F",4,"723",NA,NA
+"779","KIT779",2003,"Kitimat R",NA,"F",4,"812",NA,NA
+"780","KIT780",2003,"Kitimat R",NA,"F",4,"771",NA,NA
+"781","KIT781",2003,"Hirsch",NA,"F",4,"696",NA,NA
+"782","KIT782",2003,"Hirsch",NA,"F",4,"785",NA,NA
+"783","KIT783",2003,"Hirsch",NA,"F",4,"820",NA,NA
+"784","KIT784",2003,"Hirsch",NA,"F",4,"720",NA,NA
+"785","KIT785",2003,"Hirsch",NA,"F",4,"765",NA,NA
+"786","KIT786",2003,"Hirsch",NA,"F",4,"820",NA,NA
+"787","KIT787",2003,"Hirsch",NA,"F",4,"710",NA,NA
+"788","KIT788",2003,"Kitimat R",NA,"M",4,"714",NA,NA
+"789","KIT789",2003,"Kitimat R",NA,"M",4,"700",NA,NA
+"790","KIT790",2003,"Kitimat R",NA,"M",4,"783",NA,NA
+"791","KIT791",2003,"Kitimat R",NA,"M",4,"715",NA,NA
+"792","KIT792",2003,"Kitimat R",NA,"M",4,"640",NA,NA
+"793","KIT793",2003,"Kitimat R",NA,"M",4,"655",NA,NA
+"794","KIT794",2003,"Kitimat R",NA,"M",4,"624",NA,NA
+"795","KIT795",2003,"Kitimat R",NA,"M",4,"667",NA,NA
+"796","KIT796",2003,"Kitimat R",NA,"M",4,"604",NA,NA
+"797","KIT797",2003,"Kitimat R",NA,"M",4,"686",NA,NA
+"798","KIT798",2003,"Kitimat R",NA,"M",4,"774",NA,NA
+"799","KIT799",2003,"Kitimat R",NA,"M",4,"633",NA,NA
+"800","KIT800",2003,"Kitimat R",NA,"M",4,"640",NA,NA
+"801","KIT801",2003,"Kitimat R",NA,"M",4,"601",NA,NA
+"802","KIT802",2003,"Hirsch",NA,"M",4,"600",NA,NA
+"803","KIT803",2003,"Hirsch",NA,"M",4,"620",NA,NA
+"804","KIT804",2003,"Hirsch",NA,"M",4,"665",NA,NA
+"805","KIT805",2003,"Hirsch",NA,"M",4,"700",NA,NA
+"806","KIT806",2003,"Hirsch",NA,"M",4,"720",NA,NA
+"807","KIT807",2003,"Hirsch",NA,"M",4,"810",NA,NA
+"808","KIT808",2003,"Kitimat R",NA,"F",5,"690",NA,NA
+"809","KIT809",2003,"Kitimat R",NA,"F",5,"900",NA,NA
+"810","KIT810",2003,"Kitimat R",NA,"F",5,"778",NA,NA
+"811","KIT811",2003,"Kitimat R",NA,"F",5,"780",NA,NA
+"812","KIT812",2003,"Kitimat R",NA,"F",5,"825",NA,NA
+"813","KIT813",2003,"Kitimat R",NA,"F",5,"812",NA,NA
+"814","KIT814",2003,"Kitimat R",NA,"F",5,"794",NA,NA
+"815","KIT815",2003,"Hirsch",NA,"F",5,"880",NA,NA
+"816","KIT816",2003,"Hirsch",NA,"F",5,"750",NA,NA
+"817","KIT817",2003,"Kitimat R",NA,"M",5,"892",NA,NA
+"818","KIT818",2003,"Kitimat R",NA,"M",5,"658",NA,NA
+"819","KIT819",2003,"Kitimat R",NA,"M",5,"870",NA,NA
+"820","KIT820",2003,"Kitimat R",NA,"M",5,"760",NA,NA
+"821","KIT821",2003,"Kitimat R",NA,"M",5,"893",NA,NA
+"822","KIT822",2003,"Hirsch",NA,"F",6,"710",NA,NA
+"823","KIT823",2004,"Kitimat R",NA,"M",2,"335",NA,NA
+"824","KIT824",2004,"Hirsch",NA,"M",2,"304",NA,NA
+"825","KIT825",2004,"Hirsch",NA,"M",2,"330",NA,NA
+"826","KIT826",2004,"Hirsch",NA,"M",2,"421",NA,NA
+"827","KIT827",2004,"Kitimat R",NA,"M",3,"604",NA,NA
+"828","KIT828",2004,"Kitimat R",NA,"M",3,"611",NA,NA
+"829","KIT829",2004,"Kitimat R",NA,"M",3,"533",NA,NA
+"830","KIT830",2004,"Kitimat R",NA,"M",3,"625",NA,NA
+"831","KIT831",2004,"Kitimat R",NA,"M",3,"573",NA,NA
+"832","KIT832",2004,"Kitimat R",NA,"M",3,"535",NA,NA
+"833","KIT833",2004,"Kitimat R",NA,"M",3,"588",NA,NA
+"834","KIT834",2004,"Kitimat R",NA,"M",3,"504",NA,NA
+"835","KIT835",2004,"Kitimat R",NA,"M",3,"571",NA,NA
+"836","KIT836",2004,"Kitimat R",NA,"M",3,"534",NA,NA
+"837","KIT837",2004,"Kitimat R",NA,"M",3,"533",NA,NA
+"838","KIT838",2004,"Kitimat R",NA,"M",3,"535",NA,NA
+"839","KIT839",2004,"Kitimat R",NA,"M",3,"575",NA,NA
+"840","KIT840",2004,"Kitimat R",NA,"M",3,"594",NA,NA
+"841","KIT841",2004,"Kitimat R",NA,"M",3,"572",NA,NA
+"842","KIT842",2004,"Kitimat R",NA,"M",3,"555",NA,NA
+"843","KIT843",2004,"Hirsch",NA,"M",3,"590",NA,NA
+"844","KIT844",2004,"Kitimat R",NA,"F",4,"715",NA,NA
+"845","KIT845",2004,"Kitimat R",NA,"F",4,"773",NA,NA
+"846","KIT846",2004,"Hirsch",NA,"F",4,"667",NA,NA
+"847","KIT847",2004,"Hirsch",NA,"F",4,"730",NA,NA
+"848","KIT848",2004,"Kitimat R",NA,"M",4,"602",NA,NA
+"849","KIT849",2004,"Kitimat R",NA,"M",4,"644",NA,NA
+"850","KIT850",2004,"Hirsch",NA,"M",4,"683",NA,NA
+"851","KIT851",2004,"Hirsch",NA,"M",4,"720",NA,NA
+"852","KIT852",2004,"Hirsch",NA,"M",4,"672",NA,NA
+"853","KIT853",2004,"Kitimat R",NA,"F",5,"815",NA,NA
+"854","KIT854",2004,"Kitimat R",NA,"F",5,"805",NA,NA
+"855","KIT855",2004,"Kitimat R",NA,"F",5,"760",NA,NA
+"856","KIT856",2004,"Kitimat R",NA,"F",5,"744",NA,NA
+"857","KIT857",2004,"Kitimat R",NA,"F",5,"796",NA,NA
+"858","KIT858",2004,"Kitimat R",NA,"F",5,"830",NA,NA
+"859","KIT859",2004,"Kitimat R",NA,"F",5,"731",NA,NA
+"860","KIT860",2004,"Kitimat R",NA,"F",5,"845",NA,NA
+"861","KIT861",2004,"Kitimat R",NA,"F",5,"792",NA,NA
+"862","KIT862",2004,"Kitimat R",NA,"F",5,"760",NA,NA
+"863","KIT863",2004,"Kitimat R",NA,"F",5,"805",NA,NA
+"864","KIT864",2004,"Kitimat R",NA,"F",5,"792",NA,NA
+"865","KIT865",2004,"Hirsch",NA,"F",5,"831",NA,NA
+"866","KIT866",2004,"Hirsch",NA,"F",5,"760",NA,NA
+"867","KIT867",2004,"Hirsch",NA,"F",5,"740",NA,NA
+"868","KIT868",2004,"Hirsch",NA,"F",5,"801",NA,NA
+"869","KIT869",2004,"Hirsch",NA,"F",5,"790",NA,NA
+"870","KIT870",2004,"Hirsch",NA,"F",5,"738",NA,NA
+"871","KIT871",2004,"Hirsch",NA,"F",5,"785",NA,NA
+"872","KIT872",2004,"Hirsch",NA,"F",5,"767",NA,NA
+"873","KIT873",2004,"Kitimat R",NA,"M",5,"835",NA,NA
+"874","KIT874",2004,"Kitimat R",NA,"M",5,"857",NA,NA
+"875","KIT875",2004,"Kitimat R",NA,"M",5,"736",NA,NA
+"876","KIT876",2004,"Kitimat R",NA,"M",5,"751",NA,NA
+"877","KIT877",2004,"Kitimat R",NA,"M",5,"755",NA,NA
+"878","KIT878",2004,"Kitimat R",NA,"M",5,"820",NA,NA
+"879","KIT879",2004,"Kitimat R",NA,"M",5,"720",NA,NA
+"880","KIT880",2004,"Kitimat R",NA,"M",5,"852",NA,NA
+"881","KIT881",2004,"Hirsch",NA,"M",5,"831",NA,NA
+"882","KIT882",2004,"Hirsch",NA,"M",5,"730",NA,NA
+"883","KIT883",2005,"Kitimat R",NA,"M",2,"380",NA,NA
+"884","KIT884",2005,"Kitimat R",NA,"M",2,"350",NA,NA
+"885","KIT885",2005,"Kitimat R",NA,"M",2,"340",NA,NA
+"886","KIT886",2005,"Kitimat R",NA,"M",2,"360",NA,NA
+"887","KIT887",2005,"Kitimat R",NA,"M",2,"380",NA,NA
+"888","KIT888",2005,"Kitimat R",NA,"M",2,"379",NA,NA
+"889","KIT889",2005,"Kitimat R",NA,"M",2,"369",NA,NA
+"890","KIT890",2005,"Kitimat R",NA,"M",2,"305",NA,NA
+"891","KIT891",2005,"Kitimat R",NA,"M",2,"334",NA,NA
+"892","KIT892",2005,"Kitimat R",NA,"M",2,"420",NA,NA
+"893","KIT893",2005,"Kitimat R",NA,"M",2,"404",NA,NA
+"894","KIT894",2005,"Kitimat R",NA,"M",2,"325",NA,NA
+"895","KIT895",2005,"Kitimat R",NA,"M",2,"385",NA,NA
+"896","KIT896",2005,"Kitimat R",NA,"M",2,"351",NA,NA
+"897","KIT897",2005,"Kitimat R",NA,"M",2,"368",NA,NA
+"898","KIT898",2005,"Kitimat R",NA,"M",2,"355",NA,NA
+"899","KIT899",2005,"Kitimat R",NA,"M",2,"353",NA,NA
+"900","KIT900",2005,"Kitimat R",NA,"M",2,"352",NA,NA
+"901","KIT901",2005,"Hirsch",NA,"M",2,"420",NA,NA
+"902","KIT902",2005,"Kitimat R",NA,"M",3,"549",NA,NA
+"903","KIT903",2005,"Kitimat R",NA,"M",3,"538",NA,NA
+"904","KIT904",2005,"Kitimat R",NA,"M",3,"550",NA,NA
+"905","KIT905",2005,"Kitimat R",NA,"M",3,"564",NA,NA
+"906","KIT906",2005,"Kitimat R",NA,"M",3,"506",NA,NA
+"907","KIT907",2005,"Kitimat R",NA,"M",3,"549",NA,NA
+"908","KIT908",2005,"Kitimat R",NA,"M",3,"508",NA,NA
+"909","KIT909",2005,"Kitimat R",NA,"M",3,"520",NA,NA
+"910","KIT910",2005,"Kitimat R",NA,"M",3,"451",NA,NA
+"911","KIT911",2005,"Kitimat R",NA,"M",3,"520",NA,NA
+"912","KIT912",2005,"Kitimat R",NA,"M",3,"468",NA,NA
+"913","KIT913",2005,"Kitimat R",NA,"M",3,"458",NA,NA
+"914","KIT914",2005,"Kitimat R",NA,"M",3,"547",NA,NA
+"915","KIT915",2005,"Kitimat R",NA,"M",3,"495",NA,NA
+"916","KIT916",2005,"Hirsch",NA,"M",3,"590",NA,NA
+"917","KIT917",2005,"Hirsch",NA,"M",3,"660",NA,NA
+"918","KIT918",2005,"Hirsch",NA,"M",3,"610",NA,NA
+"919","KIT919",2005,"Hirsch",NA,"M",3,"630",NA,NA
+"920","KIT920",2005,"Kitimat R",NA,"F",4,"665",NA,NA
+"921","KIT921",2005,"Kitimat R",NA,"F",4,"745",NA,NA
+"922","KIT922",2005,"Kitimat R",NA,"F",4,"790",NA,NA
+"923","KIT923",2005,"Kitimat R",NA,"F",4,"689",NA,NA
+"924","KIT924",2005,"Kitimat R",NA,"F",4,"732",NA,NA
+"925","KIT925",2005,"Kitimat R",NA,"F",4,"591",NA,NA
+"926","KIT926",2005,"Kitimat R",NA,"F",4,"711",NA,NA
+"927","KIT927",2005,"Kitimat R",NA,"F",4,"699",NA,NA
+"928","KIT928",2005,"Kitimat R",NA,"F",4,"798",NA,NA
+"929","KIT929",2005,"Kitimat R",NA,"F",4,"672",NA,NA
+"930","KIT930",2005,"Kitimat R",NA,"F",4,"675",NA,NA
+"931","KIT931",2005,"Kitimat R",NA,"F",4,"636",NA,NA
+"932","KIT932",2005,"Kitimat R",NA,"F",4,"704",NA,NA
+"933","KIT933",2005,"Kitimat R",NA,"F",4,"675",NA,NA
+"934","KIT934",2005,"Kitimat R",NA,"F",4,"718",NA,NA
+"935","KIT935",2005,"Kitimat R",NA,"F",4,"755",NA,NA
+"936","KIT936",2005,"Kitimat R",NA,"F",4,"685",NA,NA
+"937","KIT937",2005,"Kitimat R",NA,"F",4,"702",NA,NA
+"938","KIT938",2005,"Kitimat R",NA,"F",4,"679",NA,NA
+"939","KIT939",2005,"Kitimat R",NA,"F",4,"670",NA,NA
+"940","KIT940",2005,"Kitimat R",NA,"F",4,"667",NA,NA
+"941","KIT941",2005,"Kitimat R",NA,"F",4,"702",NA,NA
+"942","KIT942",2005,"Kitimat R",NA,"F",4,"667",NA,NA
+"943","KIT943",2005,"Kitimat R",NA,"F",4,"758",NA,NA
+"944","KIT944",2005,"Kitimat R",NA,"F",4,"721",NA,NA
+"945","KIT945",2005,"Kitimat R",NA,"F",4,"698",NA,NA
+"946","KIT946",2005,"Kitimat R",NA,"F",4,"714",NA,NA
+"947","KIT947",2005,"Kitimat R",NA,"M",4,"705",NA,NA
+"948","KIT948",2005,"Kitimat R",NA,"M",4,"680",NA,NA
+"949","KIT949",2005,"Kitimat R",NA,"M",4,"725",NA,NA
+"950","KIT950",2005,"Kitimat R",NA,"M",4,"703",NA,NA
+"951","KIT951",2005,"Kitimat R",NA,"M",4,"640",NA,NA
+"952","KIT952",2005,"Kitimat R",NA,"M",4,"691",NA,NA
+"953","KIT953",2005,"Kitimat R",NA,"M",4,"728",NA,NA
+"954","KIT954",2005,"Kitimat R",NA,"M",4,"781",NA,NA
+"955","KIT955",2005,"Kitimat R",NA,"M",4,"701",NA,NA
+"956","KIT956",2005,"Kitimat R",NA,"M",4,"605",NA,NA
+"957","KIT957",2005,"Kitimat R",NA,"M",4,"794",NA,NA
+"958","KIT958",2005,"Kitimat R",NA,"M",4,"705",NA,NA
+"959","KIT959",2005,"Kitimat R",NA,"M",4,"790",NA,NA
+"960","KIT960",2005,"Kitimat R",NA,"M",4,"659",NA,NA
+"961","KIT961",2005,"Kitimat R",NA,"M",4,"659",NA,NA
+"962","KIT962",2005,"Kitimat R",NA,"M",4,"615",NA,NA
+"963","KIT963",2005,"Kitimat R",NA,"M",4,"690",NA,NA
+"964","KIT964",2005,"Kitimat R",NA,"M",4,"720",NA,NA
+"965","KIT965",2005,"Kitimat R",NA,"M",4,"698",NA,NA
+"966","KIT966",2005,"Kitimat R",NA,"M",4,"769",NA,NA
+"967","KIT967",2005,"Kitimat R",NA,"M",4,"680",NA,NA
+"968","KIT968",2005,"Kitimat R",NA,"M",4,"770",NA,NA
+"969","KIT969",2005,"Kitimat R",NA,"M",4,"614",NA,NA
+"970","KIT970",2005,"Hirsch",NA,"M",4,"790",NA,NA
+"971","KIT971",2005,"Hirsch",NA,"M",4,"730",NA,NA
+"972","KIT972",2005,"Hirsch",NA,"M",4,"720",NA,NA
+"973","KIT973",2005,"Kitimat R",NA,"F",5,"830",NA,NA
+"974","KIT974",2005,"Hirsch",NA,"F",5,"840",NA,NA
+"975","KIT975",2005,"Kitimat R",NA,"M",5,"750",NA,NA
+"976","KIT976",2005,"Kitimat R",NA,"M",5,"708",NA,NA
+"977","KIT977",2005,"Hirsch",NA,"M",5,"910",NA,NA
+"978","KIT978",2006,"Kitimat R",NA,"M",3,"620",NA,NA
+"979","KIT979",2006,"Kitimat R",NA,"M",3,"510",NA,NA
+"980","KIT980",2006,"Kitimat R",NA,"M",3,"580",NA,NA
+"981","KIT981",2006,"Kitimat R",NA,"M",3,"584",NA,NA
+"982","KIT982",2006,"Kitimat R",NA,"M",3,"578",NA,NA
+"983","KIT983",2006,"Kitimat R",NA,"M",3,"571",NA,NA
+"984","KIT984",2006,"Kitimat R",NA,"M",3,"538",NA,NA
+"985","KIT985",2006,"Kitimat R",NA,"M",3,"543",NA,NA
+"986","KIT986",2006,"Kitimat R",NA,"M",3,"508",NA,NA
+"987","KIT987",2006,"Kitimat R",NA,"M",3,"560",NA,NA
+"988","KIT988",2006,"Kitimat R",NA,"M",3,"530",NA,NA
+"989","KIT989",2006,"Kitimat R",NA,"M",3,"581",NA,NA
+"990","KIT990",2006,"Kitimat R",NA,"M",3,"478",NA,NA
+"991","KIT991",2006,"Kitimat R",NA,"M",3,"557",NA,NA
+"992","KIT992",2006,"Kitimat R",NA,"M",3,"608",NA,NA
+"993","KIT993",2006,"Kitimat R",NA,"M",3,"565",NA,NA
+"994","KIT994",2006,"Kitimat R",NA,"M",3,"545",NA,NA
+"995","KIT995",2006,"Kitimat R",NA,"M",3,"602",NA,NA
+"996","KIT996",2006,"Kitimat R",NA,"M",3,"562",NA,NA
+"997","KIT997",2006,"Kitimat R",NA,"M",3,"550",NA,NA
+"998","KIT998",2006,"Kitimat R",NA,"M",3,"575",NA,NA
+"999","KIT999",2006,"Kitimat R",NA,"M",3,"529",NA,NA
+"1000","KIT1000",2006,"Kitimat R",NA,"M",3,"568",NA,NA
+"1001","KIT1001",2006,"Kitimat R",NA,"M",3,"585",NA,NA
+"1002","KIT1002",2006,"Kitimat R",NA,"M",3,"583",NA,NA
+"1003","KIT1003",2006,"Kitimat R",NA,"M",3,"571",NA,NA
+"1004","KIT1004",2006,"Kitimat R",NA,"M",3,"515",NA,NA
+"1005","KIT1005",2006,"Kitimat R",NA,"M",3,"545",NA,NA
+"1006","KIT1006",2006,"Kitimat R",NA,"M",3,"595",NA,NA
+"1007","KIT1007",2006,"Kitimat R",NA,"M",3,"554",NA,NA
+"1008","KIT1008",2006,"Kitimat R",NA,"M",3,"538",NA,NA
+"1009","KIT1009",2006,"Kitimat R",NA,"M",3,"565",NA,NA
+"1010","KIT1010",2006,"Kitimat R",NA,"M",3,"545",NA,NA
+"1011","KIT1011",2006,"Kitimat R",NA,"M",3,"575",NA,NA
+"1012","KIT1012",2006,"Kitimat R",NA,"M",3,"550",NA,NA
+"1013","KIT1013",2006,"Hirsch",NA,"M",3,"560",NA,NA
+"1014","KIT1014",2006,"Hirsch",NA,"M",3,"570",NA,NA
+"1015","KIT1015",2006,"Hirsch",NA,"M",3,"540",NA,NA
+"1016","KIT1016",2006,"Hirsch",NA,"M",3,"540",NA,NA
+"1017","KIT1017",2006,"Hirsch",NA,"M",3,"570",NA,NA
+"1018","KIT1018",2006,"Hirsch",NA,"M",3,"570",NA,NA
+"1019","KIT1019",2006,"Hirsch",NA,"M",3,"560",NA,NA
+"1020","KIT1020",2006,"Hirsch",NA,"M",3,"500",NA,NA
+"1021","KIT1021",2006,"Hirsch",NA,"M",3,"570",NA,NA
+"1022","KIT1022",2006,"Hirsch",NA,"M",3,"583",NA,NA
+"1023","KIT1023",2006,"Hirsch",NA,"M",3,"510",NA,NA
+"1024","KIT1024",2006,"Hirsch",NA,"M",3,"555",NA,NA
+"1025","KIT1025",2006,"Hirsch",NA,"M",3,"555",NA,NA
+"1026","KIT1026",2006,"Hirsch",NA,"M",3,"550",NA,NA
+"1027","KIT1027",2006,"Hirsch",NA,"M",3,"540",NA,NA
+"1028","KIT1028",2006,"Hirsch",NA,"M",3,"590",NA,NA
+"1029","KIT1029",2006,"Hirsch",NA,"M",3,"560",NA,NA
+"1030","KIT1030",2006,"Hirsch",NA,"M",3,"525",NA,NA
+"1031","KIT1031",2006,"Hirsch",NA,"M",3,"590",NA,NA
+"1032","KIT1032",2006,"Hirsch",NA,"M",3,"620",NA,NA
+"1033","KIT1033",2006,"Kitimat R",NA,"F",4,"760",NA,NA
+"1034","KIT1034",2006,"Kitimat R",NA,"F",4,"722",NA,NA
+"1035","KIT1035",2006,"Kitimat R",NA,"F",4,"710",NA,NA
+"1036","KIT1036",2006,"Kitimat R",NA,"F",4,"724",NA,NA
+"1037","KIT1037",2006,"Kitimat R",NA,"F",4,"745",NA,NA
+"1038","KIT1038",2006,"Kitimat R",NA,"F",4,"748",NA,NA
+"1039","KIT1039",2006,"Kitimat R",NA,"F",4,"695",NA,NA
+"1040","KIT1040",2006,"Hirsch",NA,"F",4,"775",NA,NA
+"1041","KIT1041",2006,"Hirsch",NA,"F",4,"741",NA,NA
+"1042","KIT1042",2006,"Hirsch",NA,"F",4,"740",NA,NA
+"1043","KIT1043",2006,"Kitimat R",NA,"M",4,"737",NA,NA
+"1044","KIT1044",2006,"Kitimat R",NA,"M",4,"747",NA,NA
+"1045","KIT1045",2006,"Kitimat R",NA,"M",4,"720",NA,NA
+"1046","KIT1046",2006,"Kitimat R",NA,"M",4,"656",NA,NA
+"1047","KIT1047",2006,"Kitimat R",NA,"M",4,"678",NA,NA
+"1048","KIT1048",2006,"Kitimat R",NA,"M",4,"703",NA,NA
+"1049","KIT1049",2006,"Kitimat R",NA,"M",4,"650",NA,NA
+"1050","KIT1050",2006,"Kitimat R",NA,"M",4,"736",NA,NA
+"1051","KIT1051",2006,"Kitimat R",NA,"M",4,"628",NA,NA
+"1052","KIT1052",2006,"Kitimat R",NA,"M",4,"672",NA,NA
+"1053","KIT1053",2006,"Kitimat R",NA,"M",4,"667",NA,NA
+"1054","KIT1054",2006,"Kitimat R",NA,"M",4,"674",NA,NA
+"1055","KIT1055",2006,"Hirsch",NA,"M",4,"740",NA,NA
+"1056","KIT1056",2006,"Hirsch",NA,"M",4,"690",NA,NA
+"1057","KIT1057",2006,"Hirsch",NA,"M",4,"670",NA,NA
+"1058","KIT1058",2006,"Hirsch",NA,"M",4,"625",NA,NA
+"1059","KIT1059",2006,"Hirsch",NA,"M",4,"640",NA,NA
+"1060","KIT1060",2006,"Kitimat R",NA,"F",5,"765",NA,NA
+"1061","KIT1061",2006,"Kitimat R",NA,"F",5,"739",NA,NA
+"1062","KIT1062",2006,"Kitimat R",NA,"F",5,"760",NA,NA
+"1063","KIT1063",2006,"Kitimat R",NA,"F",5,"750",NA,NA
+"1064","KIT1064",2006,"Kitimat R",NA,"F",5,"770",NA,NA
+"1065","KIT1065",2006,"Kitimat R",NA,"F",5,"768",NA,NA
+"1066","KIT1066",2006,"Kitimat R",NA,"F",5,"790",NA,NA
+"1067","KIT1067",2006,"Kitimat R",NA,"F",5,"798",NA,NA
+"1068","KIT1068",2006,"Kitimat R",NA,"F",5,"800",NA,NA
+"1069","KIT1069",2006,"Kitimat R",NA,"F",5,"722",NA,NA
+"1070","KIT1070",2006,"Kitimat R",NA,"F",5,"850",NA,NA
+"1071","KIT1071",2006,"Kitimat R",NA,"F",5,"752",NA,NA
+"1072","KIT1072",2006,"Kitimat R",NA,"F",5,"805",NA,NA
+"1073","KIT1073",2006,"Kitimat R",NA,"M",5,"693",NA,NA
+"1074","KIT1074",2006,"Kitimat R",NA,"M",5,"763",NA,NA
+"1075","KIT1075",2006,"Kitimat R",NA,"M",5,"814",NA,NA
+"1076","KIT1076",2006,"Kitimat R",NA,"M",5,"707",NA,NA
+"1077","KIT1077",2006,"Hirsch",NA,"M",5,"760",NA,NA
+"1078","KIT1078",2007,"Kitimat R",NA,"F",4,"714",NA,NA
+"1079","KIT1079",2007,"Kitimat R",NA,"F",4,"684",NA,NA
+"1080","KIT1080",2007,"Kitimat R",NA,"F",4,"720",NA,NA
+"1081","KIT1081",2007,"Kitimat R",NA,"F",4,"690",NA,NA
+"1082","KIT1082",2007,"Kitimat R",NA,"F",4,"693",NA,NA
+"1083","KIT1083",2007,"Kitimat R",NA,"F",4,"700",NA,NA
+"1084","KIT1084",2007,"Kitimat R",NA,"F",4,"698",NA,NA
+"1085","KIT1085",2007,"Kitimat R",NA,"F",4,"708",NA,NA
+"1086","KIT1086",2007,"Kitimat R",NA,"F",4,"705",NA,NA
+"1087","KIT1087",2007,"Kitimat R",NA,"F",4,"687",NA,NA
+"1088","KIT1088",2007,"Kitimat R",NA,"F",4,"695",NA,NA
+"1089","KIT1089",2007,"Kitimat R",NA,"F",4,"684",NA,NA
+"1090","KIT1090",2007,"Kitimat R",NA,"F",4,"710",NA,NA
+"1091","KIT1091",2007,"Kitimat R",NA,"F",4,"720",NA,NA
+"1092","KIT1092",2007,"Kitimat R",NA,"F",4,"750",NA,NA
+"1093","KIT1093",2007,"Kitimat R",NA,"F",4,"725",NA,NA
+"1094","KIT1094",2007,"Kitimat R",NA,"F",4,"730",NA,NA
+"1095","KIT1095",2007,"Kitimat R",NA,"F",4,"775",NA,NA
+"1096","KIT1096",2007,"Kitimat R",NA,"F",4,"725",NA,NA
+"1097","KIT1097",2007,"Kitimat R",NA,"F",4,"680",NA,NA
+"1098","KIT1098",2007,"Kitimat R",NA,"F",4,"735",NA,NA
+"1099","KIT1099",2007,"Kitimat R",NA,"F",4,"690",NA,NA
+"1100","KIT1100",2007,"Kitimat R",NA,"F",4,"710",NA,NA
+"1101","KIT1101",2007,"Kitimat R",NA,"F",4,"660",NA,NA
+"1102","KIT1102",2007,"Kitimat R",NA,"F",4,"745",NA,NA
+"1103","KIT1103",2007,"Kitimat R",NA,"F",4,"755",NA,NA
+"1104","KIT1104",2007,"Kitimat R",NA,"F",4,"680",NA,NA
+"1105","KIT1105",2007,"Kitimat R",NA,"F",4,"705",NA,NA
+"1106","KIT1106",2007,"Kitimat R",NA,"F",4,"660",NA,NA
+"1107","KIT1107",2007,"Kitimat R",NA,"F",4,"710",NA,NA
+"1108","KIT1108",2007,"Kitimat R",NA,"F",4,"755",NA,NA
+"1109","KIT1109",2007,"Kitimat R",NA,"F",4,"688",NA,NA
+"1110","KIT1110",2007,"Kitimat R",NA,"F",4,"750",NA,NA
+"1111","KIT1111",2007,"Kitimat R",NA,"F",4,"715",NA,NA
+"1112","KIT1112",2007,"Hirsch",NA,"F",4,"760",NA,NA
+"1113","KIT1113",2007,"Hirsch",NA,"F",4,"760",NA,NA
+"1114","KIT1114",2007,"Hirsch",NA,"F",4,"740",NA,NA
+"1115","KIT1115",2007,"Hirsch",NA,"F",4,"730",NA,NA
+"1116","KIT1116",2007,"Hirsch",NA,"F",4,"700",NA,NA
+"1117","KIT1117",2007,"Kitimat R",NA,"M",4,"799",NA,NA
+"1118","KIT1118",2007,"Kitimat R",NA,"M",4,"575",NA,NA
+"1119","KIT1119",2007,"Kitimat R",NA,"M",4,"660",NA,NA
+"1120","KIT1120",2007,"Kitimat R",NA,"M",4,"670",NA,NA
+"1121","KIT1121",2007,"Kitimat R",NA,"M",4,"667",NA,NA
+"1122","KIT1122",2007,"Kitimat R",NA,"M",4,"638",NA,NA
+"1123","KIT1123",2007,"Kitimat R",NA,"M",4,"720",NA,NA
+"1124","KIT1124",2007,"Kitimat R",NA,"M",4,"645",NA,NA
+"1125","KIT1125",2007,"Kitimat R",NA,"M",4,"640",NA,NA
+"1126","KIT1126",2007,"Kitimat R",NA,"M",4,"700",NA,NA
+"1127","KIT1127",2007,"Kitimat R",NA,"M",4,"645",NA,NA
+"1128","KIT1128",2007,"Kitimat R",NA,"M",4,"670",NA,NA
+"1129","KIT1129",2007,"Kitimat R",NA,"M",4,"655",NA,NA
+"1130","KIT1130",2007,"Kitimat R",NA,"M",4,"690",NA,NA
+"1131","KIT1131",2007,"Kitimat R",NA,"M",4,"602",NA,NA
+"1132","KIT1132",2007,"Kitimat R",NA,"M",4,"560",NA,NA
+"1133","KIT1133",2007,"Kitimat R",NA,"M",4,"660",NA,NA
+"1134","KIT1134",2007,"Kitimat R",NA,"M",4,"687",NA,NA
+"1135","KIT1135",2007,"Kitimat R",NA,"M",4,"690",NA,NA
+"1136","KIT1136",2007,"Kitimat R",NA,"M",4,"617",NA,NA
+"1137","KIT1137",2007,"Kitimat R",NA,"M",4,"730",NA,NA
+"1138","KIT1138",2007,"Kitimat R",NA,"M",4,"607",NA,NA
+"1139","KIT1139",2007,"Kitimat R",NA,"M",4,"830",NA,NA
+"1140","KIT1140",2007,"Kitimat R",NA,"M",4,"627",NA,NA
+"1141","KIT1141",2007,"Kitimat R",NA,"M",4,"692",NA,NA
+"1142","KIT1142",2007,"Kitimat R",NA,"M",4,"755",NA,NA
+"1143","KIT1143",2007,"Kitimat R",NA,"M",4,"577",NA,NA
+"1144","KIT1144",2007,"Kitimat R",NA,"M",4,"625",NA,NA
+"1145","KIT1145",2007,"Kitimat R",NA,"M",4,"685",NA,NA
+"1146","KIT1146",2007,"Hirsch",NA,"M",4,"762",NA,NA
+"1147","KIT1147",2007,"Hirsch",NA,"M",4,"760",NA,NA
+"1148","KIT1148",2007,"Hirsch",NA,"M",4,"700",NA,NA
+"1149","KIT1149",2007,"Hirsch",NA,"M",4,"660",NA,NA
+"1150","KIT1150",2007,"Hirsch",NA,"M",4,"550",NA,NA
+"1151","KIT1151",2007,"Hirsch",NA,"M",4,"700",NA,NA
+"1152","KIT1152",2007,"Hirsch",NA,"M",4,"605",NA,NA
+"1153","KIT1153",2007,"Hirsch",NA,"M",4,"660",NA,NA
+"1154","KIT1154",2007,"Hirsch",NA,"M",4,"755",NA,NA
+"1155","KIT1155",2007,"Hirsch",NA,"M",4,"670",NA,NA
+"1156","KIT1156",2007,"Hirsch",NA,"M",4,"660",NA,NA
+"1157","KIT1157",2007,"Kitimat R",NA,"F",5,"840",NA,NA
+"1158","KIT1158",2007,"Kitimat R",NA,"F",5,"720",NA,NA
+"1159","KIT1159",2007,"Kitimat R",NA,"F",5,"755",NA,NA
+"1160","KIT1160",2007,"Kitimat R",NA,"F",5,"735",NA,NA
+"1161","KIT1161",2007,"Kitimat R",NA,"F",5,"784",NA,NA
+"1162","KIT1162",2007,"Kitimat R",NA,"F",5,"735",NA,NA
+"1163","KIT1163",2007,"Kitimat R",NA,"F",5,"785",NA,NA
+"1164","KIT1164",2007,"Kitimat R",NA,"F",5,"737",NA,NA
+"1165","KIT1165",2007,"Kitimat R",NA,"F",5,"795",NA,NA
+"1166","KIT1166",2007,"Kitimat R",NA,"F",5,"810",NA,NA
+"1167","KIT1167",2007,"Kitimat R",NA,"F",5,"760",NA,NA
+"1168","KIT1168",2007,"Kitimat R",NA,"F",5,"742",NA,NA
+"1169","KIT1169",2007,"Kitimat R",NA,"F",5,"720",NA,NA
+"1170","KIT1170",2007,"Kitimat R",NA,"M",5,"868",NA,NA
+"1171","KIT1171",2007,"Kitimat R",NA,"M",5,"836",NA,NA
+"1172","KIT1172",2007,"Kitimat R",NA,"M",5,"630",NA,NA
+"1173","KIT1173",2007,"Kitimat R",NA,"M",5,"678",NA,NA
+"1174","KIT1174",2007,"Hirsch",NA,"M",5,"860",NA,NA
+"1175","KIT1175",2007,"Hirsch",NA,"M",5,"900",NA,NA
+"1176","KIT1176",2014,"Kitimat R","-","F",NA,"773","41","N"
+"1177","KIT1177",2014,"Kitimat R","-","F",NA,"771","41","N"
+"1178","KIT1178",2014,"Kitimat R","-","F",NA,"660","41","N"
+"1179","KIT1179",2014,"Kitimat R","-","F",NA,"729","41","N"
+"1180","KIT1180",2014,"Kitimat R","-","F",NA,"699","41","N"
+"1181","KIT1181",2014,"Kitimat R","-","M",NA,"745","52","N"
+"1182","KIT1182",2014,"Kitimat R","-","M",NA,"733","42","N"
+"1183","KIT1183",2014,"Kitimat R","-","M",NA,"615","31","N"
+"1184","KIT1184",2014,"Kitimat R","-","M",NA,"754","41","N"
+"1185","KIT1185",2014,"Kitimat R","-","M",NA,"845","41","N"
+"1186","KIT1186",2014,"Kitimat R","-","M",NA,"742","41","N"
+"1187","KIT1187",2014,"Kitimat R","-","F",NA,"703","41","N"
+"1188","KIT1188",2014,"Kitimat R","-","F",NA,"718","41","N"
+"1189","KIT1189",2014,"Kitimat R","-","M",NA,"770","52","N"
+"1190","KIT1190",2014,"Kitimat R","-","M",NA,"765","51","N"
+"1191","KIT1191",2014,"Kitimat R","-","F",NA,"753","-","N"
+"1192","KIT1192",2014,"Kitimat R","-","F",NA,"684","41","N"
+"1193","KIT1193",2014,"Kitimat R","-","F",NA,"629","3M","N"
+"1194","KIT1194",2014,"Kitimat R","-","F",NA,"634","52","N"
+"1195","KIT1195",2014,"Kitimat R","-","F",NA,"806","62","N"
+"1196","KIT1196",2014,"Kitimat R","-","F",NA,"637","41","N"
+"1197","KIT1197",2014,"Kitimat R","-","M",NA,"638","41","N"
+"1198","KIT1198",2014,"Kitimat R","-","M",NA,"667","62","N"
+"1199","KIT1199",2014,"Kitimat R","-","M",NA,"632","41","N"
+"1200","KIT1200",2014,"Kitimat R","-","M",NA,"706","4M","N"
+"1201","KIT1201",2014,"Kitimat R","-","M",NA,"708","41","N"
+"1202","KIT1202",2014,"Kitimat R","-","M",NA,"861","4M","N"
+"1203","KIT1203",2014,"Kitimat R","-","F",NA,"620","41","N"
+"1204","KIT1204",2014,"Kitimat R","-","F",NA,"731","41","N"
+"1205","KIT1205",2014,"Kitimat R","-","F",NA,"669","52","N"
+"1206","KIT1206",2014,"Kitimat R","-","F",NA,"739","3M","N"
+"1207","KIT1207",2014,"Kitimat R","-","M",NA,"674","41","N"
+"1208","KIT1208",2014,"Kitimat R","-","M",NA,"560","42","N"
+"1209","KIT1209",2014,"Kitimat R","-","M",NA,"684","41","N"
+"1210","KIT1210",2014,"Kitimat R","-","M",NA,"642","41","N"
+"1211","KIT1211",2014,"Kitimat R","-","F",NA,"771","3M","N"
+"1212","KIT1212",2014,"Kitimat R","-","F",NA,"666","41","N"
+"1213","KIT1213",2014,"Kitimat R","-","F",NA,"797","62","N"
+"1214","KIT1214",2014,"Kitimat R","-","F",NA,"777","41","N"
+"1215","KIT1215",2014,"Kitimat R","-","F",NA,"759","62","N"
+"1216","KIT1216",2014,"Kitimat R","-","F",NA,"625","41","N"
+"1217","KIT1217",2014,"Kitimat R","-","F",NA,"658","41","N"
+"1218","KIT1218",2014,"Kitimat R","-","M",NA,"640","41","N"
+"1219","KIT1219",2014,"Kitimat R","-","M",NA,"688","52","N"
+"1220","KIT1220",2014,"Kitimat R","-","M",NA,"619","41","N"
+"1221","KIT1221",2014,"Kitimat R","-","M",NA,"752","41","N"
+"1222","KIT1222",2014,"Kitimat R","-","M",NA,"774","52","N"
+"1223","KIT1223",2014,"Kitimat R","-","M",NA,"654","41","N"
+"1224","KIT1224",2014,"Kitimat R","-","M",NA,"661","41","N"
+"1225","KIT1225",2014,"Kitimat R","-","F",NA,"775","51","N"
+"1226","KIT1226",2014,"Kitimat R","-","F",NA,"688","41","N"
+"1227","KIT1227",2014,"Kitimat R","-","F",NA,"803","52","N"
+"1228","KIT1228",2014,"Kitimat R","-","F",NA,"665","41","N"
+"1229","KIT1229",2014,"Kitimat R","-","F",NA,"684","41","N"
+"1230","KIT1230",2014,"Kitimat R","-","F",NA,"726","41","N"
+"1231","KIT1231",2014,"Kitimat R","-","F",NA,"715","52","N"
+"1232","KIT1232",2014,"Kitimat R","-","F",NA,"737","41","N"
+"1233","KIT1233",2014,"Kitimat R","-","M",NA,"753","51","N"
+"1234","KIT1234",2014,"Kitimat R","-","M",NA,"652","41","N"
+"1235","KIT1235",2014,"Kitimat R","-","M",NA,"625","41","N"
+"1236","KIT1236",2014,"Kitimat R","-","M",NA,"665","41","N"
+"1237","KIT1237",2014,"Kitimat R","-","M",NA,"621","41","N"
+"1238","KIT1238",2014,"Kitimat R","-","M",NA,"629","41","N"
+"1239","KIT1239",2014,"Kitimat R","-","M",NA,"634","41","N"
+"1240","KIT1240",2014,"Kitimat R","-","F",NA,"719","41","N"
+"1241","KIT1241",2014,"Kitimat R","-","F",NA,"660","41","N"
+"1242","KIT1242",2014,"Kitimat R","-","F",NA,"678","41","N"
+"1243","KIT1243",2014,"Kitimat R","-","F",NA,"760","41","N"
+"1244","KIT1244",2014,"Kitimat R","-","F",NA,"729","41","N"
+"1245","KIT1245",2014,"Kitimat R","-","F",NA,"751","41","N"
+"1246","KIT1246",2014,"Kitimat R","-","F",NA,"703","41","N"
+"1247","KIT1247",2014,"Kitimat R","-","M",NA,"608","31","N"
+"1248","KIT1248",2014,"Kitimat R","-","M",NA,"755","41","N"
+"1249","KIT1249",2014,"Kitimat R","-","M",NA,"760","52","N"
+"1250","KIT1250",2014,"Kitimat R","-","M",NA,"722","52","N"
+"1251","KIT1251",2014,"Kitimat R","-","M",NA,"670","41","N"
+"1252","KIT1252",2014,"Kitimat R","-","M",NA,"592","31","N"
+"1253","KIT1253",2014,"Kitimat R","-","M",NA,"591","31","N"
+"1254","KIT1254",2014,"Kitimat R","-","M",NA,"797","31","N"
+"1255","KIT1255",2014,"Kitimat R","-","M",NA,"604","31","N"
+"1256","KIT1256",2014,"Kitimat R","-","M",NA,"573","31","N"
+"1257","KIT1257",2014,"Kitimat R","-","M",NA,"733","41","N"
+"1258","KIT1258",2014,"Kitimat R","-","M",NA,"712","41","N"
+"1259","KIT1259",2014,"Kitimat R","-","M",NA,"582","31","N"
+"1260","KIT1260",2014,"Kitimat R","-","M",NA,"750","41","N"
+"1261","KIT1261",2014,"Kitimat R","-","F",NA,"775","41","N"
+"1262","KIT1262",2014,"Kitimat R","-","F",NA,"736","41","N"
+"1263","KIT1263",2014,"Kitimat R","-","F",NA,"706","3M","N"
+"1264","KIT1264",2014,"Kitimat R","-","F",NA,"681","41","N"
+"1265","KIT1265",2014,"Kitimat R","-","F",NA,"776","41","N"
+"1266","KIT1266",2014,"Kitimat R","-","F",NA,"743","41","N"
+"1267","KIT1267",2014,"Kitimat R","-","F",NA,"649","41","N"
+"1268","KIT1268",2014,"Kitimat R","-","F",NA,"701","41","N"
+"1269","KIT1269",2014,"Kitimat R","-","F",NA,"709","41","N"
+"1270","KIT1270",2014,"Kitimat R","-","F",NA,"722","41","N"
+"1271","KIT1271",2014,"Kitimat R","-","F",NA,"719","51","N"
+"1272","KIT1272",2014,"Kitimat R","-","M",NA,"590","31","N"
+"1273","KIT1273",2014,"Kitimat R","-","M",NA,"549","31","N"
+"1274","KIT1274",2014,"Kitimat R","-","M",NA,"623","41","N"
+"1275","KIT1275",2014,"Kitimat R","-","M",NA,"560","31","N"
+"1276","KIT1276",2014,"Kitimat R","-","M",NA,"662","3M","N"
+"1277","KIT1277",2014,"Kitimat R","-","F",NA,"710","41","N"
+"1278","KIT1278",2014,"Kitimat R","-","F",NA,"680","41","N"
+"1279","KIT1279",2014,"Kitimat R","-","F",NA,"675","41","N"
+"1280","KIT1280",2014,"Kitimat R","-","F",NA,"705","41","N"
+"1281","KIT1281",2014,"Kitimat R","-","F",NA,"704","41","N"
+"1282","KIT1282",2014,"Kitimat R","-","M",NA,"685","3M","N"
+"1283","KIT1283",2014,"Kitimat R","-","M",NA,"555","31","N"
+"1284","KIT1284",2014,"Kitimat R","-","M",NA,"616","41","N"
+"1285","KIT1285",2014,"Kitimat R","-","M",NA,"567","31","N"
+"1286","KIT1286",2014,"Kitimat R","-","M",NA,"623","41","N"
+"1287","KIT1287",2014,"Kitimat R","-","M",NA,"642","41","N"
+"1288","KIT1288",2014,"Kitimat R","-","M",NA,"584","41","N"
+"1289","KIT1289",2014,"Kitimat R","-","M",NA,"587","31","N"
+"1290","KIT1290",2014,"Kitimat R","-","F",NA,"688","41","N"
+"1291","KIT1291",2014,"Kitimat R","-","F",NA,"700","41","N"
+"1292","KIT1292",2014,"Kitimat R","-","F",NA,"672","41","N"
+"1293","KIT1293",2014,"Kitimat R","-","M",NA,"568","31","N"
+"1294","KIT1294",2014,"Kitimat R","-","F",NA,"746","41","N"
+"1295","KIT1295",2015,"Kitimat R","-","F",NA,"912","51",NA
+"1296","KIT1296",2015,"Kitimat R","-","F",NA,"789","41",NA
+"1297","KIT1297",2015,"Kitimat R","-","F",NA,"837","4M",NA
+"1298","KIT1298",2015,"Kitimat R","-","M",NA,"790","41",NA
+"1299","KIT1299",2015,"Kitimat R","-","M",NA,"736","41",NA
+"1300","KIT1300",2015,"Kitimat R","-","M",NA,"836","41",NA
+"1301","KIT1301",2015,"Kitimat R","-","F",NA,"769","41",NA
+"1302","KIT1302",2015,"Kitimat R","-","F",NA,"769","41",NA
+"1303","KIT1303",2015,"Kitimat R","-","F",NA,"722","3M",NA
+"1304","KIT1304",2015,"Kitimat R","-","F",NA,"773","41",NA
+"1305","KIT1305",2015,"Kitimat R","-","M",NA,"777","41",NA
+"1306","KIT1306",2015,"Kitimat R","-","M",NA,"770","41",NA
+"1307","KIT1307",2015,"Kitimat R","-","M",NA,"824","41",NA
+"1308","KIT1308",2015,"Kitimat R","-","M",NA,"732","41",NA
+"1309","KIT1309",2015,"Kitimat R","-","F",NA,"768","51",NA
+"1310","KIT1310",2015,"Kitimat R","-","F",NA,"748","51",NA
+"1311","KIT1311",2015,"Kitimat R","-","F",NA,"768","41",NA
+"1312","KIT1312",2015,"Kitimat R","-","F",NA,"752","41",NA
+"1313","KIT1313",2015,"Kitimat R","-","M",NA,"678","41",NA
+"1314","KIT1314",2015,"Kitimat R","-","M",NA,"645","41",NA
+"1315","KIT1315",2015,"Kitimat R","-","M",NA,"549","2M",NA
+"1316","KIT1316",2015,"Kitimat R","-","M",NA,"770","3M",NA
+"1317","KIT1317",2015,"Kitimat R","-","M",NA,"654","41",NA
+"1318","KIT1318",2015,"Kitimat R","-","F",NA,"706","41",NA
+"1319","KIT1319",2015,"Kitimat R","-","F",NA,"694","51",NA
+"1320","KIT1320",2015,"Kitimat R","-","F",NA,"725","51",NA
+"1321","KIT1321",2015,"Kitimat R","-","F",NA,"699","41",NA
+"1322","KIT1322",2015,"Kitimat R","-","M",NA,"736","41",NA
+"1323","KIT1323",2015,"Kitimat R","-","M",NA,"720","41",NA
+"1324","KIT1324",2015,"Kitimat R","-","M",NA,"678","41",NA
+"1325","KIT1325",2015,"Kitimat R","-","M",NA,"690","41",NA
+"1326","KIT1326",2015,"Kitimat R","-","F",NA,"836","4M",NA
+"1327","KIT1327",2015,"Kitimat R","-","F",NA,"680","41",NA
+"1328","KIT1328",2015,"Kitimat R","-","F",NA,"734","41",NA
+"1329","KIT1329",2015,"Kitimat R","-","F",NA,"787","4M",NA
+"1330","KIT1330",2015,"Kitimat R","-","F",NA,"788","51",NA
+"1331","KIT1331",2015,"Kitimat R","-","M",NA,"674","41",NA
+"1332","KIT1332",2015,"Kitimat R","-","M",NA,"697","41",NA
+"1333","KIT1333",2015,"Kitimat R","-","M",NA,"653","41",NA
+"1334","KIT1334",2015,"Kitimat R","-","M",NA,"706","41",NA
+"1335","KIT1335",2015,"Kitimat R","-","F",NA,"714","3M",NA
+"1336","KIT1336",2015,"Kitimat R","-","F",NA,"689","41",NA
+"1337","KIT1337",2015,"Kitimat R","-","F",NA,"687","41",NA
+"1338","KIT1338",2015,"Kitimat R","-","F",NA,"687","41",NA
+"1339","KIT1339",2015,"Kitimat R","-","F",NA,"786","51",NA
+"1340","KIT1340",2015,"Kitimat R","-","F",NA,"726","51",NA
+"1341","KIT1341",2015,"Kitimat R","-","M",NA,"809","51",NA
+"1342","KIT1342",2015,"Kitimat R","-","M",NA,"651","41",NA
+"1343","KIT1343",2015,"Kitimat R","-","M",NA,"680","31",NA
+"1344","KIT1344",2015,"Kitimat R","-","M",NA,"678","41",NA
+"1345","KIT1345",2015,"Kitimat R","-","M",NA,"582","2M",NA
+"1346","KIT1346",2015,"Kitimat R","-","M",NA,"646","41",NA
+"1347","KIT1347",2015,"Kitimat R","-","F",NA,"737","51",NA
+"1348","KIT1348",2015,"Kitimat R","-","F",NA,"657","3M",NA
+"1349","KIT1349",2015,"Kitimat R","-","F",NA,"676","41",NA
+"1350","KIT1350",2015,"Kitimat R","-","F",NA,"699","41",NA
+"1351","KIT1351",2015,"Kitimat R","-","F",NA,"736","-",NA
+"1352","KIT1352",2015,"Kitimat R","-","F",NA,"688","41",NA
+"1353","KIT1353",2015,"Kitimat R","-","F",NA,"746","51",NA
+"1354","KIT1354",2015,"Kitimat R","-","M",NA,"653","41",NA
+"1355","KIT1355",2015,"Kitimat R","-","M",NA,"601","3M",NA
+"1356","KIT1356",2015,"Kitimat R","-","M",NA,"654","41",NA
+"1357","KIT1357",2015,"Kitimat R","-","M",NA,"554","31",NA
+"1358","KIT1358",2015,"Kitimat R","-","M",NA,"634","31",NA
+"1359","KIT1359",2015,"Kitimat R","-","M",NA,"514","31",NA
+"1360","KIT1360",2015,"Kitimat R","-","M",NA,"531","31",NA
+"1361","KIT1361",2015,"Kitimat R","-","F",NA,"766","51",NA
+"1362","KIT1362",2015,"Kitimat R","-","F",NA,"759","41",NA
+"1363","KIT1363",2015,"Kitimat R","-","F",NA,"758","51",NA
+"1364","KIT1364",2015,"Kitimat R","-","F",NA,"738","41",NA
+"1365","KIT1365",2015,"Kitimat R","-","M",NA,"655","31",NA
+"1366","KIT1366",2015,"Kitimat R","-","M",NA,"621","41",NA
+"1367","KIT1367",2015,"Kitimat R","-","M",NA,"635","41",NA
+"1368","KIT1368",2015,"Kitimat R","-","M",NA,"703","41",NA
+"1369","KIT1369",2015,"Kitimat R","-","M",NA,"531","31",NA
+"1370","KIT1370",2015,"Kitimat R","-","F",NA,"713","3M",NA
+"1371","KIT1371",2015,"Kitimat R","-","F",NA,"692","41",NA
+"1372","KIT1372",2015,"Kitimat R","-","F",NA,"702","41",NA
+"1373","KIT1373",2015,"Kitimat R","-","M",NA,"716","3M",NA
+"1374","KIT1374",2015,"Kitimat R","-","J",NA,"375","21",NA
+"1375","KIT1375",2015,"Kitimat R","-","F",NA,"753","52",NA
+"1376","KIT1376",2015,"Kitimat R","-","F",NA,"712","41",NA
+"1377","KIT1377",2015,"Kitimat R","-","F",NA,"706","3M",NA
+"1378","KIT1378",2015,"Kitimat R","-","F",NA,"709","41",NA
+"1379","KIT1379",2015,"Kitimat R","-","F",NA,"690","41",NA
+"1380","KIT1380",2015,"Kitimat R","-","F",NA,"634","41",NA
+"1381","KIT1381",2015,"Kitimat R","-","M",NA,"562","-",NA
+"1382","KIT1382",2015,"Kitimat R","-","M",NA,"625","41",NA
+"1383","KIT1383",2015,"Kitimat R","-","M",NA,"671","41",NA
+"1384","KIT1384",2015,"Kitimat R","-","M",NA,"560","41",NA
+"1385","KIT1385",2015,"Kitimat R","-","M",NA,"638","41",NA
+"1386","KIT1386",2015,"Kitimat R","-","M",NA,"520","31",NA
+"1387","KIT1387",2015,"Kitimat R","-","F",NA,"656","41",NA
+"1388","KIT1388",2015,"Kitimat R","-","M",NA,"564","31",NA
+"1389","KIT1389",2016,"Kitimat R","-","J",NA,NA,"1M",NA
+"1390","KIT1390",2016,"Kitimat R","-","J",NA,NA,"1M",NA
+"1391","KIT1391",2016,"Kitimat R","183664","J",NA,"360","-",NA
+"1392","KIT1392",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1393","KIT1393",2016,"Kitimat R","-","J",NA,NA,"1M",NA
+"1394","KIT1394",2016,"Kitimat R","-","J",NA,NA,"1M",NA
+"1395","KIT1395",2016,"Kitimat R","-","J",NA,NA,"-",NA
+"1396","KIT1396",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1397","KIT1397",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1398","KIT1398",2016,"Kitimat R","-","F",NA,NA,"3M",NA
+"1399","KIT1399",2016,"Kitimat R","-","F",NA,NA,"S1",NA
+"1400","KIT1400",2016,"Kitimat R","-","J",NA,NA,"42",NA
+"1401","KIT1401",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1402","KIT1402",2016,"Kitimat R","-","J",NA,NA,"S1",NA
+"1403","KIT1403",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1404","KIT1404",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1405","KIT1405",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1406","KIT1406",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1407","KIT1407",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1408","KIT1408",2016,"Kitimat R","-","M",NA,NA,"51",NA
+"1409","KIT1409",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1410","KIT1410",2016,"Kitimat R","-","M",NA,NA,"51",NA
+"1411","KIT1411",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1412","KIT1412",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1413","KIT1413",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1414","KIT1414",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1415","KIT1415",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1416","KIT1416",2016,"Kitimat R","-","M",NA,NA,"52",NA
+"1417","KIT1417",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1418","KIT1418",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1419","KIT1419",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1420","KIT1420",2016,"Kitimat R","-","M",NA,NA,"42",NA
+"1421","KIT1421",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1422","KIT1422",2016,"Kitimat R","-","M",NA,NA,"42",NA
+"1423","KIT1423",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1424","KIT1424",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1425","KIT1425",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1426","KIT1426",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1427","KIT1427",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1428","KIT1428",2016,"Kitimat R","-","F",NA,NA,"3M",NA
+"1429","KIT1429",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1430","KIT1430",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1431","KIT1431",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1432","KIT1432",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1433","KIT1433",2016,"Kitimat R","-","F",NA,NA,"-",NA
+"1434","KIT1434",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1435","KIT1435",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1436","KIT1436",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1437","KIT1437",2016,"Kitimat R","-","M",NA,NA,"4M",NA
+"1438","KIT1438",2016,"Kitimat R","-","M",NA,NA,"51",NA
+"1439","KIT1439",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1440","KIT1440",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1441","KIT1441",2016,"Kitimat R","-","M",NA,NA,"51",NA
+"1442","KIT1442",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1443","KIT1443",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1444","KIT1444",2016,"Kitimat R","-","J",NA,NA,"32",NA
+"1445","KIT1445",2016,"Kitimat R","-","J",NA,NA,"32",NA
+"1446","KIT1446",2016,"Kitimat R","-","J",NA,NA,"1M",NA
+"1447","KIT1447",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1448","KIT1448",2016,"Kitimat R","-","F",NA,NA,"-",NA
+"1449","KIT1449",2016,"Kitimat R","-","F",NA,NA,"52",NA
+"1450","KIT1450",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1451","KIT1451",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1452","KIT1452",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1453","KIT1453",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1454","KIT1454",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1455","KIT1455",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1456","KIT1456",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1457","KIT1457",2016,"Kitimat R","-","J",NA,NA,"S1",NA
+"1458","KIT1458",2016,"Kitimat R","-","M",NA,NA,"-",NA
+"1459","KIT1459",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1460","KIT1460",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1461","KIT1461",2016,"Kitimat R","-","M",NA,NA,"42",NA
+"1462","KIT1462",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1463","KIT1463",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1464","KIT1464",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1465","KIT1465",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1466","KIT1466",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1467","KIT1467",2016,"Kitimat R","-","M",NA,NA,"S1",NA
+"1468","KIT1468",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1469","KIT1469",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1470","KIT1470",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1471","KIT1471",2016,"Kitimat R","-","M",NA,NA,"52",NA
+"1472","KIT1472",2016,"Kitimat R","-","M",NA,NA,"51",NA
+"1473","KIT1473",2016,"Kitimat R","-","M",NA,NA,"52",NA
+"1474","KIT1474",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1475","KIT1475",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1476","KIT1476",2016,"Kitimat R","-","J",NA,NA,"1M",NA
+"1477","KIT1477",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1478","KIT1478",2016,"Kitimat R","-","F",NA,NA,"4M",NA
+"1479","KIT1479",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1480","KIT1480",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1481","KIT1481",2016,"Kitimat R","-","F",NA,NA,"3M",NA
+"1482","KIT1482",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1483","KIT1483",2016,"Kitimat R","-","F",NA,NA,"3M",NA
+"1484","KIT1484",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1485","KIT1485",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1486","KIT1486",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1487","KIT1487",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1488","KIT1488",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1489","KIT1489",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1490","KIT1490",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1491","KIT1491",2016,"Kitimat R","-","M",NA,NA,"51",NA
+"1492","KIT1492",2016,"Kitimat R","-","M",NA,NA,"51",NA
+"1493","KIT1493",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1494","KIT1494",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1495","KIT1495",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1496","KIT1496",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1497","KIT1497",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1498","KIT1498",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1499","KIT1499",2016,"Kitimat R","-","J",NA,NA,"1M",NA
+"1500","KIT1500",2016,"Kitimat R","-","J",NA,NA,"1M",NA
+"1501","KIT1501",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1502","KIT1502",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1503","KIT1503",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1504","KIT1504",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1505","KIT1505",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1506","KIT1506",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1507","KIT1507",2016,"Kitimat R","-","M",NA,NA,"51",NA
+"1508","KIT1508",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1509","KIT1509",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1510","KIT1510",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1511","KIT1511",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1512","KIT1512",2016,"Kitimat R","-","F",NA,NA,"-",NA
+"1513","KIT1513",2016,"Kitimat R","-","F",NA,NA,"-",NA
+"1514","KIT1514",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1515","KIT1515",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1516","KIT1516",2016,"Kitimat R","-","M",NA,NA,"51",NA
+"1517","KIT1517",2016,"Kitimat R","-","M",NA,NA,"51",NA
+"1518","KIT1518",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1519","KIT1519",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1520","KIT1520",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1521","KIT1521",2016,"Kitimat R","183665","J",NA,"365","21",NA
+"1522","KIT1522",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1523","KIT1523",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1524","KIT1524",2016,"Kitimat R","-","F",NA,NA,"-",NA
+"1525","KIT1525",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1526","KIT1526",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1527","KIT1527",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1528","KIT1528",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1529","KIT1529",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1530","KIT1530",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1531","KIT1531",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1532","KIT1532",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1533","KIT1533",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1534","KIT1534",2016,"Kitimat R","-","J",NA,NA,"2M",NA
+"1535","KIT1535",2016,"Kitimat R","-","J",NA,NA,"21",NA
+"1536","KIT1536",2016,"Kitimat R","-","J",NA,NA,"31",NA
+"1537","KIT1537",2016,"Kitimat R","-","M",NA,NA,"42",NA
+"1538","KIT1538",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1539","KIT1539",2016,"Kitimat R","-","M",NA,NA,"21",NA
+"1540","KIT1540",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1541","KIT1541",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1542","KIT1542",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1543","KIT1543",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1544","KIT1544",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1545","KIT1545",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1546","KIT1546",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1547","KIT1547",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1548","KIT1548",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1549","KIT1549",2016,"Kitimat R","-","F",NA,NA,"62",NA
+"1550","KIT1550",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1551","KIT1551",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1552","KIT1552",2016,"Kitimat R","-","M",NA,NA,"-",NA
+"1553","KIT1553",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1554","KIT1554",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1555","KIT1555",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1556","KIT1556",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1557","KIT1557",2016,"Kitimat R","-","M",NA,NA,"-",NA
+"1558","KIT1558",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1559","KIT1559",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1560","KIT1560",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1561","KIT1561",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1562","KIT1562",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1563","KIT1563",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1564","KIT1564",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1565","KIT1565",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1566","KIT1566",2016,"Kitimat R","-","F",NA,NA,"3M",NA
+"1567","KIT1567",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1568","KIT1568",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1569","KIT1569",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1570","KIT1570",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1571","KIT1571",2016,"Kitimat R","-","F",NA,NA,"-",NA
+"1572","KIT1572",2016,"Kitimat R","-","F",NA,NA,"3M",NA
+"1573","KIT1573",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1574","KIT1574",2016,"Kitimat R","183665","J",NA,"371","-",NA
+"1575","KIT1575",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1576","KIT1576",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1577","KIT1577",2016,"Kitimat R","-","M",NA,NA,"-",NA
+"1578","KIT1578",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1579","KIT1579",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1580","KIT1580",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1581","KIT1581",2016,"Kitimat R","-","M",NA,NA,"-",NA
+"1582","KIT1582",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1583","KIT1583",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1584","KIT1584",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1585","KIT1585",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1586","KIT1586",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1587","KIT1587",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1588","KIT1588",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1589","KIT1589",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1590","KIT1590",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1591","KIT1591",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1592","KIT1592",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1593","KIT1593",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1594","KIT1594",2016,"Kitimat R","-","M",NA,NA,"3M",NA
+"1595","KIT1595",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1596","KIT1596",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1597","KIT1597",2016,"Kitimat R","-","F",NA,NA,"31",NA
+"1598","KIT1598",2016,"Kitimat R","-","F",NA,NA,"3M",NA
+"1599","KIT1599",2016,"Kitimat R","-","F",NA,NA,"3M",NA
+"1600","KIT1600",2016,"Kitimat R","-","F",NA,NA,"4M",NA
+"1601","KIT1601",2016,"Kitimat R","-","F",NA,NA,"3M",NA
+"1602","KIT1602",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1603","KIT1603",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1604","KIT1604",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1605","KIT1605",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1606","KIT1606",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1607","KIT1607",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1608","KIT1608",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1609","KIT1609",2016,"Kitimat R","-","M",NA,NA,"41",NA
+"1610","KIT1610",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1611","KIT1611",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1612","KIT1612",2016,"Kitimat R","-","M",NA,NA,"42",NA
+"1613","KIT1613",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1614","KIT1614",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1615","KIT1615",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1616","KIT1616",2016,"Kitimat R","-","M",NA,NA,"2M",NA
+"1617","KIT1617",2016,"Kitimat R","-","M",NA,NA,"31",NA
+"1618","KIT1618",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1619","KIT1619",2016,"Kitimat R","-","F",NA,NA,"41",NA
+"1620","KIT1620",2016,"Kitimat R","-","F",NA,NA,"51",NA
+"1621","KIT1621",2017,"Kitimat R","183690","J",NA,"350","21",NA
+"1622","KIT1622",2017,"Kitimat R","183665","M",NA,"510","-",NA
+"1623","KIT1623",2017,"Kitimat R","183667","M",NA,"580","-",NA
+"1624","KIT1624",2017,"Kitimat R","183297","J",NA,"400","21",NA
+"1625","KIT1625",2017,"Kitimat R","183666","M",NA,"590","31",NA
+"1626","KIT1626",2017,"Kitimat R","183665","M",NA,"570","31",NA
+"1627","KIT1627",2017,"Kitimat R","183664","M",NA,"640","2M",NA
+"1628","KIT1628",2017,"Kitimat R","-","J",NA,"448","21",NA
+"1629","KIT1629",2017,"Kitimat R","-","J",NA,"495","21",NA
+"1630","KIT1630",2017,"Kitimat R","183665","M",NA,"550","31",NA
+"1631","KIT1631",2017,"Kitimat R","183666","M",NA,"550","31",NA
+"1632","KIT1632",2017,"Kitimat R","183666","M",NA,"590","31",NA
+"1633","KIT1633",2017,"Kitimat R","-","J",NA,"410","21",NA
+"1634","KIT1634",2017,"Kitimat R","-","J",NA,"460","31",NA
+"1635","KIT1635",2017,"Kitimat R","-","M",NA,"590","31",NA
+"1636","KIT1636",2017,"Kitimat R","-","M",NA,"618","41",NA
+"1637","KIT1637",2017,"Kitimat R","-","M",NA,"530","-",NA
+"1638","KIT1638",2017,"Kitimat R","-","M",NA,"665","51",NA
+"1639","KIT1639",2017,"Kitimat R","-","M",NA,"740","-",NA
+"1640","KIT1640",2017,"Kitimat R","-","M",NA,"789","3M",NA
+"1641","KIT1641",2017,"Kitimat R","-","M",NA,"701","3M",NA
+"1642","KIT1642",2017,"Kitimat R","-","M",NA,"765","52",NA
+"1643","KIT1643",2017,"Kitimat R","-","M",NA,"755","41",NA
+"1644","KIT1644",2017,"Kitimat R","-","M",NA,"680","52",NA
+"1645","KIT1645",2017,"Kitimat R","-","M",NA,"714","3M",NA
+"1646","KIT1646",2017,"Kitimat R","-","M",NA,"728","41",NA
+"1647","KIT1647",2017,"Kitimat R","-","F",NA,"719","41",NA
+"1648","KIT1648",2017,"Kitimat R","-","F",NA,"775","51",NA
+"1649","KIT1649",2017,"Kitimat R","-","J",NA,"445","S1",NA
+"1650","KIT1650",2017,"Kitimat R","-","J",NA,"388","21",NA
+"1651","KIT1651",2017,"Kitimat R","-","J",NA,"325","-",NA
+"1652","KIT1652",2017,"Kitimat R","183664","M",NA,"638","31",NA
+"1653","KIT1653",2017,"Kitimat R","183664","F",NA,"710","2M",NA
+"1654","KIT1654",2017,"Kitimat R","183665","M",NA,"580","41",NA
+"1655","KIT1655",2017,"Kitimat R","183666","M",NA,"526","31",NA
+"1656","KIT1656",2017,"Kitimat R","183667","M",NA,"571","31",NA
+"1657","KIT1657",2017,"Kitimat R","-","J",NA,"409","21",NA
+"1658","KIT1658",2017,"Kitimat R","-","M",NA,"619","41",NA
+"1659","KIT1659",2017,"Kitimat R","-","M",NA,"775","41",NA
+"1660","KIT1660",2017,"Kitimat R","-","F",NA,"700","51",NA
+"1661","KIT1661",2017,"Kitimat R","-","F",NA,"670","51",NA
+"1662","KIT1662",2017,"Kitimat R","NTD","M",NA,"578","31",NA
+"1663","KIT1663",2017,"Kitimat R","183297","J",NA,"392","1M",NA
+"1664","KIT1664",2017,"Kitimat R","183664","M",NA,"620","31",NA
+"1665","KIT1665",2017,"Kitimat R","-","J",NA,"410","21",NA
+"1666","KIT1666",2017,"Kitimat R","-","J",NA,"449","21",NA
+"1667","KIT1667",2017,"Kitimat R","-","J",NA,"396","-",NA
+"1668","KIT1668",2017,"Kitimat R","-","M",NA,"508","2M",NA
+"1669","KIT1669",2017,"Kitimat R","-","M",NA,"500","31",NA
+"1670","KIT1670",2017,"Kitimat R","NTD","M",NA,"573","31",NA
+"1671","KIT1671",2017,"Kitimat R","NTD","M",NA,"565","31",NA
+"1672","KIT1672",2017,"Kitimat R","183664","M",NA,"527","2M",NA
+"1673","KIT1673",2017,"Kitimat R","183665","M",NA,"570","31",NA
+"1674","KIT1674",2017,"Kitimat R","183666","M",NA,"553","31",NA
+"1675","KIT1675",2017,"Kitimat R","-","J",NA,"340","21",NA
+"1676","KIT1676",2017,"Kitimat R","-","J",NA,"430","32",NA
+"1677","KIT1677",2017,"Kitimat R","-","F",NA,"703","41",NA
+"1678","KIT1678",2017,"Kitimat R","-","F",NA,"650","41",NA
+"1679","KIT1679",2017,"Kitimat R","183297","J",NA,"393","21",NA
+"1680","KIT1680",2017,"Kitimat R","183664","M",NA,"550","31",NA
+"1681","KIT1681",2017,"Kitimat R","183665","M",NA,"580","2M",NA
+"1682","KIT1682",2017,"Kitimat R","183667","M",NA,"570","31",NA
+"1683","KIT1683",2017,"Kitimat R","183690","J",NA,"375","21",NA
+"1684","KIT1684",2017,"Kitimat R","-","M",NA,"583","31",NA
+"1685","KIT1685",2017,"Kitimat R","-","M",NA,"773","4M",NA
+"1686","KIT1686",2017,"Kitimat R","-","M",NA,"675","3M",NA
+"1687","KIT1687",2017,"Kitimat R","-","M",NA,"831","3M",NA
+"1688","KIT1688",2017,"Kitimat R","-","M",NA,"690","41",NA
+"1689","KIT1689",2017,"Kitimat R","-","J",NA,"384","21",NA
+"1690","KIT1690",2017,"Kitimat R","-","J",NA,"395","-",NA
+"1691","KIT1691",2017,"Kitimat R","-","J",NA,"385","32",NA
+"1692","KIT1692",2017,"Kitimat R","183297","J",NA,"396","1M",NA
+"1693","KIT1693",2017,"Kitimat R","183666","J",NA,"487","2M",NA
+"1694","KIT1694",2017,"Kitimat R","-","J",NA,"349","21",NA
+"1695","KIT1695",2017,"Kitimat R","-","J",NA,"386","21",NA
+"1696","KIT1696",2017,"Kitimat R","-","J",NA,"440","21",NA
+"1697","KIT1697",2017,"Kitimat R","-","M",NA,"610","-",NA
+"1698","KIT1698",2017,"Kitimat R","-","M",NA,"519","41",NA
+"1699","KIT1699",2017,"Kitimat R","-","M",NA,"560","31",NA
+"1700","KIT1700",2017,"Kitimat R","-","M",NA,"805","3M",NA
+"1701","KIT1701",2017,"Kitimat R","-","M",NA,"740","52",NA
+"1702","KIT1702",2017,"Kitimat R","-","M",NA,"702","41",NA
+"1703","KIT1703",2017,"Kitimat R","-","F",NA,"711","51",NA
+"1704","KIT1704",2017,"Kitimat R","-","F",NA,"740","52",NA
+"1705","KIT1705",2017,"Kitimat R","-","F",NA,"739","41",NA
+"1706","KIT1706",2017,"Kitimat R","-","J",NA,"430","21",NA
+"1707","KIT1707",2017,"Kitimat R","-","J",NA,"420","21",NA
+"1708","KIT1708",2017,"Kitimat R","-","J",NA,"366","21",NA
+"1709","KIT1709",2017,"Kitimat R","-","J",NA,"333","21",NA
+"1710","KIT1710",2017,"Kitimat R","183297","J",NA,"379","21",NA
+"1711","KIT1711",2017,"Kitimat R","-","J",NA,"381","21",NA
+"1712","KIT1712",2017,"Kitimat R","183297","J",NA,"374","21",NA
+"1713","KIT1713",2017,"Kitimat R","183664","M",NA,"545","31",NA
+"1714","KIT1714",2017,"Kitimat R","183665","F",NA,"640","2M",NA
+"1715","KIT1715",2017,"Kitimat R","-","M",NA,"544","31",NA
+"1716","KIT1716",2017,"Kitimat R","-","M",NA,"611","31",NA
+"1717","KIT1717",2017,"Kitimat R","-","M",NA,"601","31",NA
+"1718","KIT1718",2017,"Kitimat R","-","M",NA,"584","2M",NA
+"1719","KIT1719",2017,"Kitimat R","-","M",NA,"641","3M",NA
+"1720","KIT1720",2017,"Kitimat R","-","M",NA,"631","41",NA
+"1721","KIT1721",2017,"Kitimat R","-","M",NA,"831","52",NA
+"1722","KIT1722",2017,"Kitimat R","-","M",NA,"762","51",NA
+"1723","KIT1723",2017,"Kitimat R","-","M",NA,"750","62",NA
+"1724","KIT1724",2017,"Kitimat R","-","F",NA,"694","52",NA
+"1725","KIT1725",2017,"Kitimat R","-","F",NA,"697","41",NA
+"1726","KIT1726",2017,"Kitimat R","-","F",NA,"786","52",NA
+"1727","KIT1727",2017,"Kitimat R","-","F",NA,"642","-",NA
+"1728","KIT1728",2017,"Kitimat R","-","F",NA,"681","41",NA
+"1729","KIT1729",2017,"Kitimat R","-","F",NA,"656","3M",NA
+"1730","KIT1730",2017,"Kitimat R","-","F",NA,"871","52",NA
+"1731","KIT1731",2017,"Kitimat R","183297","J",NA,"420","21",NA
+"1732","KIT1732",2017,"Kitimat R","-","M",NA,"570","31",NA
+"1733","KIT1733",2017,"Kitimat R","-","M",NA,"565","41",NA
+"1734","KIT1734",2017,"Kitimat R","-","M",NA,"605","31",NA
+"1735","KIT1735",2017,"Kitimat R","-","M",NA,"527","31",NA
+"1736","KIT1736",2017,"Kitimat R","-","M",NA,"574","2M",NA
+"1737","KIT1737",2017,"Kitimat R","-","M",NA,"585","31",NA
+"1738","KIT1738",2017,"Kitimat R","-","M",NA,"594","41",NA
+"1739","KIT1739",2017,"Kitimat R","-","M",NA,"620","31",NA
+"1740","KIT1740",2017,"Kitimat R","-","M",NA,"716","41",NA
+"1741","KIT1741",2017,"Kitimat R","-","M",NA,"723","41",NA
+"1742","KIT1742",2017,"Kitimat R","-","M",NA,"720","41",NA
+"1743","KIT1743",2017,"Kitimat R","-","M",NA,"696","41",NA
+"1744","KIT1744",2017,"Kitimat R","-","M",NA,"723","41",NA
+"1745","KIT1745",2017,"Kitimat R","-","M",NA,"760","41",NA
+"1746","KIT1746",2017,"Kitimat R","-","M",NA,"790","51",NA
+"1747","KIT1747",2017,"Kitimat R","-","M",NA,"770","41",NA
+"1748","KIT1748",2017,"Kitimat R","-","F",NA,"786","51",NA
+"1749","KIT1749",2017,"Kitimat R","-","F",NA,"645","3M",NA
+"1750","KIT1750",2017,"Kitimat R","-","F",NA,"704","41",NA
+"1751","KIT1751",2017,"Kitimat R","-","F",NA,"635","41",NA
+"1752","KIT1752",2017,"Kitimat R","-","F",NA,"730","41",NA
+"1753","KIT1753",2017,"Kitimat R","-","F",NA,"657","-",NA
+"1754","KIT1754",2017,"Kitimat R","-","F",NA,"716","-",NA
+"1755","KIT1755",2017,"Kitimat R","-","F",NA,"705","41",NA
+"1756","KIT1756",2017,"Kitimat R","-","F",NA,"683","3M",NA
+"1757","KIT1757",2017,"Kitimat R","-","F",NA,"730","41",NA
+"1758","KIT1758",2017,"Kitimat R","-","F",NA,"777","51",NA
+"1759","KIT1759",2017,"Kitimat R","-","F",NA,"710","41",NA
+"1760","KIT1760",2017,"Kitimat R","183664","M",NA,"562","31",NA
+"1761","KIT1761",2017,"Kitimat R","183664","M",NA,"536","31",NA
+"1762","KIT1762",2017,"Kitimat R","183666","M",NA,"541","1M",NA
+"1763","KIT1763",2017,"Kitimat R","183666","F",NA,"610","31",NA
+"1764","KIT1764",2017,"Kitimat R","-","M",NA,"578","31",NA
+"1765","KIT1765",2017,"Kitimat R","-","M",NA,"633","41",NA
+"1766","KIT1766",2017,"Kitimat R","-","M",NA,"575","31",NA
+"1767","KIT1767",2017,"Kitimat R","-","M",NA,"537","31",NA
+"1768","KIT1768",2017,"Kitimat R","-","M",NA,"586","4M",NA
+"1769","KIT1769",2017,"Kitimat R","-","M",NA,"579","31",NA
+"1770","KIT1770",2017,"Kitimat R","-","M",NA,"785","41",NA
+"1771","KIT1771",2017,"Kitimat R","-","M",NA,"758","3M",NA
+"1772","KIT1772",2017,"Kitimat R","-","M",NA,"658","3M",NA
+"1773","KIT1773",2017,"Kitimat R","-","M",NA,"725","41",NA
+"1774","KIT1774",2017,"Kitimat R","-","M",NA,"688","41",NA
+"1775","KIT1775",2017,"Kitimat R","-","M",NA,"690","41",NA
+"1776","KIT1776",2017,"Kitimat R","-","F",NA,"697","3M",NA
+"1777","KIT1777",2017,"Kitimat R","-","F",NA,"769","3M",NA
+"1778","KIT1778",2017,"Kitimat R","-","F",NA,"658","41",NA
+"1779","KIT1779",2017,"Kitimat R","-","F",NA,"721","51",NA
+"1780","KIT1780",2017,"Kitimat R","-","F",NA,"707","52",NA
+"1781","KIT1781",2017,"Kitimat R","-","F",NA,"711","41",NA
+"1782","KIT1782",2017,"Kitimat R","-","F",NA,"699","51",NA
+"1783","KIT1783",2017,"Kitimat R","183665","M",NA,"577","31",NA
+"1784","KIT1784",2017,"Kitimat R","183666","M",NA,"576","31",NA
+"1785","KIT1785",2017,"Kitimat R","-","M",NA,"635","41",NA
+"1786","KIT1786",2017,"Kitimat R","-","M",NA,"634","41",NA
+"1787","KIT1787",2017,"Kitimat R","-","M",NA,"630","41",NA
+"1788","KIT1788",2017,"Kitimat R","-","M",NA,"624","3M",NA
+"1789","KIT1789",2017,"Kitimat R","-","M",NA,"582","31",NA
+"1790","KIT1790",2017,"Kitimat R","-","M",NA,"625","31",NA
+"1791","KIT1791",2017,"Kitimat R","-","M",NA,"598","2M",NA
+"1792","KIT1792",2017,"Kitimat R","-","M",NA,"796","3M",NA
+"1793","KIT1793",2017,"Kitimat R","-","M",NA,"677","3M",NA
+"1794","KIT1794",2017,"Kitimat R","-","M",NA,"755","41",NA
+"1795","KIT1795",2017,"Kitimat R","-","M",NA,"669","3M",NA
+"1796","KIT1796",2017,"Kitimat R","-","M",NA,"691","3M",NA
+"1797","KIT1797",2017,"Kitimat R","-","M",NA,"731","-",NA
+"1798","KIT1798",2017,"Kitimat R","-","M",NA,"677","2M",NA
+"1799","KIT1799",2017,"Kitimat R","-","M",NA,"675","41",NA
+"1800","KIT1800",2017,"Kitimat R","-","M",NA,"675","51",NA
+"1801","KIT1801",2017,"Kitimat R","-","F",NA,"721","41",NA
+"1802","KIT1802",2017,"Kitimat R","-","F",NA,"723","4M",NA
+"1803","KIT1803",2017,"Kitimat R","-","F",NA,"616","41",NA
+"1804","KIT1804",2017,"Kitimat R","-","F",NA,"651","41",NA
+"1805","KIT1805",2017,"Kitimat R","-","F",NA,"742","51",NA
+"1806","KIT1806",2017,"Kitimat R","-","F",NA,"695","41",NA
+"1807","KIT1807",2017,"Kitimat R","-","F",NA,"735","41",NA
+"1808","KIT1808",2017,"Kitimat R","-","F",NA,"657","3M",NA
+"1809","KIT1809",2017,"Kitimat R","-","F",NA,"631","41",NA
+"1810","KIT1810",2017,"Kitimat R","-","F",NA,"702","4M",NA
+"1811","KIT1811",2017,"Kitimat R","-","F",NA,"661","41",NA
+"1812","KIT1812",2017,"Kitimat R","-","F",NA,"655","3M",NA
+"1813","KIT1813",2017,"Kitimat R","-","F",NA,"732","41",NA
+"1814","KIT1814",2017,"Kitimat R","-","F",NA,"654","41",NA
+"1815","KIT1815",2017,"Kitimat R","-","F",NA,"711","41",NA
+"1816","KIT1816",2017,"Kitimat R","-","F",NA,"644","41",NA
+"1817","KIT1817",2017,"Kitimat R","183664","M",NA,"588","2M",NA
+"1818","KIT1818",2017,"Kitimat R","183664","M",NA,"584","31",NA
+"1819","KIT1819",2017,"Kitimat R","-","M",NA,"544","2M",NA
+"1820","KIT1820",2017,"Kitimat R","-","M",NA,"581","31",NA
+"1821","KIT1821",2017,"Kitimat R","-","M",NA,"610","41",NA
+"1822","KIT1822",2017,"Kitimat R","-","M",NA,"622","2M",NA
+"1823","KIT1823",2017,"Kitimat R","-","M",NA,"571","31",NA
+"1824","KIT1824",2017,"Kitimat R","-","M",NA,"641","31",NA
+"1825","KIT1825",2017,"Kitimat R","-","M",NA,"578","31",NA
+"1826","KIT1826",2017,"Kitimat R","-","M",NA,"647","3M",NA
+"1827","KIT1827",2017,"Kitimat R","-","M",NA,"611","41",NA
+"1828","KIT1828",2017,"Kitimat R","-","M",NA,"576","2M",NA
+"1829","KIT1829",2017,"Kitimat R","-","M",NA,"561","31",NA
+"1830","KIT1830",2017,"Kitimat R","-","M",NA,"599","31",NA
+"1831","KIT1831",2017,"Kitimat R","-","M",NA,"541","31",NA
+"1832","KIT1832",2017,"Kitimat R","-","M",NA,"597","2M",NA
+"1833","KIT1833",2017,"Kitimat R","-","M",NA,"690","41",NA
+"1834","KIT1834",2017,"Kitimat R","-","M",NA,"743","41",NA
+"1835","KIT1835",2017,"Kitimat R","-","M",NA,"680","41",NA
+"1836","KIT1836",2017,"Kitimat R","-","M",NA,"706","41",NA
+"1837","KIT1837",2017,"Kitimat R","-","F",NA,"710","41",NA
+"1838","KIT1838",2017,"Kitimat R","-","F",NA,"700","41",NA
+"1839","KIT1839",2017,"Kitimat R","-","F",NA,"700","41",NA
+"1840","KIT1840",2017,"Kitimat R","-","F",NA,"720","41",NA
+"1841","KIT1841",2017,"Kitimat R","-","F",NA,"670","3M",NA
+"1842","KIT1842",2017,"Kitimat R","-","F",NA,"675","41",NA
+"1843","KIT1843",2017,"Kitimat R","-","F",NA,"680","3M",NA
+"1844","KIT1844",2017,"Kitimat R","-","F",NA,"680","3M",NA
+"1845","KIT1845",2017,"Kitimat R","-","F",NA,"715","52",NA
+"1846","KIT1846",2017,"Kitimat R","-","F",NA,"715","3M",NA
+"1847","KIT1847",2017,"Kitimat R","-","F",NA,"740","3M",NA
+"1848","KIT1848",2017,"Kitimat R","-","F",NA,"635","41",NA
+"1849","KIT1849",2017,"Kitimat R","-","F",NA,"717","41",NA
+"1850","KIT1850",2017,"Kitimat R","-","F",NA,"698","3M",NA
+"1851","KIT1851",2017,"Kitimat R","-","F",NA,"685","41",NA
+"1852","KIT1852",2017,"Kitimat R","NTD","M",NA,"587","2M",NA
+"1853","KIT1853",2017,"Kitimat R","-","M",NA,"755","3M",NA
+"1854","KIT1854",2017,"Kitimat R","-","M",NA,"651","41",NA
+"1855","KIT1855",2017,"Kitimat R","-","M",NA,"656","41",NA
+"1856","KIT1856",2017,"Kitimat R","-","F",NA,"704","41",NA
+"1857","KIT1857",2017,"Kitimat R","-","F",NA,"672","41",NA
+"1858","KIT1858",2017,"Kitimat R","-","F",NA,"726","41",NA
+"1859","KIT1859",2017,"Kitimat R","-","F",NA,"715","41",NA
+"1860","KIT1860",2017,"Kitimat R","-","F",NA,"783","51",NA
+"1861","KIT1861",2017,"Kitimat R","-","F",NA,"776","41",NA
+"1862","KIT1862",2017,"Kitimat R","-","F",NA,"770","41",NA
+"1863","KIT1863",2017,"Kitimat R","-","F",NA,"700","41",NA
+"1864","KIT1864",2017,"Kitimat R","-","F",NA,"697","41",NA
+"1865","KIT1865",2017,"Kitimat R","-","F",NA,"702","52",NA
+"1866","KIT1866",2017,"Kitimat R","-","F",NA,"740","41",NA
+"1867","KIT1867",2017,"Kitimat R","183664","M",NA,"539","-",NA
+"1868","KIT1868",2017,"Kitimat R","183666","M",NA,"562","-",NA
+"1869","KIT1869",2018,"Kitimat R","183664","M",NA,"619","3M",NA
+"1870","KIT1870",2018,"Kitimat R","183690","M",NA,"520","31",NA
+"1871","KIT1871",2018,"Kitimat R","183690","M",NA,"550","31",NA
+"1872","KIT1872",2018,"Kitimat R","-","M",NA,"640","31",NA
+"1873","KIT1873",2018,"Kitimat R","-","M",NA,"595","31",NA
+"1874","KIT1874",2018,"Kitimat R","-","M",NA,"645","41",NA
+"1875","KIT1875",2018,"Kitimat R","-","M",NA,"585","31",NA
+"1876","KIT1876",2018,"Kitimat R","-","M",NA,"615","2M",NA
+"1877","KIT1877",2018,"Kitimat R","-","M",NA,"655","41",NA
+"1878","KIT1878",2018,"Kitimat R","-","M",NA,"810","S1",NA
+"1879","KIT1879",2018,"Kitimat R","-","F",NA,"720","41",NA
+"1880","KIT1880",2018,"Kitimat R","-","F",NA,"675","41",NA
+"1881","KIT1881",2018,"Kitimat R","183664","F",NA,"660","41",NA
+"1882","KIT1882",2018,"Kitimat R","-","M",NA,"633","41",NA
+"1883","KIT1883",2018,"Kitimat R","-","M",NA,"730","51",NA
+"1884","KIT1884",2018,"Kitimat R","-","F",NA,"763","3M",NA
+"1885","KIT1885",2018,"Kitimat R","183297","M",NA,"570",NA,NA
+"1886","KIT1886",2018,"Kitimat R","183664","F",NA,"725","3M",NA
+"1887","KIT1887",2018,"Kitimat R","183664","F",NA,"685","31",NA
+"1888","KIT1888",2018,"Kitimat R","183664","F",NA,"695","41",NA
+"1889","KIT1889",2018,"Kitimat R","183665","M",NA,"705","41",NA
+"1890","KIT1890",2018,"Kitimat R","183667","M",NA,"680","41",NA
+"1891","KIT1891",2018,"Kitimat R","-","M",NA,"645","3M",NA
+"1892","KIT1892",2018,"Kitimat R","-","M",NA,"645","2M",NA
+"1893","KIT1893",2018,"Kitimat R","-","M",NA,"540","31",NA
+"1894","KIT1894",2018,"Kitimat R","-","M",NA,"600","31",NA
+"1895","KIT1895",2018,"Kitimat R","-","M",NA,"555","31",NA
+"1896","KIT1896",2018,"Kitimat R","-","M",NA,"535","31",NA
+"1897","KIT1897",2018,"Kitimat R","-","M",NA,"515","31",NA
+"1898","KIT1898",2018,"Kitimat R","-","M",NA,"545","31",NA
+"1899","KIT1899",2018,"Kitimat R","-","M",NA,"555","-",NA
+"1900","KIT1900",2018,"Kitimat R","-","M",NA,"845","3M",NA
+"1901","KIT1901",2018,"Kitimat R","-","M",NA,"815","41",NA
+"1902","KIT1902",2018,"Kitimat R","-","M",NA,"710","-",NA
+"1903","KIT1903",2018,"Kitimat R","-","M",NA,"715","51",NA
+"1904","KIT1904",2018,"Kitimat R","-","M",NA,"675","41",NA
+"1905","KIT1905",2018,"Kitimat R","-","M",NA,"655","31",NA
+"1906","KIT1906",2018,"Kitimat R","-","M",NA,"675","41",NA
+"1907","KIT1907",2018,"Kitimat R","-","M",NA,"675","41",NA
+"1908","KIT1908",2018,"Kitimat R","-","F",NA,"620","41",NA
+"1909","KIT1909",2018,"Kitimat R","-","F",NA,"695","41",NA
+"1910","KIT1910",2018,"Kitimat R","-","F",NA,"760","41",NA
+"1911","KIT1911",2018,"Kitimat R","-","F",NA,"720","-",NA
+"1912","KIT1912",2018,"Kitimat R","-","F",NA,"740","41",NA
+"1913","KIT1913",2018,"Kitimat R","-","F",NA,"810","51",NA
+"1914","KIT1914",2018,"Kitimat R","-","F",NA,"700","41",NA
+"1915","KIT1915",2018,"Kitimat R","-","F",NA,"780","41",NA
+"1916","KIT1916",2018,"Kitimat R","-","F",NA,"805","41",NA
+"1917","KIT1917",2018,"Kitimat R","-","F",NA,"755","41",NA
+"1918","KIT1918",2018,"Kitimat R","-","F",NA,"700","3M",NA
+"1919","KIT1919",2018,"Kitimat R","-","F",NA,"670","41",NA
+"1920","KIT1920",2018,"Kitimat R","-","F",NA,"725","51",NA
+"1921","KIT1921",2018,"Kitimat R","-","F",NA,"710","41",NA
+"1922","KIT1922",2018,"Kitimat R","NTD","M",NA,"710","41",NA
+"1923","KIT1923",2018,"Kitimat R","NTD","F",NA,"745","41",NA
+"1924","KIT1924",2018,"Kitimat R","183690","M",NA,"540","31",NA
+"1925","KIT1925",2018,"Kitimat R","183664","M",NA,"710","41",NA
+"1926","KIT1926",2018,"Kitimat R","183664","M",NA,"655","41",NA
+"1927","KIT1927",2018,"Kitimat R","183664","F",NA,"730","41",NA
+"1928","KIT1928",2018,"Kitimat R","183665","M",NA,"710","31",NA
+"1929","KIT1929",2018,"Kitimat R","183667","F",NA,"725","41",NA
+"1930","KIT1930",2018,"Kitimat R","183690","M",NA,"683","41",NA
+"1931","KIT1931",2018,"Kitimat R","-","M",NA,"744","3M",NA
+"1932","KIT1932",2018,"Kitimat R","-","M",NA,"783","41",NA
+"1933","KIT1933",2018,"Kitimat R","-","F",NA,"730","41",NA
+"1934","KIT1934",2018,"Kitimat R","-","F",NA,"703","52",NA
+"1935","KIT1935",2018,"Kitimat R","-","F",NA,"677","41",NA
+"1936","KIT1936",2018,"Kitimat R","-","F",NA,"809","41",NA
+"1937","KIT1937",2018,"Kitimat R","-","F",NA,"696","41",NA
+"1938","KIT1938",2018,"Kitimat R","-","J",NA,"380","21",NA
+"1939","KIT1939",2018,"Kitimat R","-","J",NA,"309","21",NA
+"1940","KIT1940",2018,"Kitimat R","-","J",NA,"305","21",NA
+"1941","KIT1941",2018,"Kitimat R","-","J",NA,"349","21",NA
+"1942","KIT1942",2018,"Kitimat R","-","J",NA,"352","21",NA
+"1943","KIT1943",2018,"Kitimat R","-","J",NA,"322","1M",NA
+"1944","KIT1944",2018,"Kitimat R","-","J",NA,"347","21",NA
+"1945","KIT1945",2018,"Kitimat R","-","J",NA,"295","21",NA
+"1946","KIT1946",2018,"Kitimat R","-","J",NA,"335","1M",NA
+"1947","KIT1947",2018,"Kitimat R","-","J",NA,"316","1M",NA
+"1948","KIT1948",2018,"Kitimat R","183664","F",NA,"694","3M",NA
+"1949","KIT1949",2018,"Kitimat R","183666","F",NA,"668","41",NA
+"1950","KIT1950",2018,"Kitimat R","183666","F",NA,"719","41",NA
+"1951","KIT1951",2018,"Kitimat R","183667","F",NA,"685","41",NA
+"1952","KIT1952",2018,"Kitimat R","-","M",NA,"616","41",NA
+"1953","KIT1953",2018,"Kitimat R","-","M",NA,"614","3M",NA
+"1954","KIT1954",2018,"Kitimat R","-","M",NA,"592","42",NA
+"1955","KIT1955",2018,"Kitimat R","-","M",NA,"615","3M",NA
+"1956","KIT1956",2018,"Kitimat R","-","M",NA,"602","31",NA
+"1957","KIT1957",2018,"Kitimat R","-","M",NA,"561","31",NA
+"1958","KIT1958",2018,"Kitimat R","-","M",NA,"635","31",NA
+"1959","KIT1959",2018,"Kitimat R","-","M",NA,"620","41",NA
+"1960","KIT1960",2018,"Kitimat R","-","M",NA,"590","2M",NA
+"1961","KIT1961",2018,"Kitimat R","-","M",NA,"623","31",NA
+"1962","KIT1962",2018,"Kitimat R","-","M",NA,"613","41",NA
+"1963","KIT1963",2018,"Kitimat R","-","M",NA,"574","2M",NA
+"1964","KIT1964",2018,"Kitimat R","-","M",NA,"584","31",NA
+"1965","KIT1965",2018,"Kitimat R","-","M",NA,"556","-",NA
+"1966","KIT1966",2018,"Kitimat R","-","M",NA,"594","31",NA
+"1967","KIT1967",2018,"Kitimat R","-","M",NA,"575","31",NA
+"1968","KIT1968",2018,"Kitimat R","-","M",NA,"561","31",NA
+"1969","KIT1969",2018,"Kitimat R","-","M",NA,"537","31",NA
+"1970","KIT1970",2018,"Kitimat R","-","M",NA,"533","2M",NA
+"1971","KIT1971",2018,"Kitimat R","-","M",NA,"562","31",NA
+"1972","KIT1972",2018,"Kitimat R","-","M",NA,"555","31",NA
+"1973","KIT1973",2018,"Kitimat R","-","M",NA,"730","41",NA
+"1974","KIT1974",2018,"Kitimat R","-","M",NA,"721","3M",NA
+"1975","KIT1975",2018,"Kitimat R","-","M",NA,"701","3M",NA
+"1976","KIT1976",2018,"Kitimat R","-","M",NA,"691","41",NA
+"1977","KIT1977",2018,"Kitimat R","-","M",NA,"696","-",NA
+"1978","KIT1978",2018,"Kitimat R","-","M",NA,"706","3M",NA
+"1979","KIT1979",2018,"Kitimat R","-","M",NA,"717","-",NA
+"1980","KIT1980",2018,"Kitimat R","-","M",NA,"667","-",NA
+"1981","KIT1981",2018,"Kitimat R","-","M",NA,"696","-",NA
+"1982","KIT1982",2018,"Kitimat R","-","M",NA,"695","41",NA
+"1983","KIT1983",2018,"Kitimat R","-","M",NA,"687","41",NA
+"1984","KIT1984",2018,"Kitimat R","-","M",NA,"661","-",NA
+"1985","KIT1985",2018,"Kitimat R","-","M",NA,"656","-",NA
+"1986","KIT1986",2018,"Kitimat R","-","J",NA,"490","31",NA
+"1987","KIT1987",2018,"Kitimat R","-","J",NA,"402","2M",NA
+"1988","KIT1988",2018,"Kitimat R","-","J",NA,"325","21",NA
+"1989","KIT1989",2018,"Kitimat R","-","F",NA,"660","41",NA
+"1990","KIT1990",2018,"Kitimat R","-","F",NA,"723","3M",NA
+"1991","KIT1991",2018,"Kitimat R","-","F",NA,"666","41",NA
+"1992","KIT1992",2018,"Kitimat R","-","F",NA,"745","3M",NA
+"1993","KIT1993",2018,"Kitimat R","-","F",NA,"720","51",NA
+"1994","KIT1994",2018,"Kitimat R","-","F",NA,"731","41",NA
+"1995","KIT1995",2018,"Kitimat R","-","F",NA,"691","41",NA
+"1996","KIT1996",2018,"Kitimat R","-","F",NA,"701","-",NA
+"1997","KIT1997",2018,"Kitimat R","-","F",NA,"732","-",NA
+"1998","KIT1998",2018,"Kitimat R","-","F",NA,"696","41",NA
+"1999","KIT1999",2018,"Kitimat R","-","F",NA,"692","41",NA
+"2000","KIT2000",2018,"Kitimat R","-","F",NA,"741","41",NA
+"2001","KIT2001",2018,"Kitimat R","-","F",NA,"683","41",NA
+"2002","KIT2002",2018,"Kitimat R","-","F",NA,"702","41",NA
+"2003","KIT2003",2018,"Kitimat R","-","F",NA,"630","41",NA
+"2004","KIT2004",2018,"Kitimat R","-","F",NA,"734","3M",NA
+"2005","KIT2005",2018,"Kitimat R","-","F",NA,"719","51",NA
+"2006","KIT2006",2018,"Kitimat R","-","F",NA,"680","41",NA
+"2007","KIT2007",2018,"Kitimat R","-","F",NA,"724","41",NA
+"2008","KIT2008",2018,"Kitimat R","-","F",NA,"688","41",NA
+"2009","KIT2009",2018,"Kitimat R","-","F",NA,"701","3M",NA
+"2010","KIT2010",2018,"Kitimat R","-","F",NA,"707","41",NA
+"2011","KIT2011",2018,"Kitimat R","-","F",NA,"650","41",NA
+"2012","KIT2012",2018,"Kitimat R","-","F",NA,"735","3M",NA
+"2013","KIT2013",2018,"Kitimat R","-","F",NA,"690","41",NA
+"2014","KIT2014",2018,"Kitimat R","-","F",NA,"672","41",NA
+"2015","KIT2015",2018,"Kitimat R","-","F",NA,"721","51",NA
+"2016","KIT2016",2018,"Kitimat R","-","F",NA,"671","3M",NA
+"2017","KIT2017",2018,"Kitimat R","-","F",NA,"614","3M",NA
+"2018","KIT2018",2018,"Kitimat R","-","F",NA,"637","41",NA
+"2019","KIT2019",2018,"Kitimat R","-","F",NA,"647","3M",NA
+"2020","KIT2020",2018,"Kitimat R","NTD","F",NA,"656","3M",NA
+"2021","KIT2021",2018,"Kitimat R","183297","M",NA,"541","31",NA
+"2022","KIT2022",2018,"Kitimat R","183664","F",NA,"680","41",NA
+"2023","KIT2023",2018,"Kitimat R","183664","F",NA,"657","41",NA
+"2024","KIT2024",2018,"Kitimat R","183665","F",NA,"667","41",NA
+"2025","KIT2025",2018,"Kitimat R","183666","F",NA,"612","41",NA
+"2026","KIT2026",2018,"Kitimat R","183690","M",NA,"547","31",NA
+"2027","KIT2027",2018,"Kitimat R","-","M",NA,"516","31",NA
+"2028","KIT2028",2018,"Kitimat R","-","M",NA,"653","41",NA
+"2029","KIT2029",2018,"Kitimat R","-","M",NA,"660","51",NA
+"2030","KIT2030",2018,"Kitimat R","-","M",NA,"603","31",NA
+"2031","KIT2031",2018,"Kitimat R","-","M",NA,"637","41",NA
+"2032","KIT2032",2018,"Kitimat R","-","M",NA,"525","31",NA
+"2033","KIT2033",2018,"Kitimat R","-","M",NA,"556","31",NA
+"2034","KIT2034",2018,"Kitimat R","-","M",NA,"632","41",NA
+"2035","KIT2035",2018,"Kitimat R","-","M",NA,"564","31",NA
+"2036","KIT2036",2018,"Kitimat R","-","M",NA,"550","3M",NA
+"2037","KIT2037",2018,"Kitimat R","-","M",NA,"555","31",NA
+"2038","KIT2038",2018,"Kitimat R","-","M",NA,"559","31",NA
+"2039","KIT2039",2018,"Kitimat R","-","M",NA,"625","31",NA
+"2040","KIT2040",2018,"Kitimat R","-","M",NA,"667","41",NA
+"2041","KIT2041",2018,"Kitimat R","-","M",NA,"773","3M",NA
+"2042","KIT2042",2018,"Kitimat R","-","M",NA,"772","41",NA
+"2043","KIT2043",2018,"Kitimat R","-","M",NA,"774","41",NA
+"2044","KIT2044",2018,"Kitimat R","-","M",NA,"668","3M",NA
+"2045","KIT2045",2018,"Kitimat R","-","M",NA,"669","31",NA
+"2046","KIT2046",2018,"Kitimat R","-","M",NA,"770","41",NA
+"2047","KIT2047",2018,"Kitimat R","-","M",NA,"772","41",NA
+"2048","KIT2048",2018,"Kitimat R","-","M",NA,"773","41",NA
+"2049","KIT2049",2018,"Kitimat R","-","M",NA,"701","31",NA
+"2050","KIT2050",2018,"Kitimat R","-","M",NA,"700","41",NA
+"2051","KIT2051",2018,"Kitimat R","-","M",NA,"667","31",NA
+"2052","KIT2052",2018,"Kitimat R","-","J",NA,"495","31",NA
+"2053","KIT2053",2018,"Kitimat R","-","F",NA,"703","4M",NA
+"2054","KIT2054",2018,"Kitimat R","-","F",NA,"755","4M",NA
+"2055","KIT2055",2018,"Kitimat R","-","F",NA,"664","41",NA
+"2056","KIT2056",2018,"Kitimat R","-","F",NA,"699","2M",NA
+"2057","KIT2057",2018,"Kitimat R","-","F",NA,"734","4M",NA
+"2058","KIT2058",2018,"Kitimat R","-","F",NA,"631","41",NA
+"2059","KIT2059",2018,"Kitimat R","NTD","M",NA,"666","41",NA
+"2060","KIT2060",2018,"Kitimat R","-","J",NA,"355","21",NA
+"2061","KIT2061",2018,"Kitimat R","183297","M",NA,"545","2M",NA
+"2062","KIT2062",2018,"Kitimat R","183297","M",NA,"606","2M",NA
+"2063","KIT2063",2018,"Kitimat R","183664","F",NA,"629","41",NA
+"2064","KIT2064",2018,"Kitimat R","183665","F",NA,NA,"-",NA
+"2065","KIT2065",2018,"Kitimat R","183665","F",NA,"659","41",NA
+"2066","KIT2066",2018,"Kitimat R","183665","F",NA,"682","51",NA
+"2067","KIT2067",2018,"Kitimat R","183666","M",NA,"650","41",NA
+"2068","KIT2068",2018,"Kitimat R","183666","F",NA,"681","41",NA
+"2069","KIT2069",2018,"Kitimat R","183667","F",NA,"684","41",NA
+"2070","KIT2070",2018,"Kitimat R","-","M",NA,"587","31",NA
+"2071","KIT2071",2018,"Kitimat R","-","M",NA,"545","31",NA
+"2072","KIT2072",2018,"Kitimat R","-","M",NA,"529","21",NA
+"2073","KIT2073",2018,"Kitimat R","-","M",NA,"515","1M",NA
+"2074","KIT2074",2018,"Kitimat R","-","M",NA,"548","31",NA
+"2075","KIT2075",2018,"Kitimat R","-","M",NA,"504","31",NA
+"2076","KIT2076",2018,"Kitimat R","-","M",NA,"610","31",NA
+"2077","KIT2077",2018,"Kitimat R","-","M",NA,"746","41",NA
+"2078","KIT2078",2018,"Kitimat R","-","M",NA,"795","41",NA
+"2079","KIT2079",2018,"Kitimat R","-","M",NA,"780","41",NA
+"2080","KIT2080",2018,"Kitimat R","-","F",NA,"844","51",NA
+"2081","KIT2081",2018,"Kitimat R","-","F",NA,"663","41",NA
+"2082","KIT2082",2018,"Kitimat R","-","F",NA,"674","41",NA
+"2083","KIT2083",2018,"Kitimat R","-","F",NA,"680","41",NA
+"2084","KIT2084",2018,"Kitimat R","-","F",NA,"676","41",NA
+"2085","KIT2085",2018,"Kitimat R","-","F",NA,"760","51",NA
+"2086","KIT2086",2018,"Kitimat R","-","F",NA,"641","41",NA
+"2087","KIT2087",2018,"Kitimat R","-","F",NA,"684","41",NA
+"2088","KIT2088",2018,"Kitimat R","-","F",NA,"720","41",NA
+"2089","KIT2089",2018,"Kitimat R","-","F",NA,"681","3M",NA
+"2090","KIT2090",2018,"Kitimat R","NTD","M",NA,"553","31",NA
+"2091","KIT2091",2018,"Kitimat R","183297","F",NA,"626","-",NA
+"2092","KIT2092",2018,"Kitimat R","183297","M",NA,"552","-",NA
+"2093","KIT2093",2018,"Kitimat R","183297","M",NA,"551","31",NA
+"2094","KIT2094",2018,"Kitimat R","183297","M",NA,"540","31",NA
+"2095","KIT2095",2018,"Kitimat R","183665","F",NA,"745","-",NA
+"2096","KIT2096",2018,"Kitimat R","183666","F",NA,"732","-",NA
+"2097","KIT2097",2018,"Kitimat R","183690","M",NA,"541","-",NA
+"2098","KIT2098",2018,"Kitimat R","-","M",NA,"600","31",NA
+"2099","KIT2099",2018,"Kitimat R","-","M",NA,"616","31",NA
+"2100","KIT2100",2018,"Kitimat R","-","M",NA,"605","2M",NA
+"2101","KIT2101",2018,"Kitimat R","-","M",NA,"582","31",NA
+"2102","KIT2102",2018,"Kitimat R","-","M",NA,"630","41",NA
+"2103","KIT2103",2018,"Kitimat R","-","M",NA,"598","31",NA
+"2104","KIT2104",2018,"Kitimat R","-","F",NA,"670","41",NA
+"2105","KIT2105",2018,"Kitimat R","-","F",NA,"690","41",NA
+"2106","KIT2106",2018,"Kitimat R","-","F",NA,"704","3M",NA
+"2107","KIT2107",2018,"Kitimat R","-","F",NA,"742","51",NA
+"2108","KIT2108",2018,"Kitimat R","-","F",NA,"710","41",NA
+"2109","KIT2109",2018,"Kitimat R","-","F",NA,"707","41",NA
+"2110","KIT2110",2018,"Kitimat R","183297","M",NA,"507","31",NA
+"2111","KIT2111",2018,"Kitimat R","183297","M",NA,"525","31",NA
+"2112","KIT2112",2018,"Kitimat R","183664","M",NA,"610","31",NA
+"2113","KIT2113",2018,"Kitimat R","183664","M",NA,"609","41",NA
+"2114","KIT2114",2018,"Kitimat R","183665","F",NA,"714","41",NA
+"2115","KIT2115",2018,"Kitimat R","183690","M",NA,"513","-",NA
+"2116","KIT2116",2018,"Kitimat R","-","M",NA,"530","2M",NA
+"2117","KIT2117",2018,"Kitimat R","-","M",NA,"598","31",NA
+"2118","KIT2118",2018,"Kitimat R","-","M",NA,"540","31",NA
+"2119","KIT2119",2018,"Kitimat R","-","M",NA,"609","31",NA
+"2120","KIT2120",2018,"Kitimat R","-","F",NA,"734","51",NA
+"2121","KIT2121",2018,"Kitimat R","-","F",NA,"654","41",NA
+"2122","KIT2122",2018,"Kitimat R","-","F",NA,"672","41",NA
+"2123","KIT2123",2018,"Kitimat R","183664","M",NA,"657","-",NA
+"2124","KIT2124",2018,"Kitimat R","183664","F",NA,"675","-",NA
+"2125","KIT2125",2018,"Kitimat R","183665","F",NA,"650","-",NA
+"2126","KIT2126",2018,"Kitimat R","183665","M",NA,"685","-",NA
+"2127","KIT2127",2018,"Kitimat R","183297","M",NA,"526","-",NA
+"2128","KIT2128",2018,"Kitimat R","183297","M",NA,"531","-",NA
+"2129","KIT2129",2018,"Kitimat R","183297","M",NA,"541","-",NA
+"2130","KIT2130",2018,"Kitimat R","183297","M",NA,"505","-",NA
+"2131","KIT2131",2018,"Kitimat R","183665","F",NA,"610","-",NA
+"2132","KIT2132",2018,"Kitimat R","183666","F",NA,"681","-",NA
+"2133","KIT2133",2018,"Kitimat R","183667","F",NA,"612","-",NA
+"2134","KIT2134",2018,"Kitimat R","183690","M",NA,"554","-",NA
+"2135","KIT2135",2018,"Kitimat R","NTD","F",NA,"700","-",NA
+"2136","KIT2136",2019,"Kitimat R","-","J",NA,"430","21",NA
+"2137","KIT2137",2019,"Kitimat R","184773","J",NA,"435","21",NA
+"2138","KIT2138",2019,"Kitimat R","183085","M",NA,"565","31",NA
+"2139","KIT2139",2019,"Kitimat R","183587","M",NA,"536","31",NA
+"2140","KIT2140",2019,"Kitimat R","184772","J",NA,"423","21",NA
+"2141","KIT2141",2019,"Kitimat R","184476","M",NA,"496","21",NA
+"2142","KIT2142",2019,"Kitimat R","184188","M",NA,"509","31",NA
+"2143","KIT2143",2019,"Kitimat R","185266","J",NA,"399","21",NA
+"2144","KIT2144",2019,"Kitimat R","183084","J",NA,"498","21",NA
+"2145","KIT2145",2019,"Kitimat R","184476","J",NA,"445","21",NA
+"2146","KIT2146",2019,"Kitimat R","184773","J",NA,"416","21",NA
+"2147","KIT2147",2019,"Kitimat R","184476","J",NA,"403","21",NA
+"2148","KIT2148",2019,"Kitimat R","184772","J",NA,"443","21",NA
+"2149","KIT2149",2019,"Kitimat R","184772","J",NA,"386","21",NA
+"2150","KIT2150",2019,"Kitimat R","185266","J",NA,"393","21",NA
+"2151","KIT2151",2019,"Kitimat R","184188","M",NA,"504","31",NA
+"2152","KIT2152",2019,"Kitimat R","184188","M",NA,"545","31",NA
+"2153","KIT2153",2019,"Kitimat R","184772","J",NA,"418","21",NA
+"2154","KIT2154",2019,"Kitimat R","184772","M",NA,"462","21",NA
+"2155","KIT2155",2019,"Kitimat R","184773","J",NA,"371","21",NA
+"2156","KIT2156",2019,"Kitimat R","183690","M",NA,"760","41",NA
+"2157","KIT2157",2019,"Kitimat R","183690","F",NA,"720","41",NA
+"2158","KIT2158",2019,"Kitimat R","183690","F",NA,"690","41",NA
+"2159","KIT2159",2019,"Kitimat R","184773","J",NA,"390","21",NA
+"2160","KIT2160",2019,"Kitimat R","-","M",NA,"680","41",NA
+"2161","KIT2161",2019,"Kitimat R","-","M",NA,"716","41",NA
+"2162","KIT2162",2019,"Kitimat R","-","M",NA,"816","51",NA
+"2163","KIT2163",2019,"Kitimat R","-","F",NA,"806","51",NA
+"2164","KIT2164",2019,"Kitimat R","-","F",NA,"740","41",NA
+"2165","KIT2165",2019,"Kitimat R","183084","J",NA,"495","31",NA
+"2166","KIT2166",2019,"Kitimat R","183084","M",NA,"546","31",NA
+"2167","KIT2167",2019,"Kitimat R","183690","F",NA,"695","41",NA
+"2168","KIT2168",2019,"Kitimat R","183690","M",NA,"709","-",NA
+"2169","KIT2169",2019,"Kitimat R","-","F",NA,"793","41",NA
+"2170","KIT2170",2019,"Kitimat R","-","F",NA,"697","41",NA
+"2171","KIT2171",2019,"Kitimat R","-","F",NA,"726","41",NA
+"2172","KIT2172",2019,"Kitimat R","-","F",NA,"728","41",NA
+"2173","KIT2173",2019,"Kitimat R","-","F",NA,"734","41",NA
+"2174","KIT2174",2019,"Kitimat R","-","F",NA,"780","41",NA
+"2175","KIT2175",2019,"Kitimat R","-","F",NA,"720","41",NA
+"2176","KIT2176",2019,"Kitimat R","-","M",NA,"627","3m",NA
+"2177","KIT2177",2019,"Kitimat R","-","M",NA,"667","3m",NA
+"2178","KIT2178",2019,"Kitimat R","-","M",NA,"668","41",NA
+"2179","KIT2179",2019,"Kitimat R","-","M",NA,"699","41",NA
+"2180","KIT2180",2019,"Kitimat R","-","M",NA,"742","3m",NA
+"2181","KIT2181",2019,"Kitimat R","-","M",NA,"606","31",NA
+"2182","KIT2182",2019,"Kitimat R","184772","M",NA,"457","21",NA
+"2183","KIT2183",2019,"Kitimat R","185266","J",NA,"445","21",NA
+"2184","KIT2184",2019,"Kitimat R","185266","J",NA,"403","21",NA
+"2185","KIT2185",2019,"Kitimat R","183664","M",NA,"798","4M",NA
+"2186","KIT2186",2019,"Kitimat R","185266","J",NA,"382","21",NA
+"2187","KIT2187",2019,"Kitimat R","-","F",NA,"729","41",NA
+"2188","KIT2188",2019,"Kitimat R","-","F",NA,"779","52",NA
+"2189","KIT2189",2019,"Kitimat R","-","F",NA,"702","52",NA
+"2190","KIT2190",2019,"Kitimat R","-","F",NA,"773","41",NA
+"2191","KIT2191",2019,"Kitimat R","-","F",NA,"706","41",NA
+"2192","KIT2192",2019,"Kitimat R","-","F",NA,"708","41",NA
+"2193","KIT2193",2019,"Kitimat R","-","F",NA,"685","41",NA
+"2194","KIT2194",2019,"Kitimat R","-","M",NA,"621","41",NA
+"2195","KIT2195",2019,"Kitimat R","-","M",NA,"650","31",NA
+"2196","KIT2196",2019,"Kitimat R","-","M",NA,"508","31",NA
+"2197","KIT2197",2019,"Kitimat R","-","M",NA,"641","2M",NA
+"2198","KIT2198",2019,"Kitimat R","-","M",NA,"535","31",NA
+"2199","KIT2199",2019,"Kitimat R","-","M",NA,"632","52",NA
+"2200","KIT2200",2019,"Kitimat R","-","M",NA,"756","41",NA
+"2201","KIT2201",2019,"Kitimat R","-","M",NA,"749","31",NA
+"2202","KIT2202",2019,"Kitimat R","NTD","F",NA,"750","41",NA
+"2203","KIT2203",2019,"Kitimat R","184773","J",NA,"348","21",NA
+"2204","KIT2204",2019,"Kitimat R","184773","J",NA,"402","21",NA
+"2205","KIT2205",2019,"Kitimat R","183084","M",NA,"597","31",NA
+"2206","KIT2206",2019,"Kitimat R","183084","M",NA,"528","31",NA
+"2207","KIT2207",2019,"Kitimat R","183297","M",NA,"747","41",NA
+"2208","KIT2208",2019,"Kitimat R","184188","M",NA,"545","31",NA
+"2209","KIT2209",2019,"Kitimat R","-","F",NA,"699","41",NA
+"2210","KIT2210",2019,"Kitimat R","-","F",NA,"742","41",NA
+"2211","KIT2211",2019,"Kitimat R","-","F",NA,"744","41",NA
+"2212","KIT2212",2019,"Kitimat R","-","F",NA,"731","41",NA
+"2213","KIT2213",2019,"Kitimat R","-","F",NA,"696","31",NA
+"2214","KIT2214",2019,"Kitimat R","-","F",NA,"666","41",NA
+"2215","KIT2215",2019,"Kitimat R","-","F",NA,"719","41",NA
+"2216","KIT2216",2019,"Kitimat R","-","F",NA,"778","52",NA
+"2217","KIT2217",2019,"Kitimat R","-","F",NA,"753","41",NA
+"2218","KIT2218",2019,"Kitimat R","-","M",NA,"693","3M",NA
+"2219","KIT2219",2019,"Kitimat R","-","M",NA,"517","31",NA
+"2220","KIT2220",2019,"Kitimat R","-","M",NA,"434","21",NA
+"2221","KIT2221",2019,"Kitimat R","-","M",NA,"725","41",NA
+"2222","KIT2222",2019,"Kitimat R","-","M",NA,"634","41",NA
+"2223","KIT2223",2019,"Kitimat R","-","M",NA,"698","3M",NA
+"2224","KIT2224",2019,"Kitimat R","184772","J",NA,"391","-",NA
+"2225","KIT2225",2019,"Kitimat R","NTD","J",NA,"431","21",NA
+"2226","KIT2226",2019,"Kitimat R","183297","F",NA,"690","-",NA
+"2227","KIT2227",2019,"Kitimat R","184772","J",NA,"435","21",NA
+"2228","KIT2228",2019,"Kitimat R","184772","J",NA,"414","21",NA
+"2229","KIT2229",2019,"Kitimat R","184773","J",NA,"406","1M",NA
+"2230","KIT2230",2019,"Kitimat R","-","F",NA,"709","3M",NA
+"2231","KIT2231",2019,"Kitimat R","-","F",NA,"710","42",NA
+"2232","KIT2232",2019,"Kitimat R","-","F",NA,"699","3M",NA
+"2233","KIT2233",2019,"Kitimat R","-","F",NA,"703","3M",NA
+"2234","KIT2234",2019,"Kitimat R","-","F",NA,"666","3M",NA
+"2235","KIT2235",2019,"Kitimat R","-","F",NA,"739","-",NA
+"2236","KIT2236",2019,"Kitimat R","-","M",NA,"694","41",NA
+"2237","KIT2237",2019,"Kitimat R","-","M",NA,"611","2M",NA
+"2238","KIT2238",2019,"Kitimat R","-","M",NA,"590","3M",NA
+"2239","KIT2239",2019,"Kitimat R","-","M",NA,"612","31",NA
+"2240","KIT2240",2019,"Kitimat R","-","M",NA,"517","31",NA
+"2241","KIT2241",2019,"Kitimat R","-","M",NA,"747","3M",NA
+"2242","KIT2242",2019,"Kitimat R","-","M",NA,"680","3M",NA
+"2243","KIT2243",2019,"Kitimat R","184188","M",NA,"550","31",NA
+"2244","KIT2244",2019,"Kitimat R","183297","F",NA,"758","3M",NA
+"2245","KIT2245",2019,"Kitimat R","183297","F",NA,"758","41",NA
+"2246","KIT2246",2019,"Kitimat R","183297","F",NA,"738","41",NA
+"2247","KIT2247",2019,"Kitimat R","183297","M",NA,"677","41",NA
+"2248","KIT2248",2019,"Kitimat R","183690","F",NA,"725","41",NA
+"2249","KIT2249",2019,"Kitimat R","183690","F",NA,"689","41",NA
+"2250","KIT2250",2019,"Kitimat R","183690","M",NA,"683","3M",NA
+"2251","KIT2251",2019,"Kitimat R","-","F",NA,"757","41",NA
+"2252","KIT2252",2019,"Kitimat R","-","F",NA,"811","51",NA
+"2253","KIT2253",2019,"Kitimat R","-","F",NA,"665","41",NA
+"2254","KIT2254",2019,"Kitimat R","-","F",NA,"763","3M",NA
+"2255","KIT2255",2019,"Kitimat R","-","F",NA,"809","41",NA
+"2256","KIT2256",2019,"Kitimat R","-","F",NA,"695","41",NA
+"2257","KIT2257",2019,"Kitimat R","-","F",NA,"798","52",NA
+"2258","KIT2258",2019,"Kitimat R","-","F",NA,"763","52",NA
+"2259","KIT2259",2019,"Kitimat R","-","F",NA,"748","41",NA
+"2260","KIT2260",2019,"Kitimat R","-","J",NA,"419","21",NA
+"2261","KIT2261",2019,"Kitimat R","-","M",NA,"622","2M",NA
+"2262","KIT2262",2019,"Kitimat R","-","M",NA,"613","2M",NA
+"2263","KIT2263",2019,"Kitimat R","-","M",NA,"825","31",NA
+"2264","KIT2264",2019,"Kitimat R","-","M",NA,"798","3M",NA
+"2265","KIT2265",2019,"Kitimat R","-","M",NA,"551","31",NA
+"2266","KIT2266",2019,"Kitimat R","-","M",NA,"734","31",NA
+"2267","KIT2267",2019,"Kitimat R","-","M",NA,"760","3M",NA
+"2268","KIT2268",2019,"Kitimat R","-","M",NA,"541","31",NA
+"2269","KIT2269",2019,"Kitimat R","184188","M",NA,"535","-",NA
+"2270","KIT2270",2019,"Kitimat R","183084","M",NA,"558","-",NA
+"2271","KIT2271",2019,"Kitimat R","183297","F",NA,"732","-",NA
+"2272","KIT2272",2019,"Kitimat R","183297","F",NA,"712","-",NA
+"2273","KIT2273",2019,"Kitimat R","183297","M",NA,"535","-",NA
+"2274","KIT2274",2019,"Kitimat R","183587","M",NA,"591","-",NA
+"2275","KIT2275",2019,"Kitimat R","183666","F",NA,"754","-",NA
+"2276","KIT2276",2019,"Kitimat R","183690","F",NA,"685","-",NA
+"2277","KIT2277",2019,"Kitimat R","183690","F",NA,"711","-",NA
+"2278","KIT2278",2019,"Kitimat R","184188","M",NA,"528","-",NA
+"2279","KIT2279",2019,"Kitimat R","184476","J",NA,"446","-",NA
+"2280","KIT2280",2019,"Kitimat R","184773","J",NA,"452","-",NA
+"2281","KIT2281",2019,"Kitimat R","-","F",NA,"700","3M",NA
+"2282","KIT2282",2019,"Kitimat R","-","F",NA,"747","3M",NA
+"2283","KIT2283",2019,"Kitimat R","-","F",NA,"747","41",NA
+"2284","KIT2284",2019,"Kitimat R","-","F",NA,"720","41",NA
+"2285","KIT2285",2019,"Kitimat R","-","F",NA,"700","41",NA
+"2286","KIT2286",2019,"Kitimat R","-","F",NA,"765","41",NA
+"2287","KIT2287",2019,"Kitimat R","-","F",NA,"776","52",NA
+"2288","KIT2288",2019,"Kitimat R","-","F",NA,"646","3M",NA
+"2289","KIT2289",2019,"Kitimat R","-","F",NA,"707","41",NA
+"2290","KIT2290",2019,"Kitimat R","-","F",NA,"707","51",NA
+"2291","KIT2291",2019,"Kitimat R","-","F",NA,"680","41",NA
+"2292","KIT2292",2019,"Kitimat R","-","F",NA,"764","41",NA
+"2293","KIT2293",2019,"Kitimat R","-","F",NA,"716","41",NA
+"2294","KIT2294",2019,"Kitimat R","-","F",NA,"702","41",NA
+"2295","KIT2295",2019,"Kitimat R","-","F",NA,"722","51",NA
+"2296","KIT2296",2019,"Kitimat R","-","F",NA,"666","3M",NA
+"2297","KIT2297",2019,"Kitimat R","-","F",NA,"730","41",NA
+"2298","KIT2298",2019,"Kitimat R","-","F",NA,"734","51",NA
+"2299","KIT2299",2019,"Kitimat R","-","F",NA,"767","41",NA
+"2300","KIT2300",2019,"Kitimat R","-","F",NA,"750","4M",NA
+"2301","KIT2301",2019,"Kitimat R","-","F",NA,"695","3M",NA
+"2302","KIT2302",2019,"Kitimat R","-","F",NA,"700","41",NA
+"2303","KIT2303",2019,"Kitimat R","-","F",NA,"705","51",NA
+"2304","KIT2304",2019,"Kitimat R","-","F",NA,"650","41",NA
+"2305","KIT2305",2019,"Kitimat R","-","F",NA,"678","41",NA
+"2306","KIT2306",2019,"Kitimat R","-","F",NA,"710","51",NA
+"2307","KIT2307",2019,"Kitimat R","-","F",NA,"690","3M",NA
+"2308","KIT2308",2019,"Kitimat R","-","F",NA,"745","51",NA
+"2309","KIT2309",2019,"Kitimat R","-","F",NA,"712","31",NA
+"2310","KIT2310",2019,"Kitimat R","-","F",NA,"704","41",NA
+"2311","KIT2311",2019,"Kitimat R","-","F",NA,"704","41",NA
+"2312","KIT2312",2019,"Kitimat R","-","F",NA,"736","42",NA
+"2313","KIT2313",2019,"Kitimat R","-","F",NA,"735","3M",NA
+"2314","KIT2314",2019,"Kitimat R","-","F",NA,"695","41",NA
+"2315","KIT2315",2019,"Kitimat R","-","F",NA,"674","41",NA
+"2316","KIT2316",2019,"Kitimat R","-","F",NA,"717","41",NA
+"2317","KIT2317",2019,"Kitimat R","-","F",NA,"770","41",NA
+"2318","KIT2318",2019,"Kitimat R","-","F",NA,"755","41",NA
+"2319","KIT2319",2019,"Kitimat R","-","F",NA,"695","41",NA
+"2320","KIT2320",2019,"Kitimat R","-","F",NA,"725","41",NA
+"2321","KIT2321",2019,"Kitimat R","-","J",NA,"485","31",NA
+"2322","KIT2322",2019,"Kitimat R","-","M",NA,"570","31",NA
+"2323","KIT2323",2019,"Kitimat R","-","M",NA,"530","31",NA
+"2324","KIT2324",2019,"Kitimat R","-","M",NA,"550","31",NA
+"2325","KIT2325",2019,"Kitimat R","-","M",NA,"723","31",NA
+"2326","KIT2326",2019,"Kitimat R","-","M",NA,"587","31",NA
+"2327","KIT2327",2019,"Kitimat R","-","M",NA,"547","31",NA
+"2328","KIT2328",2019,"Kitimat R","-","M",NA,"535","2M",NA
+"2329","KIT2329",2019,"Kitimat R","-","J",NA,"460","31",NA
+"2330","KIT2330",2019,"Kitimat R","-","M",NA,"680","41",NA
+"2331","KIT2331",2019,"Kitimat R","-","M",NA,"680","41",NA
+"2332","KIT2332",2019,"Kitimat R","-","M",NA,"537","31",NA
+"2333","KIT2333",2019,"Kitimat R","-","M",NA,"522","31",NA
+"2334","KIT2334",2019,"Kitimat R","-","J",NA,"484","31",NA
+"2335","KIT2335",2019,"Kitimat R","-","M",NA,"595","31",NA
+"2336","KIT2336",2019,"Kitimat R","-","M",NA,"663","41",NA
+"2337","KIT2337",2019,"Kitimat R","-","M",NA,"570","31",NA
+"2338","KIT2338",2019,"Kitimat R","-","J",NA,"490","31",NA
+"2339","KIT2339",2019,"Kitimat R","-","M",NA,"605","-",NA
+"2340","KIT2340",2019,"Kitimat R","-","M",NA,"552","31",NA
+"2341","KIT2341",2019,"Kitimat R","-","M",NA,"637","41",NA
+"2342","KIT2342",2019,"Kitimat R","-","M",NA,"526","2M",NA
+"2343","KIT2343",2019,"Kitimat R","-","M",NA,"626","3M",NA
+"2344","KIT2344",2019,"Kitimat R","-","M",NA,"663","41",NA
+"2345","KIT2345",2019,"Kitimat R","-","M",NA,"549","31",NA
+"2346","KIT2346",2019,"Kitimat R","-","M",NA,"565","2M",NA
+"2347","KIT2347",2019,"Kitimat R","-","M",NA,"530","2M",NA
+"2348","KIT2348",2019,"Kitimat R","-","M",NA,"521","31",NA
+"2349","KIT2349",2019,"Kitimat R","-","M",NA,"542","31",NA
+"2350","KIT2350",2019,"Kitimat R","-","M",NA,"582","2M",NA
+"2351","KIT2351",2019,"Kitimat R","-","M",NA,"509","2M",NA
+"2352","KIT2352",2019,"Kitimat R","-","M",NA,"522","31",NA
+"2353","KIT2353",2019,"Kitimat R","-","M",NA,"662","3M",NA
+"2354","KIT2354",2019,"Kitimat R","-","M",NA,"555","2M",NA
+"2355","KIT2355",2019,"Kitimat R","-","M",NA,"553","2M",NA
+"2356","KIT2356",2019,"Kitimat R","-","M",NA,"566","31",NA
+"2357","KIT2357",2019,"Kitimat R","-","M",NA,"519","31",NA
+"2358","KIT2358",2019,"Kitimat R","-","M",NA,"540","31",NA
+"2359","KIT2359",2019,"Kitimat R","-","M",NA,"590","31",NA
+"2360","KIT2360",2019,"Kitimat R","-","M",NA,"512","31",NA
+"2361","KIT2361",2019,"Kitimat R","NTD","M",NA,"664","-",NA
+"2362","KIT2362",2019,"Kitimat R","183297","F",NA,"710","-",NA
+"2363","KIT2363",2019,"Kitimat R","183297","F",NA,"716","-",NA
+"2364","KIT2364",2019,"Kitimat R","183297","F",NA,"693","-",NA
+"2365","KIT2365",2019,"Kitimat R","183297","F",NA,"718","-",NA
+"2366","KIT2366",2019,"Kitimat R","-","F",NA,"641","41",NA
+"2367","KIT2367",2019,"Kitimat R","-","F",NA,"709","41",NA
+"2368","KIT2368",2019,"Kitimat R","-","M",NA,"532","31",NA
+"2369","KIT2369",2019,"Kitimat R","-","M",NA,"517","2M",NA
+"2370","KIT2370",2019,"Kitimat R","-","M",NA,"559","31",NA
+"2371","KIT2371",2019,"Kitimat R","-","M",NA,"513","31",NA
+"2372","KIT2372",2019,"Kitimat R","-","M",NA,"528","31",NA
+"2373","KIT2373",2019,"Kitimat R","-","M",NA,"507","2M",NA
+"2374","KIT2374",2019,"Kitimat R","-","M",NA,"532","2M",NA
+"2375","KIT2375",2019,"Kitimat R","-","M",NA,"536","31",NA
+"2376","KIT2376",2019,"Kitimat R","-","M",NA,"575","31",NA
+"2377","KIT2377",2019,"Kitimat R","-","M",NA,"651","31",NA
+"2378","KIT2378",2019,"Kitimat R","-","M",NA,"538","31",NA
+"2379","KIT2379",2019,"Kitimat R","-","M",NA,"560","2M",NA
+"2380","KIT2380",2019,"Kitimat R","-","M",NA,"558","31",NA
+"2381","KIT2381",2019,"Kitimat R","-","F",NA,"722","51",NA
+"2382","KIT2382",2019,"Kitimat R","-","F",NA,"744","41",NA
+"2383","KIT2383",2019,"Kitimat R","-","F",NA,"809","52",NA
+"2384","KIT2384",2019,"Kitimat R","-","F",NA,"749","41",NA
+"2385","KIT2385",2019,"Kitimat R","-","F",NA,"681","41",NA
+"2386","KIT2386",2019,"Kitimat R","-","F",NA,"744","3M",NA
+"2387","KIT2387",2019,"Kitimat R","-","F",NA,"705","51",NA
+"2388","KIT2388",2019,"Kitimat R","-","F",NA,"759","41",NA
+"2389","KIT2389",2019,"Kitimat R","-","F",NA,"698","41",NA
+"2390","KIT2390",2019,"Kitimat R","-","F",NA,"726","41",NA
+"2391","KIT2391",2019,"Kitimat R","-","F",NA,"681","41",NA
+"2392","KIT2392",2019,"Kitimat R","-","F",NA,"676","41",NA
+"2393","KIT2393",2019,"Kitimat R","-","F",NA,"736","41",NA
+"2394","KIT2394",2019,"Kitimat R","-","F",NA,"701","3M",NA
+"2395","KIT2395",2019,"Kitimat R","-","F",NA,"701","41",NA
+"2396","KIT2396",2019,"Kitimat R","-","F",NA,"751","3M",NA
+"2397","KIT2397",2019,"Kitimat R","183690","F",NA,"730","-",NA
+"2398","KIT2398",2019,"Kitimat R","184188","M",NA,"502","-",NA
+"2399","KIT2399",2019,"Kitimat R","184188","M",NA,"538","-",NA
+"2400","KIT2400",2019,"Kitimat R","-","M",NA,"531","31",NA
+"2401","KIT2401",2019,"Kitimat R","-","M",NA,"537","31",NA
+"2402","KIT2402",2019,"Kitimat R","-","M",NA,"565","31",NA
+"2403","KIT2403",2019,"Kitimat R","-","M",NA,"593","31",NA
+"2404","KIT2404",2019,"Kitimat R","183084","J",NA,"470","-",NA
+"2405","KIT2405",2020,"Kitimat R","183085","M",NA,NA,NA,NA
+"2406","KIT2406",2020,"Kitimat R","185266","M",NA,"517",NA,NA
+"2407","KIT2407",2020,"Kitimat R","184476","M",NA,"506",NA,NA
+"2408","KIT2408",2020,"Kitimat R","184476","M",NA,"579",NA,NA
+"2409","KIT2409",2020,"Kitimat R","184476","M",NA,"552",NA,NA
+"2410","KIT2410",2020,"Kitimat R","184476","M",NA,"563",NA,NA
+"2411","KIT2411",2020,"Kitimat R","185266","M",NA,"595",NA,NA
+"2412","KIT2412",2020,"Kitimat R","184476","M",NA,"514",NA,NA
+"2413","KIT2413",2020,"Kitimat R","184476","M",NA,"503",NA,NA
+"2414","KIT2414",2020,"Kitimat R","184476","M",NA,"525",NA,NA
+"2415","KIT2415",2020,"Kitimat R","184476","M",NA,"542",NA,NA
+"2416","KIT2416",2020,"Kitimat R","184476","M",NA,"554",NA,NA
+"2417","KIT2417",2020,"Kitimat R","184772","M",NA,"594",NA,NA
+"2418","KIT2418",2020,"Kitimat R","184772","M",NA,"579",NA,NA
+"2419","KIT2419",2020,"Kitimat R","184773","M",NA,"558",NA,NA
+"2420","KIT2420",2020,"Kitimat R","184773","M",NA,"575",NA,NA
+"2421","KIT2421",2020,"Kitimat R","185266","M",NA,"564",NA,NA
+"2422","KIT2422",2020,"Kitimat R","185878","J",NA,"312",NA,NA
+"2423","KIT2423",2020,"Kitimat R","184476","M",NA,"503",NA,NA
+"2424","KIT2424",2020,"Kitimat R","184476","M",NA,"527",NA,NA
+"2425","KIT2425",2020,"Kitimat R","184772","M",NA,"527",NA,NA
+"2426","KIT2426",2020,"Kitimat R","184773","M",NA,"590",NA,NA
+"2427","KIT2427",2020,"Kitimat R","184773","M",NA,"569",NA,NA
+"2428","KIT2428",2020,"Kitimat R","184773","J",NA,"494",NA,NA
+"2429","KIT2429",2020,"Kitimat R","185266","M",NA,"572",NA,NA
+"2430","KIT2430",2020,"Kitimat R","184772","M",NA,"590",NA,NA
+"2431","KIT2431",2020,"Kitimat R","184772","M",NA,"515",NA,NA
+"2432","KIT2432",2020,"Kitimat R","183085","M",NA,"627",NA,NA
+"2433","KIT2433",2020,"Kitimat R","184476","M",NA,"570",NA,NA
+"2434","KIT2434",2020,"Kitimat R","184476","J",NA,"498",NA,NA
+"2435","KIT2435",2020,"Kitimat R","184476","M",NA,"535",NA,NA
+"2436","KIT2436",2020,"Kitimat R","184476","M",NA,"566",NA,NA
+"2437","KIT2437",2020,"Kitimat R","184476","M",NA,"522",NA,NA
+"2438","KIT2438",2020,"Kitimat R","184772","M",NA,"588",NA,NA
+"2439","KIT2439",2020,"Kitimat R","184773","M",NA,"510",NA,NA
+"2440","KIT2440",2020,"Kitimat R","184773","M",NA,"558",NA,NA
+"2441","KIT2441",2020,"Kitimat R","185266","M",NA,"576",NA,NA
+"2442","KIT2442",2020,"Kitimat R","NTD","M",NA,"622",NA,NA
+"2443","KIT2443",2020,"Kitimat R","184476","M",NA,"566",NA,NA
+"2444","KIT2444",2020,"Kitimat R","184773","M",NA,"529",NA,NA
+"2445","KIT2445",2020,"Kitimat R","185266","M",NA,"574",NA,NA
+"2446","KIT2446",2020,"Kitimat R","184476","M",NA,"555",NA,NA
+"2447","KIT2447",2020,"Kitimat R","184476","M",NA,"558",NA,NA
+"2448","KIT2448",2020,"Kitimat R","184476","M",NA,"540",NA,NA
+"2449","KIT2449",2020,"Kitimat R","184476","M",NA,"546",NA,NA
+"2450","KIT2450",2020,"Kitimat R","184772","M",NA,"598",NA,NA
+"2451","KIT2451",2020,"Kitimat R","185266","M",NA,"598",NA,NA
+"2452","KIT2452",2020,"Kitimat R","185266","M",NA,"548",NA,NA
+"2453","KIT2453",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2454","KIT2454",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2455","KIT2455",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2456","KIT2456",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2457","KIT2457",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2458","KIT2458",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2459","KIT2459",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2460","KIT2460",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2461","KIT2461",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2462","KIT2462",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2463","KIT2463",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2464","KIT2464",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2465","KIT2465",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2466","KIT2466",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2467","KIT2467",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2468","KIT2468",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2469","KIT2469",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2470","KIT2470",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2471","KIT2471",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2472","KIT2472",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2473","KIT2473",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2474","KIT2474",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2475","KIT2475",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2476","KIT2476",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2477","KIT2477",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2478","KIT2478",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2479","KIT2479",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2480","KIT2480",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2481","KIT2481",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2482","KIT2482",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2483","KIT2483",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2484","KIT2484",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2485","KIT2485",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2486","KIT2486",2020,"Kitimat R","184476","J",NA,"497",NA,NA
+"2487","KIT2487",2020,"Kitimat R","183084","F",NA,"719",NA,NA
+"2488","KIT2488",2020,"Kitimat R","183084","M",NA,"637",NA,NA
+"2489","KIT2489",2020,"Kitimat R","183085","M",NA,"654",NA,NA
+"2490","KIT2490",2020,"Kitimat R","NTD","M",NA,"682",NA,NA
+"2491","KIT2491",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2492","KIT2492",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2493","KIT2493",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2494","KIT2494",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2495","KIT2495",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2496","KIT2496",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2497","KIT2497",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2498","KIT2498",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2499","KIT2499",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2500","KIT2500",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2501","KIT2501",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2502","KIT2502",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2503","KIT2503",2020,"Kitimat R","184476","M",NA,"516",NA,NA
+"2504","KIT2504",2020,"Kitimat R","183084","F",NA,"669",NA,NA
+"2505","KIT2505",2020,"Kitimat R","183587","F",NA,"646",NA,NA
+"2506","KIT2506",2020,"Kitimat R","NTD","J",NA,"473",NA,NA
+"2507","KIT2507",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2508","KIT2508",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2509","KIT2509",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2510","KIT2510",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2511","KIT2511",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2512","KIT2512",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2513","KIT2513",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2514","KIT2514",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2515","KIT2515",2020,"Kitimat R","184476","M",NA,"535",NA,NA
+"2516","KIT2516",2020,"Kitimat R","184476","M",NA,"523",NA,NA
+"2517","KIT2517",2020,"Kitimat R","184772","M",NA,"543",NA,NA
+"2518","KIT2518",2020,"Kitimat R","184772","M",NA,"535",NA,NA
+"2519","KIT2519",2020,"Kitimat R","184773","M",NA,"573",NA,NA
+"2520","KIT2520",2020,"Kitimat R","185266","M",NA,"591",NA,NA
+"2521","KIT2521",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2522","KIT2522",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2523","KIT2523",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2524","KIT2524",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2525","KIT2525",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2526","KIT2526",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2527","KIT2527",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2528","KIT2528",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2529","KIT2529",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2530","KIT2530",2020,"Kitimat R","183084","F",NA,"704",NA,NA
+"2531","KIT2531",2020,"Kitimat R","183085","F",NA,"742",NA,NA
+"2532","KIT2532",2020,"Kitimat R","183587","F",NA,"655",NA,NA
+"2533","KIT2533",2020,"Kitimat R","184476","M",NA,"528",NA,NA
+"2534","KIT2534",2020,"Kitimat R","184772","M",NA,"520",NA,NA
+"2535","KIT2535",2020,"Kitimat R","184772","M",NA,"544",NA,NA
+"2536","KIT2536",2020,"Kitimat R","185266","M",NA,"542",NA,NA
+"2537","KIT2537",2020,"Kitimat R","183084","F",NA,"652",NA,NA
+"2538","KIT2538",2020,"Kitimat R","183085","F",NA,"760",NA,NA
+"2539","KIT2539",2020,"Kitimat R","184476","M",NA,"515",NA,NA
+"2540","KIT2540",2020,"Kitimat R","184476","M",NA,"526",NA,NA
+"2541","KIT2541",2020,"Kitimat R","184476","M",NA,"546",NA,NA
+"2542","KIT2542",2020,"Kitimat R","184772","M",NA,"604",NA,NA
+"2543","KIT2543",2020,"Kitimat R","184773","M",NA,"542",NA,NA
+"2544","KIT2544",2020,"Kitimat R","184773","M",NA,"548",NA,NA
+"2545","KIT2545",2020,"Kitimat R","NTD","M",NA,"583",NA,NA
+"2546","KIT2546",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2547","KIT2547",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2548","KIT2548",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2549","KIT2549",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2550","KIT2550",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2551","KIT2551",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2552","KIT2552",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2553","KIT2553",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2554","KIT2554",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2555","KIT2555",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2556","KIT2556",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2557","KIT2557",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2558","KIT2558",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2559","KIT2559",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2560","KIT2560",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2561","KIT2561",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2562","KIT2562",2020,"Kitimat R","184188","F",NA,"689",NA,NA
+"2563","KIT2563",2020,"Kitimat R","184476","M",NA,"501",NA,NA
+"2564","KIT2564",2020,"Kitimat R","NTD","F",NA,"656",NA,NA
+"2565","KIT2565",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2566","KIT2566",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2567","KIT2567",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2568","KIT2568",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2569","KIT2569",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2570","KIT2570",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2571","KIT2571",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2572","KIT2572",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2573","KIT2573",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2574","KIT2574",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2575","KIT2575",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2576","KIT2576",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2577","KIT2577",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2578","KIT2578",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2579","KIT2579",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2580","KIT2580",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2581","KIT2581",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2582","KIT2582",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2583","KIT2583",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2584","KIT2584",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2585","KIT2585",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2586","KIT2586",2020,"Kitimat R","183587","M",NA,"633",NA,NA
+"2587","KIT2587",2020,"Kitimat R","184188","F",NA,"672",NA,NA
+"2588","KIT2588",2020,"Kitimat R","184188","F",NA,"640",NA,NA
+"2589","KIT2589",2020,"Kitimat R","184188","M",NA,"625",NA,NA
+"2590","KIT2590",2020,"Kitimat R","184188","M",NA,"627",NA,NA
+"2591","KIT2591",2020,"Kitimat R","185266","F",NA,"594",NA,NA
+"2592","KIT2592",2020,"Kitimat R","NTD","F",NA,"643",NA,NA
+"2593","KIT2593",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2594","KIT2594",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2595","KIT2595",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2596","KIT2596",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2597","KIT2597",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2598","KIT2598",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2599","KIT2599",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2600","KIT2600",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2601","KIT2601",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2602","KIT2602",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2603","KIT2603",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2604","KIT2604",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2605","KIT2605",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2606","KIT2606",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2607","KIT2607",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2608","KIT2608",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2609","KIT2609",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2610","KIT2610",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2611","KIT2611",2020,"Kitimat R","183587","F",NA,"744",NA,NA
+"2612","KIT2612",2020,"Kitimat R","184476","F",NA,"578",NA,NA
+"2613","KIT2613",2020,"Kitimat R","184476","M",NA,"521",NA,NA
+"2614","KIT2614",2020,"Kitimat R","184773","F",NA,"614",NA,NA
+"2615","KIT2615",2020,"Kitimat R","NTD","F",NA,"666",NA,NA
+"2616","KIT2616",2020,"Kitimat R","NTD","M",NA,"620",NA,NA
+"2617","KIT2617",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2618","KIT2618",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2619","KIT2619",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2620","KIT2620",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2621","KIT2621",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2622","KIT2622",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2623","KIT2623",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2624","KIT2624",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2625","KIT2625",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2626","KIT2626",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2627","KIT2627",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2628","KIT2628",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2629","KIT2629",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2630","KIT2630",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2631","KIT2631",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2632","KIT2632",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2633","KIT2633",2020,"Kitimat R","184188","F",NA,"726",NA,NA
+"2634","KIT2634",2020,"Kitimat R","184476","J",NA,"452",NA,NA
+"2635","KIT2635",2020,"Kitimat R","184476","M",NA,"543",NA,NA
+"2636","KIT2636",2020,"Kitimat R","184476","F",NA,"613",NA,NA
+"2637","KIT2637",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2638","KIT2638",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2639","KIT2639",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2640","KIT2640",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2641","KIT2641",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2642","KIT2642",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2643","KIT2643",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2644","KIT2644",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2645","KIT2645",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2646","KIT2646",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2647","KIT2647",2020,"Kitimat R","184188","F",NA,"680",NA,NA
+"2648","KIT2648",2020,"Kitimat R","184476","M",NA,"631",NA,NA
+"2649","KIT2649",2020,"Kitimat R","184773","M",NA,"519",NA,NA
+"2650","KIT2650",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2651","KIT2651",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2652","KIT2652",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2653","KIT2653",2020,"Kitimat R","-","F",NA,NA,NA,NA
+"2654","KIT2654",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2655","KIT2655",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2656","KIT2656",2020,"Kitimat R","-","M",NA,NA,NA,NA
+"2657","KIT2657",2020,"Kitimat R","-","M",NA,NA,NA,NA
