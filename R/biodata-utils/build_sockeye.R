@@ -24,15 +24,18 @@ source("data-raw/kokanee.R")
 #' Build the sockeye database using raw data files in the `kokanee` data lake.
 #'
 #' @param db_path Target path for the `sockeye` database.
-#' @param driver_path Path of the database driver.
+#' @param drv The database driver, RSQLite::SQLite used by default. Can be user-
+#'            specified opath to local database driver.
 #'
 #' @returns The `sockeye` database object.
-#'
-#' @examples
+
 build_sockeye <- function(db_path = "data/sockeye/sockeye.db", 
-                          driver_path = SQLite()) {
+                          drv = SQLite(),
+                          driver_class = NULL) {
   
-  sockeye_conn <- dbConnect(driver_path, db_path)
+  sockeye_conn <- connect_sockeye(db_path = db_path,
+                                  drv = drv,
+                                  driver_class = driver_class)
   
   path <- "data/sockeye/KIT_BIODATA.csv"
   kitimat <- read.csv(path)
@@ -61,28 +64,33 @@ build_sockeye <- function(db_path = "data/sockeye/sockeye.db",
 
 #' Connect `sockeye`
 #' 
-#' Connect to the `sockeye` database
+#' Connect to the `sockeye` database. If user specifies driver path and class, 
+#' the function will also load the database driver to be used and create a JDBC
+#' connection string.
 #'
 #' @param db_path Path of the `sockeye` database. Defaults to
 #'                "data/sockeye/sockeye.db".
-#' @param driver_path Path of the database driver. Defaults to
-#'                    "data/sockeye/dbdrivers/sqlite-jdbc-3.27.2.1.jar"
-#' @param driver_class Class of the database driver. Defaults to "org.sqlite.JDBC"
+#' @param drv The database driver. Defaults to using RSQLite::SQLite().
+#' @param driver_class The user-specified class of the database driver.
 #'
 #' @returns Connection to the `sockeye` database.
 #'
 #' @examples
 connect_sockeye <- function(db_path = "data/sockeye/sockeye.db", 
-                            driver_path = "data/sockeye/dbdrivers/sqlite-jdbc-3.27.2.1.jar",
-                            driver_class = "org.sqlite.JDBC") {
+                            drv = SQLite(),
+                            driver_class) {
   
-  # Connect to database ----
-  #' - Specify database driver to be used
-  #' - Create JDBC connection string
-  #' - Connect to database
+  if(class(drv)[1] != "SQLiteDriver") {
+    
+    if(is.null(driver_class)) {
+      stop("'Driver class' must be specified if using a locally-stored database driver.")
+    }
+    
+    drv <- JDBC(driver_class, drv)
+    db_path <- file.path(getwd(), db_path)
+    db_path <- paste0("jdbc:sqlite:", db_path)
+  }
   
-  jdbc_driver <- JDBC(driver_class, driver_path)
-  jdbc_path <- file.path(getwd(), db_path)
-  jdbc_path <- paste0("jdbc:sqlite:", jdbc_path)
-  return(dbConnect(jdbc_driver, jdbc_path))
+  return(dbConnect(drv, db_path))
+  
 }
