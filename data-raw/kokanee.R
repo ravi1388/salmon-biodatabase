@@ -1,27 +1,67 @@
 # Title: Create `kokanee` data object ----
 
-# Load data ----
+source("R/biodata-utils/helpers.R")
+
 
 # Load kokanee data object ----
-load_kokanee <- function() {
-  message("Loading the kokanee data object...")
-  load("./data/kokanee/kokanee.Rdata")
+load_kokanee <- function(kokanee_path = "./data/kokanee/kokanee.Rdata") {
+  
+  if(file.exists(kokanee_path)) {
+    message("Loading the kokanee data object...")
+    load(kokanee_path)
+    
+  } else {
+    
+    input <- readline("The kokanee data object doesn't yet exist, press <Enter> to create it or <Esc> to exit:")
+    
+    # Validate input and execute create_kokanee
+    if(input != "") {
+      message("Invalid input!")
+      load_kokanee()
+    } else create_kokanee()
+    
+  }
 }
+
 
 # Create kokanee data object ----
 create_kokanee <- function(path = "data/kokanee/kokanee.Rdata") {
   
+  # Check if `kokanee` exists
   if(file.exists(path)) {
-    speak <- paste0("The kokanee data object already exists at '", path, "'")
-    stop(speak)
+    input <- readline("The kokanee data object already exists at '", path, "', press <Enter> to overwrite or <Esc> to exit:")
+    
+    # Validate and handle input
+    if(input != "") {
+      message("Invalid input!")
+      create_kokanee()
+    }
   }
+  
+  # Load raw data into `kokanee`
   message("Loading raw data files...")
-  sep_raw <- load_sep_raw()
-  sep_hist_raw <- load_sep_hist_raw()
-  kitimat_raw <- load_kitimat_raw()
-  nechako_raw <- load_nechako_raw()
-  rmis_raw <- load_rmis_raw()
-  save.image(file = path)
+  sep <- load_sep_raw()
+  sep_hist <- load_sep_hist_raw()
+  kitimat <- load_kitimat_raw()
+  nechako <- load_nechako_raw()
+  rmis <- load_rmis_raw()
+  
+  kokanee <- list(sep = sep,
+                  sep_hist = sep_hist,
+                  kitimat = kitimat,
+                  nechako = nechako,
+                  rmis = rmis)
+  
+  # Save `kokanee` as single and separate objects
+  message("> Saving kokanee.Rdata")
+  saveRDS(kokanee, file = path)
+  map2(kokanee, names(kokanee), \(x, y) {
+    z <- paste0(y, ".Rdata")
+    speak("> Saving ", z)
+    dest <- gsub("kokanee.Rdata", z, path)
+    saveRDS(x, dest)
+  })
+  
   message("Successfully created kokanee data object at '", path, "'")
   
 }
@@ -38,14 +78,6 @@ load_sep_meta <- function() {
   load_dat("sep", meta_only = T)
 }
 
-# load_sep_raw <- function() {
-#   dat_dirs <- list.dirs("data")
-#   dat_dirs <- dat_dirs[grepl("sep$", dat_dirs, ignore.case = T) == T]
-#   path <- list.files(dat_dirs)
-#   path <- file.path(dat_dirs, path)
-#   return(purrr::map(path, choose_load, col_types = "text"))
-# }
-
 
 ## SEP Historical ----
 load_sep_hist_raw <- function() {
@@ -53,13 +85,6 @@ load_sep_hist_raw <- function() {
   return(load_dat("sep_historical"))
 }
 
-# load_sep_hist_raw <- function() {
-#   dat_dirs <- list.dirs("data")
-#   dat_dirs <- dat_dirs[grepl("sep_historical$", dat_dirs, ignore.case = T) == T]
-#   path <- list.files(dat_dirs)
-#   path <- file.path(dat_dirs, path)
-#   return(purrr::map(path, choose_load, col_types = "c"))
-# }
 
 ## Kitimat R Hatchery ----
 load_kitimat_raw <- function() {
@@ -68,70 +93,79 @@ load_kitimat_raw <- function() {
   return(load_dat("kitimat"))
 }
 
-# load_kitimat_raw <- function() {
-#   dat_dirs <- list.dirs("data")
-#   dat_dirs <- dat_dirs[grepl("kitimat", dat_dirs, ignore.case = T) == T]
-#   path <- list.files(dat_dirs)
-#   path <- file.path(dat_dirs, path)
-#   return(purrr::map(path, choose_load, col_types = "c"))
-# }
-
 
 ## Neckako River - DFO ----
 load_nechako_raw <- function() {
-  message("> Neckako DFO")
+  message("> Neckako DFO/NFCP")
   return(load_dat("nechako"))
 }
-
-# load_nechako_raw <- function() {
-#   dat_dirs <- list.dirs("data")
-#   dat_dirs <- dat_dirs[grepl("nechako", dat_dirs, ignore.case = T) == T]
-#   path <- list.files(dat_dirs)
-#   path <- file.path(dat_dirs, path)
-#   return(purrr::map(path, choose_load, col_types = "c"))
-# }
 
 
 ## RMIS ----
 load_rmis_raw <- function() {
   message("> RMIS")
-  return(list(rls = load_dat("rls"),
-              rcv = load_dat("rcv"))
-         )
+  
+  # Check to see if object already exists
+  result <- check_object("rmis")
+  if(!isFALSE(result)) {
+    
+    return(result)
+    
+  } else {
+    
+    return(list(rls = load_dat("rls"),
+                rcv = load_dat("rcv"))
+    )
+    
+  }
 }
-
-# dat_dirs <- list.dirs("data")
-# ## Load releases
-# rls <- read.csv("data/kokanee/RMIS/rls_50_21.csv")
-# 
-# ## Load recovery files
-# my_dir <- "data/kokanee/RMIS/rcv/"
-# list.files(my_dir)
-# rcv <- paste0(my_dir, list.files(my_dir)) %>%
-#   map_df(~read_csv(., col_types = paste(c(rep("c", 43)), collapse = "")))
 
 
 # Load data files ----
 load_dat <- function(dataset, meta_only = F) {
-  dat_dirs <- list.dirs("data")
-  dataset <- paste0(dataset, "$")
-  dat_dirs <- dat_dirs[grepl(dataset, dat_dirs, ignore.case = T) == T]
-  path <- list.files(dat_dirs)
-  path <- file.path(dat_dirs, path)
   
-  if(meta_only == T) {
-    warning("Loading metadata only! Specify `meta_only = F` to load raw data as well.")
-    path <- path[grepl("metadata", path, ignore.case = T)]
+  # Check to see if object already exists
+  result <- check_object(dataset)
+  if(!isFALSE(result)) {
+    
+    return(result) 
+    
+  } else {
+    
+    # Get list of .csv and .xlsx files
+    dat_dirs <- list.dirs("data")
+    dataset <- paste0(dataset, "$")
+    dat_dirs <- dat_dirs[grep(dataset, dat_dirs, ignore.case = T)]
+    path <- list.files(dat_dirs)
+    path <- path[c(grep("csv$", path), grep("xlsx$", path))]
+    path <- file.path(dat_dirs, path)
+    
+    # Handle case where `metdata_only = T`
+    if(meta_only == T) {
+      warning("Loading metadata only! Specify `meta_only = F` to load raw data as well.")
+      path <- path[grepl("metadata", path, ignore.case = T)]
+    }
+    
+    return(purrr::map(path, choose_load))
   }
   
-  return(purrr::map(path, choose_load))
 }
+
+
+# Check if data object exists ----
+check_object <- function(dataset) {
+  obj_path <- file.path("data/kokanee", paste0(dataset, ".Rdata"))
+  if(file.exists(obj_path)) {
+    speak("Data object for ", dataset, " already exists! Loading now...\n")
+    return(readRDS(obj_path))
+  } else return(F)
+}
+
 
 # Choose load function ----
 choose_load <- function(path, ...) {
   
-  speak <- paste0(path, "...")
-  message(speak)
+  speak(path, "...")
   
   if(grepl("csv$", path)) {
     return(readr::read_csv(path, col_types = "c"))
@@ -139,6 +173,6 @@ choose_load <- function(path, ...) {
   if(grepl("xlsx$", path)) {
     return(readxl::read_xlsx(path, col_types = "text"))
   }
-  warning(paste("Not a path to a valid data file:", path))
+  
 }
 

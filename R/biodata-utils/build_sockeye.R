@@ -33,27 +33,42 @@ build_sockeye <- function(db_path = "data/sockeye/sockeye.db",
                           drv = SQLite(),
                           driver_class = NULL) {
   
+  # Check if sockeye exists
+  if(file.exists("data/sockeye/sockeye.db")) {
+    code <- runif(1, min = 1000, max = 9999) |> round()
+    alert <- paste0("The `sockeye` database already exists! or enter to following code to rebuild it ", code, ": \nOtherwise press <Esc> to exit.\n")
+    input <- readline(alert)
+    if(!as.numeric(input) |> suppressWarnings() |> is.na() & length(input) != 4)
+    if(input != code) {
+      message("Invalid entry!")
+      build_sockeye()
+    }
+  } 
+  
+  message("Building sockeye...")
+  
+  # Create the `sockeye` database
   sockeye_conn <- connect_sockeye(db_path = db_path,
                                   drv = drv,
                                   driver_class = driver_class)
-  
+
   path <- "data/sockeye/KIT_BIODATA.csv"
   kitimat <- read.csv(path)
   kitimat_names <- names(kitimat)
-  kitimat_data_types <- modify(as.list(kitimat), \(x) class(x)) |> 
+  kitimat_data_types <- modify(as.list(kitimat), \(x) class(x)) |>
     unlist()
-  
-  
-  
+
+
+
   modify2(kitimat_names, kitimat_data_types, \(x, y) paste0(x, ""))
-  
-  
-  Table1 <- dbExecute(conn, 
+
+
+  Table1 <- dbExecute(conn,
                       "CREATE TABLE Customers (
                                       customer_id INTEGER NOT NULL ,
-                                      country_name VARCHAR(20) NOT NULL,                               
+                                      country_name VARCHAR(20) NOT NULL,
                                       country_code VARCHAR(20) NOT NULL
-                                      )", 
+                                      )",
                       errors=FALSE
   )
   
