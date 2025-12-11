@@ -73,6 +73,11 @@ load_sep_raw <- function() {
   load_dat("sep")
 }
 
+load_sep_raw_truncated <- function() {
+  message("> SEP raw (truncated)")
+  load_dat("sep", truncate = T)
+}
+
 load_sep_meta <- function() {
   message("> SEP meta")
   load_dat("sep", meta_only = T)
@@ -122,7 +127,11 @@ load_rmis_raw <- function() {
 
 
 # Load data files ----
-load_dat <- function(dataset, meta_only = F) {
+load_dat <- function(dataset, meta_only = F, truncate = F) {
+  
+  # Argument checking
+  if(!is.logical(meta_only)) stop("Invalid entry for 'meta_only', must be logical (T/F).")
+  if(!is.logical(truncate)) stop("Invalid entry for 'truncate', must be logical (T/F).")
   
   # Check to see if object already exists
   result <- check_object(dataset)

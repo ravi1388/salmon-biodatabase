@@ -4,10 +4,10 @@
 
 # Description ----
 #' This script contains code used to:
-#' 1) Clean and standardize variables in raw data for KITIMAT_CN_1 and
-#'    KITIMAT_CN_2.
-#' 2) Create a new table KITIMAT_BIODATA, to be stored in the `sockeye` data 
-#'    object.
+#' 1) Run QAQC functions to determine what standardization is required for raw
+#'    data.
+#' 2) Run the required functions to standardize like variables in raw data.
+#' 3) Add standardized data to `sockeye` biodatabase.
 
 # Packages ----
 library(tidyr)
@@ -18,7 +18,7 @@ library(purrr)
 library(janitor)
 library(lubridate)
 
-source("R/kokanee/kokanee.R")
+source("data-raw/kokanee.R")
 source("R/biodata-utils/helpers.R")
 
 # Load data ----
@@ -26,6 +26,17 @@ source("R/biodata-utils/helpers.R")
 
 kit_work <- load_kitimat_raw() |> 
   map(clean_names)
+
+# Data QAQC ----
+#' First run functions that check to see what type of standardization new
+#' dataset(s) need(s) before they are compiled and/or added to the `sockeye` 
+#' biodatabase:
+#' - Consistency in column names among like columns
+#' - Consistency in data types among like columns
+
+## Column names
+
+
 
 # Data cleaning ----
 ## Standardize column names
