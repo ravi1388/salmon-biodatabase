@@ -1,4 +1,4 @@
-# Title: 01 - Tidy SEP
+# Title: Tidy SEP
 # Author: Ravi Maharaj
 # Date: 2025-11-07
 
@@ -457,20 +457,23 @@ sep_biodata_work |> distinct(enpro_sample_source, enpro_sample_source1) |>
 ### Finalize table ----
 # Select columns needed and label table
 sep_biodata_final <- sep_biodata_work |>
-  select(id, sample_date_impute, year = enpro_year, stock_impute, 
-         enpro_site_river_location_impute, oto_stock_of_origin_impute, 
-         sex_final_impute = enpro_sex_final_impute, 
-         pohl = enpro_post_orbital_hypural_poh, age_ocean, 
-         adipose_fin_clip_impute = enpro_adipose_fin_clip_impute, 
-         final_use_distribution_impute = enpro_final_use_distribution) |> 
-  mutate(tbl_name = "sep_biodata")
+  select(id, sample_date = sample_date_impute, year = enpro_year, 
+         stock = stock_impute, 
+         enpro_site_river_location = enpro_site_river_location_impute, 
+         oto_stock_of_origin = oto_stock_of_origin_impute, 
+         sex_final = enpro_sex_final_impute, 
+         pohl = enpro_post_orbital_hypural_poh, 
+         age_ocean, 
+         adipose_fin_clip = enpro_adipose_fin_clip_impute, 
+         final_use_distribution = enpro_final_use_distribution) |> 
+  mutate(source = "sep_enpro")
 
 # Add to main database
-sockeye <- list(sep_biodata = sep_biodata_final)
+sockeye <- list(biodata = sep_biodata_final)
 
 # Save files
 dest <- "data/sockeye/SEP_BIODATA.csv"
-write.csv(sep_biodata_final, dest)
+readr::write_csv(sep_biodata_final, dest)
 dest <- "data/sockeye/SEP_BIODATA.Rdata"
 save(sockeye, file = dest)
 

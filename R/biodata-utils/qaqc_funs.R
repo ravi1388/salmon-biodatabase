@@ -1,4 +1,4 @@
-# Title: 02 - Tidy Kitimat
+# Title: Tidy Kitimat
 # Author: Ravi Maharaj
 # Date: 2025-11-07
 
@@ -28,18 +28,114 @@ kit_work <- load_kitimat_raw() |>
   map(clean_names)
 
 # Data QAQC ----
-#' First run functions that check to see what type of standardization new
-#' dataset(s) need(s) before they are compiled and/or added to the `sockeye` 
-#' biodatabase:
-#' - Consistency in column names among like columns
-#' - Consistency in data types among like columns
+#' Run functions to standardize dataset(s) before they are compiled and/or added
+#' to the `sockeye` biodatabase:
+#' - Column names among like columns
+#' - Data types among like columns
+#' - Values among like columns
 
-## Column names
+## Column names ----
+
+get_col_names <- function(dataset, dat_name) {
+  
+  df <- modify(dataset, \(x) {
+    x <- tibble(names(x),
+                unique(x$path))
+    names(x) <- c(paste0("colnames_", dat_name), "path")
+    return(x)
+  })
+  
+  return(df)
+}
 
 
+match_col_names <- function(col_names, col_map) {
+  col_match <- map(col_names,\(x) {
+    df <- left_join(x, col_map)
+    these_cols <- names(df)
+    new_cols <- map(these_cols, \(x) {
+      if(!x %in% c("path", "colnames_sock", "class_sock")) {
+        return("colnames_dat")
+      } else return(x)
+    })
+    names(df) <- new_cols
+    return(df)
+  })
+  
+  col_match <- modify(col_match, \(x) {
+    x <- x |> 
+      mutate(result = case_when(colnames_dat == colnames_sock ~ "matched...",
+                                colnames_dat != colnames_sock ~ "mapped...",
+                                is.na(colnames_sock) ~ "new..."),
+             result = factor(result, levels = c("matched...", "mapped...", "new...")))
+  })
+}
 
-# Data cleaning ----
-## Standardize column names
+get_match_result <- function(col_match, dataset, dat_name) {
+  
+  match_result <- col_match |> bind_rows() |> arrange(result) |> 
+    select(-colnames_sock)
+  
+  match_result_sum <- modify(col_match, \(x) {
+    table(x$result)
+  }) |> bind_rows() |> colSums()
+  
+  dataset_newnames <- map2(col_match, dataset, \(x, y) {
+    x <- x |> 
+      mutate(colnames_new = ifelse(result == "new...", 
+                                   colnames_dat, colnames_sock)) |> 
+      pull(colnames_new)
+    names(y) <- x
+    return(y)
+  })
+  
+  speak("Name check complete for '", str_to_title(dat_name), "'.")
+  speak(names(match_result_sum), " ", match_result_sum, "\n")
+  
+  result <- readline_enter("Press <Enter> to continue or type 'R' to review results:")
+  result <- toupper(result)
+  if(result == "R") {
+    print(match_result)
+    return(dataset_newnames)
+  } else if(isTRUE(result)) {
+    return(dataset_newnames)
+  }
+}
+
+standardize_col_names <- function(dataset, dat_name, col_map = load_col_map()) {
+  col_names <- get_col_names(dataset, dat_name)
+  
+  col_match <- match_col_names(col_names, col_map)
+  
+  match_result <- get_match_result(col_match, dataset, dat_name)
+  
+  return(match_result)
+  
+}
+
+
+## Column data types ----
+ get_col_class <- function(dataset) {
+   
+   col_class <- dataset |> 
+     map(\(x) {
+       ls <- as.list(x[1,])
+       col_class <- map(ls, \(y) {
+         y <- class(y)
+       }) |> 
+         bind_cols() |> 
+         pivot_longer(names(x),
+                      names_to = "colnames_sock",
+                      values_to = "class_dat")
+       return(col_class)
+     }) |> 
+     bind_rows()
+   
+   return(col_class)
+ }
+
+
+## Column values
 
 ### Get unique values of columns
 #' Similar columns:
@@ -48,31 +144,13 @@ kit_work <- load_kitimat_raw() |>
 #' Age columns represent different age values
 #' - 'cwt_age' taken from year of release
 #' - 'scale_age' taken from scale readings as G-R age
-kit_work |> 
-  modify(names) |> 
-  modify(sort)
-
-old_cols <- kit_work |> 
-  modify(names)
-
 col_vals <- map2(kit_work, old_cols, \(df, cols) {
   map(cols, \(cols){
     unique(df[cols])
   })
 })
 
-### Standardize names for similar variables between dataframes
-new_cols <- map(old_cols, \(cols) {
-  map_vec(cols, \(cols) {
-    if(grepl("sex", cols)) {
-      cols <- "sex"
-    } else cols <- cols
-  })
-}) 
 
-### Set new column names
-names(kit_work[[1]]) <- new_cols[[1]]
-names(kit_work[[2]]) <- new_cols[[2]]
 
 rm(old_cols, new_cols)
 
@@ -131,7 +209,7 @@ kit_work <- kit_work |> bind_rows()
 ## Impute 'age_ocean' ----
 ### Tidy cwt_meta from sep_meta ---
 #' Code in this chunk used to clean cwt_meta will be moved to '01_tidy_sep.R'
-cwt_meta <- load_sep_meta() |> 
+cwt_work <- load_sep_cwt() #|> 
   map(clean_names)
 
 cwt_meta <- cwt_meta[[1]]

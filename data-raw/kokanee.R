@@ -68,58 +68,53 @@ create_kokanee <- function(path = "data/kokanee/kokanee.Rdata") {
 
 
 ## SEP ----
-load_sep_raw <- function() {
-  message("> SEP raw")
-  load_dat("sep")
+load_sep_enpro_raw <- function(...) {
+  message("> SEP ENPRO raw")
+  load_dat("sep_enpro", ...)
 }
 
-load_sep_raw_truncated <- function() {
-  message("> SEP raw (truncated)")
-  load_dat("sep", truncate = T)
-}
-
-load_sep_meta <- function() {
-  message("> SEP meta")
-  load_dat("sep", meta_only = T)
+load_sep_cwt <- function(...) {
+  message("> SEP CWT raw")
+  load_dat("sep_cwt", ...)
 }
 
 
 ## SEP Historical ----
-load_sep_hist_raw <- function() {
+load_sep_hist_raw <- function(...) {
   message("> SEP historical")
-  return(load_dat("sep_historical"))
+  return(load_dat("sep_historical", ...))
 }
 
 
 ## Kitimat R Hatchery ----
-load_kitimat_raw <- function() {
+load_kitimat_raw <- function(...) {
   
   message("> Kitimat R Hatchery")
-  return(load_dat("kitimat"))
+  return(load_dat("kitimat", ...))
 }
 
 
 ## Neckako River - DFO ----
-load_nechako_raw <- function() {
+load_nechako_raw <- function(...) {
   message("> Neckako DFO/NFCP")
-  return(load_dat("nechako"))
+  return(load_dat("nechako", ...))
 }
 
 
 ## RMIS ----
-load_rmis_raw <- function() {
+load_rmis_raw <- function(...) {
   message("> RMIS")
   
   # Check to see if object already exists
-  result <- check_object("rmis")
+  result <- check_object_exists("rmis")
   if(!isFALSE(result)) {
     
     return(result)
     
   } else {
     
-    return(list(rls = load_dat("rls"),
-                rcv = load_dat("rcv"))
+    return(list(rls = load_dat("rls", ...),
+                rcv = load_dat("rcv", ...))
     )
     
   }
@@ -127,32 +122,33 @@ load_rmis_raw <- function() {
 
 
 # Load data files ----
-load_dat <- function(dataset, meta_only = F, truncate = F) {
+load_dat <- function(dat_name, trunc_table = F) {
   
   # Argument checking
-  if(!is.logical(meta_only)) stop("Invalid entry for 'meta_only', must be logical (T/F).")
-  if(!is.logical(truncate)) stop("Invalid entry for 'truncate', must be logical (T/F).")
+  check_type(name = deparse(substitute(dat_name)), 
+             value = dat_name, 
+             type_expected = "character")
+  check_type(name = deparse(substitute(trunc_table)), 
+             value = trunc_table, 
+             type_expected = "logical")
   
   # Check to see if object already exists
-  result <- check_object(dataset)
+  result <- check_object_exists(dat_name)
   if(!isFALSE(result)) {
-    
     return(result) 
-    
   } else {
     
     # Get list of .csv and .xlsx files
     dat_dirs <- list.dirs("data")
-    dataset <- paste0(dataset, "$")
-    dat_dirs <- dat_dirs[grep(dataset, dat_dirs, ignore.case = T)]
+    dat_name <- paste0(dat_name, "$")
+    dat_dirs <- dat_dirs[grep(dat_name, dat_dirs, ignore.case = T)]
     path <- list.files(dat_dirs)
     path <- path[c(grep("csv$", path), grep("xlsx$", path))]
     path <- file.path(dat_dirs, path)
     
-    # Handle case where `metdata_only = T`
-    if(meta_only == T) {
-      warning("Loading metadata only! Specify `meta_only = F` to load raw data as well.")
-      path <- path[grepl("metadata", path, ignore.case = T)]
+    # Handle case where `trunc_table = T`
+    if(trunc_table == T) {
+      return(purrr::map(path, choose_load, n_max = 5))
     }
     
     return(purrr::map(path, choose_load))
@@ -162,26 +158,28 @@ load_dat <- function(dataset, meta_only = F, truncate = F) {
 
 
 # Check if data object exists ----
-check_object <- function(dataset) {
-  obj_path <- file.path("data/kokanee", paste0(dataset, ".Rdata"))
+check_object_exists <- function(dat_name) {
+  obj_path <- file.path("data/kokanee", paste0(dat_name, ".Rdata"))
   if(file.exists(obj_path)) {
-    speak("Data object for ", dataset, " already exists! Loading now...\n")
+    speak("Data object for ", dat_name, " already exists! Loading now...\n")
     return(readRDS(obj_path))
   } else return(F)
 }
 
 
 # Choose load function ----
-choose_load <- function(path, ...) {
+choose_load <- function(path, n_max = Inf, ...) {
   
-  speak(path, "...")
+  speak("Loading... ", path)
   
   if(grepl("csv$", path)) {
-    return(readr::read_csv(path, col_types = "c"))
+    dat <- readr::read_csv(path, col_types = "c", n_max = n_max)
   }
   if(grepl("xlsx$", path)) {
-    return(readxl::read_xlsx(path, col_types = "text"))
+    dat <- readxl::read_xlsx(path, col_types = "text", n_max = n_max)
   }
+  
+  return(dat |> mutate(path = path))
   
 }
 

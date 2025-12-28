@@ -13,38 +13,52 @@ speak <- function(...) {
 
 
 
-#' Check data-type internals
+
+
+#' Check data-type
 #' 
 #' Checks the data-type of a variable depending on the user-specified expected 
-#' data-type. The function will provide a logical output depending on the result
-#' of type-checking, which will be used to handle messaging by 
-#' `check_type_output`.
+#' data-type.
 #'
 #' @param name Name of the variable to be checked.
 #' @param value Value of variable to be checked.
 #'
-#' @returns A message stating data-type passed checks.
+#' @returns A message stating whether or not data-type passed checks.
 
-check_type_internal <- function(name, value, type_expected) {
+check_type <- function(name, value, type_expected) {
   
   if(type_expected == "logical") {
-    if(is.logical(value)) {
-      message(sprintf("'%s' is logical.", name))
-      return(T)
-    } else {
+    if(!is.logical(value)) {
       stop(sprintf("Invalid 'type' for %s, must be logical (T/F).", name))
-      return(F)
     }
   }
   
   if(type_expected == "character") {
-    if(is.character(value)) {
-      message(sprintf("'%s' is character", name))
-      return(T)
-    } else {
-      stop(sprintf("Invalid entry for %s, must be 'character.'", name))
-      return(F)
+    if(!is.character(value)) {
+      stop(sprintf("Invalid 'type' for %s, must be 'character.'", name))
     }
   }
   
+}
+
+
+#' Load column map
+#'
+#' @returns A data frame showing column mapping to be used for raw data checking.
+
+load_col_map <- function() {
+  path <- "data/sockeye/internal/col_map.csv"
+  return(read.csv(path))
+}
+
+readline_enter <- function(prompt) {
+  
+  check_type(deparse(substitute(prompt)), prompt, "character")
+  
+  input <- readline(prompt)
+  if(input != "") {
+    speak("Invalid input!")
+    readline_enter(prompt)
+  }
+  return(T)
 }
