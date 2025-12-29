@@ -18,8 +18,9 @@ library(purrr)
 library(janitor)
 library(lubridate)
 
-source("data-raw/kokanee.R")
+source("R/kokanee/kokanee.R")
 source("R/biodata-utils/helpers.R")
+source("R/biodata-utils/qaqc_funs2.R")
 
 # Load data ----
 # load_kokanee()
@@ -117,8 +118,7 @@ standardize_col_names <- function(dataset, dat_name, col_map = load_col_map()) {
 ## Column data types ----
  get_col_class <- function(dataset) {
    
-   col_class <- dataset |> 
-     map(\(x) {
+   col_class <- map(dataset, \(x) {
        ls <- as.list(x[1,])
        col_class <- map(ls, \(y) {
          y <- class(y)

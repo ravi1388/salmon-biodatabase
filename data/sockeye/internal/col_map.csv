@@ -1,4 +1,4 @@
-colnames_sock,class_sock,colnames_kitimat
+colnames_sock,coltypes_sock,colnames_kitimat
 id,numeric,id
 sample_date,Date,
 year,numeric,year
