@@ -38,7 +38,14 @@ kit_work <- load_kitimat_raw() |>
 dataset <- kit_work
 dat_name <- "kitimat"
 attr_type <- "names"
+col_map <- load_col_map()
 
-col_attr <- get_col_attr(dataset, dat_name, attr_type)
+qa_object_attr <- get_col_attr(dataset, dat_name, attr_type)
 
-col_match <- match_col_attr(col_attr, dat_name, load_col_map(), attr_type)
+qa_object_match <- match_col_attr(qa_object_attr = qa_object_attr,
+                            col_map = col_map,
+                            attr_type = attr_type)
+
+match_result <- get_match_result(qa_object_match = qa_object_match,
+                                 dat_name = dat_name,
+                                 attr_type = attr_type)

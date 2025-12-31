@@ -5,13 +5,9 @@
 
 get_col_attr <- function(dataset, dat_name, attr_type) {
   
+  dataset <- add_qaqc_flag(dataset = dataset, attr_type = attr_type)
+  
   col_attr <- modify(dataset, \(x) {
-    
-    suppressWarnings(if(is.null(x$qa_flag) & attr_type != "names") {
-      stop("Run checks on column names first by setting attr_type to 'names'.")
-    })
-    suppressWarnings(if(is.null(x$qa_flag) & attr_type == "names") x$qa_flag <- NA)
-    
       
     df <- map(x, \(y) {
       return(class(y))
@@ -19,8 +15,8 @@ get_col_attr <- function(dataset, dat_name, attr_type) {
       bind_cols() |> 
       distinct() |>
       pivot_longer(names(x),
-                   names_to = "colnames",
-                   values_to = "coltypes") |>
+                   names_to = "col_names",
+                   values_to = "col_types") |>
       mutate(path = unique(x$path))
     
     if(attr_type == "values") {
@@ -39,18 +35,23 @@ get_col_attr <- function(dataset, dat_name, attr_type) {
     return(x)
   })
   
-  return(col_attr)
+  qa_object <- list(dataset = dataset,
+                    col_attr = col_attr)
+  return(qa_object)
 }
 
 
-match_col_attr <- function(col_attr, dat_name, col_map, attr_type) {
+match_col_attr <- function(qa_object_attr, col_map = load_col_map(), attr_type) {
+  
+  dataset <- qa_object_attr$dataset
+  col_attr <- qa_object_attr$col_attr
   
   if(!attr_type %in% c("names", "types", "vals")) {
     stop("Invalid argument for 'col_attr'. Use one of 'names', 'types' or 'vals'.")
   }
   
   col_match <- modify(col_attr, \(x) {
-    x <- left_join(x, col_map, by = paste0("col", attr_type, "_", dat_name))
+    x <- left_join(x, col_map, by = paste0("col_", attr_type, "_", dat_name))
     these_cols <- names(x)
     new_cols <- gsub(dat_name, "dat", these_cols)
     new_cols <- gsub(attr_type, "attr", new_cols)
@@ -64,17 +65,30 @@ match_col_attr <- function(col_attr, dat_name, col_map, attr_type) {
              result = factor(result, levels = c("matched...", "mapped...", "new...")))
   })
   
-  return(col_match)
+  qa_object_match <- list(dataset = dataset,
+                    col_match = col_match)
+  return(qa_object_match)
 }
 
-get_match_result <- function(dataset, col_match, dat_name, attr_type) {
+get_match_result <- function(qa_object_match, dat_name, attr_type) {
   
-  match_result <- col_match |> bind_rows() |> arrange(result) |> 
+  dataset <- qa_object_match$dataset
+  col_match <- qa_object_match$col_match
+  
+  match_result <- modify(col_match, \(x) {
+    x <- x |> bind_rows() |> arrange(result) |> 
       select(-col_attr_sock)
+  })
   
   match_result_sum <- modify(col_match, \(x) {
-    table(x$result)
-  }) |> bind_rows() |> colSums()
+    table(x$result) |> data.frame() |> mutate(path = unique(x$path)) |> 
+      select(result = Var1, ncols = Freq, path = path)
+  })
+  
+  # match_result <- col_match |> bind_rows() |> arrange(result) |> 
+  #     select(-col_attr_sock)
+  # 
+  # match_result_sum <- table(match_result$result) |> bind_rows() |> colSums()
   
   dataset_newattr <- apply_newattr(col_match, dataset)
   
@@ -125,34 +139,48 @@ apply_newattr <- function(col_match, dataset) {
   return(dataset_newattr)
 }
 
-add_qaqc_flag <- function(dataset_newattr, attr_type) {
+add_qaqc_flag <- function(dataset, attr_type) {
   
-  dataset_newattr_flag <- modify(dataset_newattr, \(x) {
-    # Column names checked - add 'names' flag
-    if(length(unique(x$qa_flag)) == 1 & 
-       is.na(unique(x$qa_flag)) &
-       attr_type == "names") {
-      x$qa_flag <- attr_type
-    }
+  dataset_flag <- modify(dataset, \(x) {
     
-    # Column types checked - add 'types' flag
-    if(length(unique(x$qa_flag)) == 1 & 
-       !is.na(unique(x$qa_flag)) & 
-       unique(x$qa_flag) == "names" &
-       attr_type == "types") {
-      x$qa_flag <- list(c(unique(x$qa_flag), attr_type))
+    # No qa conducted - Add column `qa_flag` containing NAs
+    if(suppressWarnings(is.null(x$qa_flag))) {
+      if(attr_type != "names") {
+        stop("Run checks on column names first by setting attr_type to 'names'.")
+      }
+      if(attr_type == "names") {
+        x$qa_flag <- NA
+      }
+      
+    } else {
+      # Column names checked - add 'names' flag
+      if(length(unique(x$qa_flag)) == 1 & 
+         is.na(unique(x$qa_flag)) &
+         attr_type == "names") {
+        x$qa_flag <- attr_type
+      }
+      
+      # Column types checked - add 'types' flag
+      if(length(unique(x$qa_flag)) == 1 & 
+         !is.na(unique(x$qa_flag)) & 
+         unique(x$qa_flag) == "names" &
+         attr_type == "types") {
+        x$qa_flag <- list(c(unique(x$qa_flag), attr_type))
+      }
+      
+      # Column values checked - add 'values' flag
+      if(length(unique(x$qa_flag)) == 1 & 
+         !is.na(unique(x$qa_flag)) & 
+         "types" %in% unlist(unique(x$qa_flag)) &
+         attr_type == "values") {
+        x$qa_flag <- list(c(unlist(unique(x$qa_flag)), attr_type))
+      }
     }
+    return(x)
     
-    # Column values checked - add 'values' flag
-    if(length(unique(x$qa_flag)) == 1 & 
-       !is.na(unique(x$qa_flag)) & 
-       "types" %in% unlist(unique(x$qa_flag)) &
-       attr_type == "values") {
-      x$qa_flag <- list(c(unlist(unique(x$qa_flag)), attr_type))
-    }
   })
   
-  return(dataset_newattr_flag)
+  return(dataset_flag)
   
 }
 
