@@ -12,7 +12,28 @@ speak <- function(...) {
 }
 
 
+#' Custom `warning` function
+#'
+#' @param ... Any number of objects to be pasted together.
+#'
+#' @returns A single character string output to the user in the console as a
+#'          warning message.
 
+speak_warn <- function(...) {
+  warning(paste0(...))
+}
+
+
+#' Custom `stop` function
+#'
+#' @param ... Any number of objects to be pasted together.
+#'
+#' @returns A single character string output to the user in the console as an
+#'          error message.
+
+speak_stop <- function(...) {
+  stop(paste0(...))
+}
 
 
 #' Check data-type

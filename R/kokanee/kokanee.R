@@ -142,16 +142,27 @@ load_dat <- function(dat_name, trunc_table = F) {
     dat_dirs <- list.dirs("data")
     dat_name <- paste0(dat_name, "$")
     dat_dirs <- dat_dirs[grep(dat_name, dat_dirs, ignore.case = T)]
+    dat_name <- gsub("\\$", "", dat_name)
     path <- list.files(dat_dirs)
     path <- path[c(grep("csv$", path), grep("xlsx$", path))]
     path <- file.path(dat_dirs, path)
     
     # Handle case where `trunc_table = T`
     if(trunc_table == T) {
-      return(purrr::map(path, choose_load, n_max = 5))
+      dat <- purrr::map(path, \(x) {
+        df <- choose_load(x, n_max = 5)
+        df$dat_name <- dat_name
+        return(df)
+      })
+      return(dat)
     }
     
-    return(purrr::map(path, choose_load))
+    dat <- purrr::map(path, \(x) {
+      df <- choose_load(x)
+      df$dat_name <- dat_name
+      return(df)
+    })
+    return(dat)
   }
   
 }

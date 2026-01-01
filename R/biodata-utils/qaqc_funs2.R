@@ -3,7 +3,7 @@
 #' get_match_result      :: get_match_result
 #' standardize_col_attr :: standardize_col_attr
 
-get_col_attr <- function(dataset, dat_name, attr_type) {
+get_col_attr <- function(dataset, attr_type) {
   
   dataset <- add_qaqc_flag(dataset = dataset, attr_type = attr_type)
   
@@ -17,17 +17,18 @@ get_col_attr <- function(dataset, dat_name, attr_type) {
       pivot_longer(names(x),
                    names_to = "col_names",
                    values_to = "col_types") |>
-      mutate(path = unique(x$path))
+      mutate(path = unique(x$path),
+             dat_name = unique(x$dat_name))
     
     if(attr_type == "values") {
-      mutate(df, path = unique(x$path),
-             colvals = vals)
+      mutate(df, colvals = vals)
     }
     
     return(df)
   })
   
   col_attr <- modify(col_attr, \(x) {
+    dat_name <- unique(x$dat_name)
     these_cols <- names(x)
     ind <- grep("col", these_cols)
     these_cols[ind] <- paste0(these_cols[ind], "_", dat_name)
@@ -35,8 +36,18 @@ get_col_attr <- function(dataset, dat_name, attr_type) {
     return(x)
   })
   
+  dat_name <- modify(col_attr, \(x) {
+    return(unique(x$dat_name))
+  }) |> unlist() |> unique()
+  
+  if(length(dat_name > 1)) {
+    stop("QAQC functions can only handle one data source at a time, but multiple data sources detected: ", 
+               paste(dat_name, collapse = ", "))
+  }
+  
   qa_object <- list(dataset = dataset,
-                    col_attr = col_attr)
+                    col_attr = col_attr,
+                    dat_name = dat_name)
   return(qa_object)
 }
 
@@ -45,6 +56,7 @@ match_col_attr <- function(qa_object_attr, col_map = load_col_map(), attr_type) 
   
   dataset <- qa_object_attr$dataset
   col_attr <- qa_object_attr$col_attr
+  dat_name <- qa_object_attr$dat_name
   
   if(!attr_type %in% c("names", "types", "vals")) {
     stop("Invalid argument for 'col_attr'. Use one of 'names', 'types' or 'vals'.")

@@ -9,6 +9,9 @@
 #' 2) Run the required functions to standardize like variables in raw data.
 #' 3) Add standardized data to `sockeye` biodatabase.
 
+# Setup environment ----
+rm(list = ls())
+
 # Packages ----
 library(tidyr)
 library(dplyr)
@@ -40,11 +43,11 @@ dat_name <- "kitimat"
 attr_type <- "names"
 col_map <- load_col_map()
 
-qa_object_attr <- get_col_attr(dataset, dat_name, attr_type)
+qa_object_attr <- get_col_attr(dataset, attr_type)
 
 qa_object_match <- match_col_attr(qa_object_attr = qa_object_attr,
-                            col_map = col_map,
-                            attr_type = attr_type)
+                                  col_map = col_map,
+                                  attr_type = attr_type)
 
 match_result <- get_match_result(qa_object_match = qa_object_match,
                                  dat_name = dat_name,
