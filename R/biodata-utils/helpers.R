@@ -14,37 +14,14 @@ speak <- function(...) {
 
 #' Custom `warning` function
 #'
-#' @param ... Any number of objects to be pasted together.
+#' @param ... Any number of objects to be pasted together in a warning message.
 #'
-#' @returns A single character string output to the user in the console as a
-#'          warning message.
+#' @returns A single character string output to the user in the console.
 
-speak_warn <- function(...) {
-  warning(paste0(...))
+speak_warning <- function(...) {
+  warning(paste0(...), call. = F)
 }
 
-
-#' Custom `stop` function
-#'
-#' @param ... Any number of objects to be pasted together.
-#'
-#' @returns A single character string output to the user in the console as an
-#'          error message.
-
-speak_stop <- function(...) {
-  stop(paste0(...))
-}
-
-
-#' Check data-type
-#' 
-#' Checks the data-type of a variable depending on the user-specified expected 
-#' data-type.
-#'
-#' @param name Name of the variable to be checked.
-#' @param value Value of variable to be checked.
-#'
-#' @returns A message stating whether or not data-type passed checks.
 
 check_type <- function(name, value, type_expected) {
   
@@ -72,14 +49,29 @@ load_col_map <- function() {
   return(read.csv(path))
 }
 
-readline_enter <- function(prompt) {
+
+# prompt <- "Press <Enter> to continue or type %s to review results: "
+# alt <- "R"
+readline_enter <- function(prompt, alt = NULL) {
   
   check_type(deparse(substitute(prompt)), prompt, "character")
   
-  input <- readline(prompt)
-  if(input != "") {
+  prompt <- sprintf(prompt, sprintf("'%s'", alt))
+  input <- readline(prompt) |> toupper()
+  if(is.null(alt) & input != "") {
     speak("Invalid input!")
     readline_enter(prompt)
   }
-  return(T)
+  
+  if(!is.null(alt) & !toupper(input) %in% c("", alt)) {
+    speak("Invalid input!")
+    readline_enter(prompt, alt)
+  }
+  
+  if(input == alt) {
+    return(T)
+  }
+  if(input == "") {
+    return(F)
+  }
 }

@@ -43,12 +43,16 @@ dat_name <- "kitimat"
 attr_type <- "names"
 col_map <- load_col_map()
 
-qa_object_attr <- get_col_attr(dataset, attr_type)
+qa_object <- make_qa_object(dataset, attr_type)
+qa_status(qa_object)
 
-qa_object_match <- match_col_attr(qa_object_attr = qa_object_attr,
-                                  col_map = col_map,
-                                  attr_type = attr_type)
+qa_object_attr <- get_col_attr(qa_object)
+qa_status(qa_object_attr)
 
-match_result <- get_match_result(qa_object_match = qa_object_match,
-                                 dat_name = dat_name,
-                                 attr_type = attr_type)
+qa_object_match <- match_col_attr(qa_object_attr = qa_object_attr)
+qa_status(qa_object_match)
+
+qa_object_result <- get_match_result(qa_object_match = qa_object_match)
+qa_status(qa_object_result)
+
+qa_object <- qa_object_result
