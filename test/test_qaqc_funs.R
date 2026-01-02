@@ -23,7 +23,7 @@ library(lubridate)
 
 source("R/kokanee/kokanee.R")
 source("R/biodata-utils/helpers.R")
-source("R/biodata-utils/qaqc_funs2.R")
+source("R/biodata-utils/qaqc_funs.R")
 
 # Load data ----
 # load_kokanee()
