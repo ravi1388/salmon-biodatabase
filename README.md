@@ -125,6 +125,21 @@ generate visualizations.
 
 ### Current Development Status
 
-We are currently focused on **Project 3: `biodata-utils`**, as establishing 
-clean data pipelines and a definitive schema is the foundation for all 
-subsequent analysis.
+**Project 3: `biodata-utils`**
+* Develop generalized QAQC functions
+    * Create generalized structure:
+      `qa_object <- make_qa_object(dataset)`; creates a generalized qaqc object
+      `qa_object_attr <- get_col_attr(qa_object)`; gets the attributes of columns
+      in input dataset
+      `qa_object_match <- match_col_attr(qa_object_attr)`; gets the target 
+      attributes for columns in input dataset
+      `qa_object_result <- get_match_result(qa_object_match)`; applies the target
+      attributes to columns in the input dataset
+      
+    * Develop abstractions for handling specific transformations in 
+      `get_match_result()`, which will call functions depending on what value 
+      given by 'qa_object_match$target_attr' such that:
+      
+      'qa_object_match$target_attr' == 'names' will standardize column names
+      'qa_object_match$target_attr' == 'types', will standardize column types 
+      'qa_object_match$target_attr' == 'values', will standardize column types 
