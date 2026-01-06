@@ -23,6 +23,17 @@ speak_warning <- function(...) {
 }
 
 
+#' Custom `error` function
+#'
+#' @param ... Any number of objects to be pasted together in an error message.
+#'
+#' @returns A single character string output to the user in the console.
+
+speak_stop <- function(...) {
+  stop(paste0(...), call. = F)
+}
+
+
 check_type <- function(name, value, type_expected) {
   
   if(type_expected == "logical") {

@@ -1,5 +1,5 @@
-col_names_sock,col_types_sock,col_names_kitimat
-id,numeric,id
+col_names_target,col_types_target,col_names_kitimat
+id,character,id
 sample_date,Date,
 year,numeric,year
 stock,character,sample_site

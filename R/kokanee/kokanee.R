@@ -143,9 +143,9 @@ load_dat <- function(dat_name, trunc_table = F) {
     dat_name <- paste0(dat_name, "$")
     dat_dirs <- dat_dirs[grep(dat_name, dat_dirs, ignore.case = T)]
     dat_name <- gsub("\\$", "", dat_name)
-    path <- list.files(dat_dirs)
-    path <- path[c(grep("csv$", path), grep("xlsx$", path))]
-    path <- file.path(dat_dirs, path)
+    dat_files <- list.files(dat_dirs)
+    dat_files <- dat_files[c(grep("csv$", dat_files), grep("xlsx$", dat_files))]
+    path <- file.path(dat_dirs, dat_files)
     
     # Handle case where `trunc_table = T`
     if(trunc_table == T) {
@@ -162,6 +162,9 @@ load_dat <- function(dat_name, trunc_table = F) {
       df$dat_name <- dat_name
       return(df)
     })
+    
+    names(dat) <- dat_files
+    
     return(dat)
   }
   

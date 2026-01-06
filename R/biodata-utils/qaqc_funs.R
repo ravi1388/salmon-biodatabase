@@ -1,4 +1,4 @@
-make_qa_object <- function(dataset, attr_type) {
+make_qa_object <- function(dataset) {
   
   dat_name <- modify(dataset, \(x) {
     return(unique(x$dat_name))
@@ -11,10 +11,34 @@ make_qa_object <- function(dataset, attr_type) {
   
   qa_object <- list(qa_flag = "unchecked",
                     dat_name = dat_name,
-                    attr_type = attr_type,
+                    target_attr = "names",
                     dataset = dataset)
   speak_warning("`qa_flag` set to 'unchecked'")
   return(qa_object)
+}
+
+advance_qa_stage <- function(qa_object) {
+  
+  if(qa_object$qa_flag == qa_object$target_attr) {
+    
+    qa_object$col_attr <- NULL
+    qa_object$col_match <- NULL
+    qa_object$dataset <- qa_object$dataset_newattr
+    qa_object$dataset_newattr <- NULL
+    
+    target_attr <- qa_object$target_attr
+    
+    if(target_attr == "names") {
+      qa_object$target_attr <- "types"
+    } else if(target_attr == "types") {
+      qa_object$target_attr <- "values"
+    }
+    warning(sprintf("Column '%s' checked, setting `target_attr` to '%s'", 
+                    target_attr, qa_object$target_attr))
+  }
+  
+  return(qa_object)
+  
 }
 
 get_col_attr <- function(qa_object) {
@@ -32,10 +56,9 @@ get_col_attr <- function(qa_object) {
       pivot_longer(names(x),
                    names_to = "col_names",
                    values_to = "col_types") |>
-      mutate(path = unique(x$path),
-             dat_name = unique(x$dat_name))
+      mutate(dat_name = unique(x$dat_name))
     
-    if(attr_type == "values") {
+    if(qa_object$target_attr == "values") {
       mutate(df, colvals = vals)
     }
     
@@ -62,23 +85,32 @@ get_col_attr <- function(qa_object) {
 match_col_attr <- function(qa_object_attr, col_map = load_col_map()) {
   
   dataset <- qa_object_attr$dataset
-  attr_type <- qa_object_attr$attr_type
+  target_attr <- qa_object_attr$target_attr
   col_attr <- qa_object_attr$col_attr
   dat_name <- qa_object_attr$dat_name
   
   col_match <- modify(col_attr, \(x) {
-    x <- left_join(x, col_map, by = paste0("col_", attr_type, "_", dat_name))
+    # x <- left_join(x, col_map, by = paste0("col_", target_attr, "_", dat_name))
+    x <- left_join(x, col_map, by = paste0("col_names_", dat_name))
     these_cols <- names(x)
-    new_cols <- gsub(dat_name, "dat", these_cols)
-    new_cols <- gsub(attr_type, "attr", new_cols)
+    new_cols <- gsub(dat_name, "source", these_cols)
+    new_cols <- gsub(target_attr, "attr", new_cols)
     names(x) <- new_cols
     
     x <- x |> 
-      select(col_attr_dat, col_attr_sock, path) |> 
-      mutate(result = case_when(col_attr_dat == col_attr_sock ~ "matched...",
-                                col_attr_dat != col_attr_sock ~ "mapped...",
-                                is.na(col_attr_sock) ~ "new..."),
+      mutate(result = case_when(col_attr_source == col_attr_target ~ "matched...",
+                                col_attr_source != col_attr_target ~ "mapped...",
+                                is.na(col_attr_target) ~ "new..."),
              result = factor(result, levels = c("matched...", "mapped...", "new...")))
+    
+    if(target_attr == "names") {
+      x <- x |> 
+        select(col_attr_source, col_attr_target, result)
+    } else {
+      x <- x |> 
+        select(col_names_source, col_attr_source, col_names_target, col_attr_target, result)
+    }
+    
   })
   
   qa_object_match <- qa_object_attr
@@ -90,66 +122,64 @@ match_col_attr <- function(qa_object_attr, col_map = load_col_map()) {
 get_match_result <- function(qa_object_match) {
   
   dat_name <- qa_object_match$dat_name
-  attr_type <- qa_object_match$attr_type
+  target_attr <- qa_object_match$target_attr
   dataset <- qa_object_match$dataset
   col_match <- qa_object_match$col_match
   
   match_result <- modify(col_match, \(x) {
     x <- x |> 
       arrange(result) |> 
-      select(result, col_attr_dat, path)
+      select(result, col_attr_source)
   })
   
   match_result_sum <- modify(col_match, \(x) {
-    table(x$result) |> data.frame() |> mutate(path = unique(x$path)) |> 
-      select(result = Var1, ncols = Freq, path = path)
-  }) #|> bind_rows()
+    table(x$result) |> data.frame() |> 
+      select(result = Var1, ncols = Freq )
+  })
   
-  # match_result <- col_match |> bind_rows() |> arrange(result) |>
-  #     select(-col_attr_sock)
-  # 
-  # match_result_sum <- table(match_result$result) |> bind_rows() |> colSums()
+  names(match_result_sum) <- names(col_match)
   
-  dataset_newattr <- apply_newattr(col_match, dataset)
-  
+  dataset_newattr <- apply_newattr(col_match, dataset, target_attr)
   qa_object_result <- qa_object_match
   qa_object_result$dataset_newattr <- dataset_newattr
+  qa_object_result$match_result <- match_result
   qa_object_result <- update_qaqc_flag(qa_object_result)
   
-  speak("Finished checking column ", attr_type, " for '", str_to_title(dat_name), "'.")
+  speak("Finished checking column ", target_attr, " for '", str_to_title(dat_name), "'.")
   # speak(names(match_result_sum), " ", match_result_sum, "\n")
   print(match_result_sum)
-  result <- readline_enter("Press <Enter> to continue or type %s to review results: ", alt = "R")
+  speak("Call match_result_summary(`qa_object`) to review results.")
   
-  if(isTRUE(result)) {
-    print(match_result)
-    return(qa_object_result)
-  } else {
-    return(qa_object_result)
-  }
+  return(qa_object_result)
 }
 
-apply_newattr <- function(col_match, dataset) {
+match_result_summary <- function(qa_object_result) {
+  
+  print(qa_object_result$match_result)
+  
+}
+
+apply_newattr <- function(col_match, dataset, target_attr) {
   dataset_newattr <- map2(col_match, dataset, \(x, y) {
     x <- x |> 
       mutate(col_attr_new = ifelse(result == "new...", 
-                                   col_attr_dat, col_attr_sock)) |> 
+                                   col_attr_source, col_attr_target)) |> 
       pull(col_attr_new)
     
     # Apply standard column names
-    if(attr_type == "names") {
+    if(target_attr == "names") {
       names(y) <- x
     }
     
     # Apply standard column types
-    if(attr_type == "types") {
+    if(target_attr == "types") {
       dataset_newattr <- modify2(x, y, \(x, y) {
         stop("Column types standardization not yet active...")
       })
     }
     
     # Apply standard column values
-    if(attr_type == "values") {
+    if(target_attr == "values") {
       dataset_newattr <- modify2(x, y, \(x, y) {
         stop("Column values standardization not yet active...")
       })
@@ -165,10 +195,11 @@ update_qaqc_flag <- function(qa_object) {
   
   # No qa conducted - Add column `qa_flag` containing NAs
   if(qa_object$qa_flag == "unchecked") {
-    if(attr_type != "names") {
-      stop("Run checks on column names first by setting attr_type to 'names'.")
+    if(qa_object$target_attr != "names") {
+      stop("Run checks on column names first by setting target_attr to 'names'.")
     }
-    if(qa_object$attr_type == "names") {
+    
+    if(qa_object$target_attr == "names") {
       qa_object$qa_flag <- "in progress"
       speak_warning("Updated `qa_flag` to 'in progress...'\n")
     }
@@ -177,27 +208,27 @@ update_qaqc_flag <- function(qa_object) {
     # Column names checked - add 'names' flag
     if(length(qa_object$qa_flag) == 1 & 
        qa_object$qa_flag == "in progress" &
-       attr_type == "names") {
-      qa_object$qa_flag <- attr_type
-      speak_warning("Updated `qa_flag` to ", sprintf("'%s'\n", attr_type))
+       qa_object$target_attr == "names") {
+      qa_object$qa_flag <- qa_object$target_attr
+      speak_warning("Updated `qa_flag` to ", sprintf("'%s'\n", qa_object$target_attr))
     }
     
     # Column types checked - add 'types' flag
     if(length(qa_object$qa_flag) == 1 & 
        qa_object$qa_flag != "in progress" & 
        qa_object$qa_flag == "names" &
-       attr_type == "types") {
-      qa_object$qa_flag <- list(c(qa_object$qa_flag, attr_type))
-      speak_warning("Updated `qa_flag` to ", sprintf("'%s'\n", attr_type))
+       qa_object$target_attr == "types") {
+      qa_object$qa_flag <- list(c(qa_object$qa_flag, qa_object$target_attr))
+      speak_warning("Updated `qa_flag` to ", sprintf("'%s'\n", qa_object$target_attr))
     }
     
     # Column values checked - add 'values' flag
     if(length(unique(qa_object$qa_flag)) == 1 & 
        qa_object$qa_flag != "in progress" & 
        "types" %in% unlist(qa_object$qa_flag) &
-       attr_type == "values") {
-      qa_object$qa_flag <- list(c(unlist(qa_object$qa_flag), attr_type))
-      speak_warning("Updated `qa_flag` to ", sprintf("'%s'\n", attr_type))
+       qa_object$target_attr == "values") {
+      qa_object$qa_flag <- list(c(unlist(qa_object$qa_flag), qa_object$target_attr))
+      speak_warning("Updated `qa_flag` to ", sprintf("'%s'\n", qa_object$target_attr))
     }
   }
   
@@ -206,15 +237,17 @@ update_qaqc_flag <- function(qa_object) {
 }
 
 qa_status <- function(qa_object) {
-  return(qa_object$qa_flag)
+  return(list(qa_flag = qa_object$qa_flag,
+              dat_name = qa_object$dat_name,
+              target_attr = qa_object$target_attr))
 }
 
-standardize_col_attr <- function(dataset, dat_name, attr_type, col_map = load_col_map()) {
-  col_attr <- get_col_attr(dataset, dat_name, attr_type)
+standardize_col_attr <- function(dataset, dat_name, target_attr, col_map = load_col_map()) {
+  col_attr <- get_col_attr(dataset, dat_name, target_attr)
   
-  col_match <- match_col_attr(col_attr, dat_name, col_map, attr_type)
+  col_match <- match_col_attr(col_attr, dat_name, col_map, target_attr)
   
-  match_result <- get_match_result(dataset, col_match, dat_name, attr_type)
+  match_result <- get_match_result(dataset, col_match, dat_name, target_attr)
   
   return(match_result)
   
