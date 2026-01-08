@@ -39,7 +39,7 @@ qaqc_status <- function(qaqc_object) {
 
 
 
-advance_qa_stage <- function(qaqc_object) {
+qaqc_advance_stage <- function(qaqc_object) {
   
   qaqc_object <- update_qaqc_flag(qaqc_object)
   
@@ -86,7 +86,9 @@ update_qaqc_flag <- function(qaqc_object) {
        # qaqc_object$qa_flag == "in progress" &
       qaqc_object$qa_flag == "unchecked" &
       qaqc_object$target_attr == "names" &
-      !is.null(qaqc_object$dataset_newattr)) {
+      (!is.null(qaqc_object$dataset_newattr) |
+       !is.null(qaqc_object$col_attr) |
+       !is.null(qaqc_object$col_match))) {
       
       qaqc_object$qa_flag <- qaqc_object$target_attr
       speak_warning("Updated `qa_flag` to ", sprintf("'%s'\n", qaqc_object$target_attr)) 
@@ -121,6 +123,12 @@ update_qaqc_flag <- function(qaqc_object) {
 
 
 get_col_attr <- function(qaqc_object) {
+  
+  if(!is.null(qaqc_object$col_match) |
+     !is.null(qaqc_object$dataset_newattr)) {
+    stop(sprintf("QAQC for '%s' completed. Call `qaqc_status('qaqc_object')` to determine progress or `qaqc_advance_stage(qaqc_object)` to move to next stage.",
+                                                         qaqc_object$target_attr))
+  }
   
   dataset <- qaqc_object$dataset
   dat_name <- qaqc_object$dat_name
@@ -164,6 +172,16 @@ get_col_attr <- function(qaqc_object) {
 
 match_col_attr <- function(qaqc_object_attr, col_map = load_col_map()) {
   
+  if(is.null(qaqc_object$col_attr)) {
+    stop(sprintf("Source column '%s' not yet extracted. Call `qaqc_status('qaqc_object')` to determine current progress.",
+                 qaqc_object$target_attr))
+  }
+  
+  if(!is.null(qaqc_object$dataset_newattr)) {
+    stop(sprintf("QAQC for '%s' completed. Call `qaqc_status('qaqc_object')` to determine current progress.",
+                 qaqc_object$target_attr))
+  }
+  
   dataset <- qaqc_object_attr$dataset
   target_attr <- qaqc_object_attr$target_attr
   col_attr <- qaqc_object_attr$col_attr
@@ -202,6 +220,16 @@ match_col_attr <- function(qaqc_object_attr, col_map = load_col_map()) {
 
 
 get_qaqc_result <- function(qaqc_object_match) {
+  
+  if(is.null(qaqc_object$col_match)) {
+    stop(sprintf("Source and target column '%s' not yet matched. Call `qaqc_status('qaqc_object')` to determine current progress.",
+                 qaqc_object$target_attr))
+  }
+  
+  if(is.null(qaqc_object$dataset_newattr)) {
+    stop(sprintf("QAQC for '%s' incomplete. Call `qaqc_status('qaqc_object')` to determine current progress.",
+                 qaqc_object$target_attr))
+  }
   
   dat_name <- qaqc_object_match$dat_name
   target_attr <- qaqc_object_match$target_attr

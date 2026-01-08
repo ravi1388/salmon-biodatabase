@@ -58,7 +58,7 @@ qaqc_object_result <- get_qaqc_result(qaqc_object_match)
 qaqc_status(qaqc_object_result)
 qaqc_result_summary(qaqc_object_result)
 
-qaqc_object <- advance_qa_stage(qaqc_object_result)
+qaqc_object <- qaqc_advance_stage(qaqc_object_result)
 qaqc_status(qaqc_object)
 
 ## 'types'
@@ -72,7 +72,7 @@ qaqc_object_result <- get_qaqc_result(qaqc_object_match)
 qaqc_status(qaqc_object_result)
 qaqc_result_summary(qaqc_object_result)
 
-qaqc_object <- advance_qa_stage(qaqc_object_result)
+qaqc_object <- qaqc_advance_stage(qaqc_object_result)
 qaqc_status(qaqc_object)
 
 
