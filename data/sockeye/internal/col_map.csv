@@ -5,6 +5,7 @@ year,numeric,year
 stock,character,sample_site
 enpro_site_river_location,character,
 oto_stock_of_origin,logical,
+tag_code,character,tag_code
 sex_final,character,sex_final
 sex_final,,sex_m_f_j
 pohl,numeric,post_orbital_hypural_poh

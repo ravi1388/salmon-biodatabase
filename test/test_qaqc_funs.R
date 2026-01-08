@@ -31,7 +31,7 @@ source("R/biodata-utils/qaqc_funs.R")
 kit_work <- load_kitimat_raw() |> 
   map(clean_names)
 
-# Data QAQC ----
+# Load data ----
 #' Run functions to standardize dataset(s) before they are compiled and/or added
 #' to the `sockeye` biodatabase:
 #' - Column names among like columns
@@ -41,20 +41,52 @@ kit_work <- load_kitimat_raw() |>
 dataset <- kit_work
 col_map <- load_col_map()
 
-qa_object <- make_qa_object(dataset)
-qa_status(qa_object)
+# Make QAQC object ----
+qaqc_object <- make_qaqc_object(dataset)
+qaqc_status(qaqc_object)
 
-qa_object <- advance_qa_stage(qa_object)
-qa_status(qa_object)
 
-qa_object_attr <- get_col_attr(qa_object)
-qa_status(qa_object_attr)
+# Run QAQC functions ----
+## 'names'
+qaqc_object_attr <- get_col_attr(qaqc_object)
+qaqc_status(qaqc_object_attr)
 
-qa_object_match <- match_col_attr(qa_object_attr)
-qa_status(qa_object_match)
+qaqc_object_match <- match_col_attr(qaqc_object_attr)
+qaqc_status(qaqc_object_match)
 
-qa_object_result <- get_match_result(qa_object_match)
-qa_status(qa_object_result)
-match_result_summary(qa_object_result)
+qaqc_object_result <- get_qaqc_result(qaqc_object_match)
+qaqc_status(qaqc_object_result)
+qaqc_result_summary(qaqc_object_result)
 
-qa_object <- qa_object_result
+qaqc_object <- advance_qa_stage(qaqc_object_result)
+qaqc_status(qaqc_object)
+
+## 'types'
+qaqc_object_attr <- get_col_attr(qaqc_object)
+qaqc_status(qaqc_object_attr)
+
+qaqc_object_match <- match_col_attr(qaqc_object_attr)
+qaqc_status(qaqc_object_match)
+
+qaqc_object_result <- get_qaqc_result(qaqc_object_match)
+qaqc_status(qaqc_object_result)
+qaqc_result_summary(qaqc_object_result)
+
+qaqc_object <- advance_qa_stage(qaqc_object_result)
+qaqc_status(qaqc_object)
+
+
+# Debug `apply_newattr` ----
+dat_name <- qaqc_object_match$dat_name
+target_attr <- qaqc_object_match$target_attr
+dataset <- qaqc_object_match$dataset
+col_match <- qaqc_object_match$col_match
+
+col_match_sub <- col_match[[1]]
+dataset_sub <- dataset[[1]]
+
+this_col <- dataset_sub[[4]]
+this_col_name <- names(dataset_sub)[4]
+new_attr <- col_attr_new[4]
+source_attr <- col_attr_source[4]
+
