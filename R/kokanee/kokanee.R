@@ -57,7 +57,7 @@ create_kokanee <- function(path = "data/kokanee/kokanee.Rdata") {
   saveRDS(kokanee, file = path)
   map2(kokanee, names(kokanee), \(x, y) {
     z <- paste0(y, ".Rdata")
-    speak("> Saving ", z)
+    message("> Saving ", z)
     dest <- gsub("kokanee.Rdata", z, path)
     saveRDS(x, dest)
   })
@@ -175,7 +175,7 @@ load_dat <- function(dat_name, trunc_table = F) {
 check_object_exists <- function(dat_name) {
   obj_path <- file.path("data/kokanee", paste0(dat_name, ".Rdata"))
   if(file.exists(obj_path)) {
-    speak("Data object for ", dat_name, " already exists! Loading now...\n")
+    message("Data object for ", dat_name, " already exists! Loading now...\n")
     return(readRDS(obj_path))
   } else return(F)
 }
@@ -184,7 +184,7 @@ check_object_exists <- function(dat_name) {
 # Choose load function ----
 choose_load <- function(path, n_max = Inf, ...) {
   
-  speak("Loading... ", path)
+  message("Loading... ", path)
   
   if(grepl("csv$", path)) {
     dat <- readr::read_csv(path, col_types = "c", n_max = n_max)

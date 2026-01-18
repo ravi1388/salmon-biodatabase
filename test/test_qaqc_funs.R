@@ -31,13 +31,6 @@ source("R/biodata-utils/qaqc_funs.R")
 kit_work <- load_kitimat_raw() |> 
   map(clean_names)
 
-# Load data ----
-#' Run functions to standardize dataset(s) before they are compiled and/or added
-#' to the `sockeye` biodatabase:
-#' - Column names among like columns
-#' - Data types among like columns
-#' - Values among like columns
-
 dataset <- kit_work
 col_map <- load_col_map()
 
@@ -75,6 +68,28 @@ qaqc_result_summary(qaqc_object_result)
 qaqc_object <- qaqc_advance_stage(qaqc_object_result)
 qaqc_status(qaqc_object)
 
+## 'values'
+qaqc_object_attr <- get_col_attr(qaqc_object)
+qaqc_status(qaqc_object_attr)
+
+qaqc_object_match <- match_col_attr(qaqc_object_attr)
+qaqc_status(qaqc_object_match)
+
+qaqc_object_result <- get_qaqc_result(qaqc_object_match)
+qaqc_status(qaqc_object_result)
+qaqc_result_summary(qaqc_object_result)
+
+qaqc_object <- qaqc_advance_stage(qaqc_object_result)
+qaqc_status(qaqc_object)
+
+
+# Debug `match_col_attr` ----
+dataset <- qaqc_object_attr$dataset
+target_attr <- qaqc_object_attr$target_attr
+col_attr <- qaqc_object_attr$col_attr
+dat_name <- qaqc_object_attr$dat_name
+
+col_attr_sub <- col_attr[[1]]
 
 # Debug `apply_newattr` ----
 dat_name <- qaqc_object_match$dat_name

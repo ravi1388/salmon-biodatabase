@@ -1,15 +1,14 @@
-col_names_target,col_types_target,col_names_kitimat
-id,character,id
-sample_date,Date,
-year,numeric,year
-stock,character,sample_site
-enpro_site_river_location,character,
-oto_stock_of_origin,logical,
-tag_code,character,tag_code
-sex_final,character,sex_final
-sex_final,,sex_m_f_j
-pohl,numeric,post_orbital_hypural_poh
-age_ocean,logical,
-adipose_fin_clip,character,adipose_fin_clip
-final_use_distribution,character,
-tbl_name,character,
+col_names_target,col_types_target,col_names_kitimat,col_strictness_target,col_values_target
+id,character,id,full,
+sample_date,Date,,full,
+year,numeric,year,full,
+stock,character,,partial,"Atnarko R, Wannock R, Chuckwalla R, Klinaklini R, Nimpkish R, Keogh R, Woss R, Quinsam R, Big Soos Cr, George Adams (Purdy), Campbell R, Elk Falls Chan, Cowichan R, B+L Qualicum R, San Juan R, Samish (Friday Cr), Robertson Cr, Mamquam R, Puntledge R, Porteau Cv, Grovers Cr, Washington Brights, Nanaimo R, Nitinat R, Salmon R, Chilliwack R, Menzies Cr, Snake R Lower, Lyons Ferry Hatchery, Skagit R, Umatilla R, Clackamas R Early, McAllister Cr, Chemainus R, Nooksack R, Wallace R + Samish, Nooksack+Samish Mix, Minter Cr, Voight Cr, Englishman R, Clarks Cr, Finch Cr, Elwha R, Burman R, Sooke R, Gordon R, Sarita R, Nahmint R, Thornton Cr, Sproat R, Yukon R, Shuswap R Low, Ash R, Lowry Cr, Gold R, Effingham R, Tranquil Cr, Kennedy R Low, Moheya R, Cypre R, Bedwell R, Ursus Cr, Conuma R, Megin R, Warn Bay Cr, Tahsis R, Tlupana R, Sucwoa R, Zeballos R, Leiner R, Maclean Bay, Kaouk R, Artlish R, Tahsish R, Goodspeed R, Marble R, Quatsino Sound, Capilano R, Cheakamus R, Shovelnose Cr, Ashlu Cr, Maria Sl, Stave R, Harrison R, Spius Cr, Coldwater R, Chehalis R, Nicola R, Salmon R/Tomf, Chilko Ch, Kilbella R, Maa-Nulth Domestic, Muchalat R, Somass R, Colonial Cr, Moyeha R, Nusatsum R, Salloomt R, Area 27 R, Toquart R, Clemens Cr, Cayeghle System, Oyster R, Tenderfoot Cr, Kauwinch R, Taylor R, Hoko R, Medvejie, Chilko R"
+site_river_location,character,sample_site,none,"Atnarko R, Nusatsum R, Wannock R, Chuckwalla R, Klinaklini R, Nimpkish R, Keogh R, Quinsam R, Campbell R, Elk Falls Chan, Simms Cr, Salmon R, Menzies Cr, Puntledge R, B+L Qualicum R, Englishman R, Nanaimo R, Chemainus R, Cowichan R, Sooke R, San Juan R, Gordon R, Nitinat R, Robertson Cr, Sarita R, Nahmint R, Thornton Cr, Sproat R, Ash R, Lowry Cr, Deer Cr (Stamp R. Trib), Kitsuksis Cr (Somass R. Trib), Mcbride Cr, Effingham R, Tranquil Cr, Kennedy R Low, Moheya R, Cypre R, Ursus Cr, Bedwell R, Megin R, Warn Bay Cr, Conuma R, Tlupana R, Zeballos R, Burman R, Tahsis R, Sucwoa R, Gold R, Leiner R, Maclean Bay, Kaouk R, Artlish R, Tahsish R, Goodspeed R, Marble R, Quatsino Sound, Porteau Cv, Capilano R, Cheakamus R, Shovelnose Cr, Mamquam R, Ashlu Cr, Chilliwack R, Maria Sl, Stave R, Harrison R, Inch Cr, Spius Cr, Coldwater R, Chehalis R, Nicola R, Salmon R/Tomf, Chilko Ch, Kilbella R, Maa-Nulth Domestic, Muchalat R, Somass R, Colonial Cr, Moyeha R, Salloomt R, Area 27 R, Cayeghle System, Toquart R, Clemens Cr, Kauwinch R, Oyster R, Taylor R"
+stock_of_origin,logical,,none,"Atnarko R, Wannock R, Woss R, Quinsam R, Big Soos Cr, George Adams (Purdy), Cowichan R, B+L Qualicum R, San Juan R, Samish (Friday Cr), Robertson Cr, Mamquam R, Puntledge R, Porteau Cv, Grovers Cr, Washington Brights, Nanaimo R, Nitinat R, Chilliwack R, Salmon R, Snake R Lower, Lyons Ferry Hatchery, Skagit R, Umatilla R, Clackamas R Early, McAllister Cr, Chemainus R, Nooksack R, Wallace R + Samish, Nooksack+Samish Mix, Minter Cr, Voight Cr, Clarks Cr, Finch Cr, Elwha R, Burman R, Sarita R, Nahmint R, Yukon R, Shuswap R Low, Gold R, Bedwell R, Conuma R, Leiner R, Marble R, Capilano R, Cheakamus R, Maria Sl, Stave R, Harrison R, Coldwater R, Chehalis R, Nicola R, Tahsis R, Sucwoa R, Nimpkish R, Ashlu Cr, Shovelnose Cr, Tenderfoot Cr, Muchalat R, Hoko R, Medvejie, Chilko R, Tlupana R"
+tag_code,character,tag_code,none,
+sex_final,character,sex_final,partial,"male, female, unknown"
+sex_final,character,sex_m_f_j,partial,"male, female, unknown"
+pohl,numeric,post_orbital_hypural_poh,partial,
+age_ocean,character,,partial,"3-ocean, 4-ocean, 2-ocean, 5-ocean, 1-ocean, 6-ocean"
+adipose_fin_clip,character,adipose_fin_clip,none,"yes, no"
+final_use_distribution,character,,none,"Brood Used, Natural Spawner, FSC, Other Mortalities/Cull, Released, Not Applicable, ESSR, Holding Mortalities, Transfer Out, Natural Spawners, Unknown, Other Mortalities"

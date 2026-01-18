@@ -1,39 +1,5 @@
 # Helper functions for biodata-utils
 
-
-#' Custom `message` function
-#'
-#' @param ... Any number of objects to be pasted together.
-#'
-#' @returns A single character string output to the user in the console.
-
-speak <- function(...) {
-  message(paste0(...))
-}
-
-
-#' Custom `warning` function
-#'
-#' @param ... Any number of objects to be pasted together in a warning message.
-#'
-#' @returns A single character string output to the user in the console.
-
-speak_warning <- function(...) {
-  warning(paste0(...), call. = F)
-}
-
-
-#' Custom `error` function
-#'
-#' @param ... Any number of objects to be pasted together in an error message.
-#'
-#' @returns A single character string output to the user in the console.
-
-speak_stop <- function(...) {
-  stop(paste0(...), call. = F)
-}
-
-
 check_type <- function(name, value, type_expected) {
   
   if(type_expected == "logical") {
