@@ -29,7 +29,7 @@ create_kokanee <- function(path = "data/kokanee/kokanee.Rdata") {
   
   # Check if `kokanee` exists
   if(file.exists(path)) {
-    input <- readline("The kokanee data object already exists at '", path, "', press <Enter> to overwrite or <Esc> to exit:")
+    input <- readline(paste0("The kokanee data object already exists at '", path, "'.\nPress <Enter> to overwrite or <Esc> to exit:"))
     
     # Validate and handle input
     if(input != "") {
@@ -40,89 +40,33 @@ create_kokanee <- function(path = "data/kokanee/kokanee.Rdata") {
   
   # Load raw data into `kokanee`
   message("Loading raw data files...")
-  sep <- load_sep_raw()
-  sep_hist <- load_sep_hist_raw()
-  kitimat <- load_kitimat_raw()
-  nechako <- load_nechako_raw()
-  rmis <- load_rmis_raw()
   
-  kokanee <- list(sep = sep,
-                  sep_hist = sep_hist,
-                  kitimat = kitimat,
-                  nechako = nechako,
-                  rmis = rmis)
+  kokanee <- list(sep_enpro = load_dat("sep_enpro"),
+                  sep_oto_therm = load_dat("sep_oto_therm"),
+                  sep_cwt = load_dat("sep_cwt"),
+                  sep_hist = load_dat("sep_hist"),
+                  kitimat = load_dat("kitimat"),
+                  nechako = load_dat("nechako"),
+                  rmis = load_rmis())
   
   # Save `kokanee` as single and separate objects
   message("> Saving kokanee.Rdata")
-  saveRDS(kokanee, file = path)
+  save(kokanee, file = path)
   map2(kokanee, names(kokanee), \(x, y) {
     z <- paste0(y, ".Rdata")
     message("> Saving ", z)
     dest <- gsub("kokanee.Rdata", z, path)
-    saveRDS(x, dest)
+    save(x, file = dest)
   })
   
   message("Successfully created kokanee data object at '", path, "'")
   
 }
 
-
-## SEP ----
-load_sep_enpro_raw <- function(...) {
-  message("> SEP ENPRO raw")
-  load_dat("sep_enpro", ...)
-}
-
-load_sep_cwt <- function(...) {
-  message("> SEP CWT raw")
-  load_dat("sep_cwt", ...)
-}
-
-
-## SEP Historical ----
-load_sep_hist_raw <- function(...) {
-  message("> SEP historical")
-  return(load_dat("sep_historical", ...))
-}
-
-
-## Kitimat R Hatchery ----
-load_kitimat_raw <- function(...) {
-  
-  message("> Kitimat R Hatchery")
-  return(load_dat("kitimat", ...))
-}
-
-
-## Neckako River - DFO ----
-load_nechako_raw <- function(...) {
-  message("> Neckako DFO/NFCP")
-  return(load_dat("nechako", ...))
-}
-
-
-## RMIS ----
-load_rmis_raw <- function(...) {
-  message("> RMIS")
-  
-  # Check to see if object already exists
-  result <- check_object_exists("rmis")
-  if(!isFALSE(result)) {
-    
-    return(result)
-    
-  } else {
-    
-    return(list(rls = load_dat("rls", ...),
-                rcv = load_dat("rcv", ...))
-    )
-    
-  }
-}
-
-
 # Load data files ----
 load_dat <- function(dat_name, trunc_table = F) {
+  
+  output <- paste0("> ", dat_name)
   
   # Argument checking
   check_type(name = deparse(substitute(dat_name)), 
@@ -170,13 +114,32 @@ load_dat <- function(dat_name, trunc_table = F) {
   
 }
 
+## Load RMIS data files ----
+load_rmis <- function(...) {
+  message("> RMIS")
+  
+  # Check to see if object already exists
+  result <- check_object_exists("rmis")
+  if(!isFALSE(result)) {
+    
+    return(result)
+    
+  } else {
+    
+    return(list(rls = load_dat("rls", ...),
+                rcv = load_dat("rcv", ...))
+    )
+    
+  }
+}
+
 
 # Check if data object exists ----
 check_object_exists <- function(dat_name) {
   obj_path <- file.path("data/kokanee", paste0(dat_name, ".Rdata"))
   if(file.exists(obj_path)) {
     message("Data object for ", dat_name, " already exists! Loading now...\n")
-    return(readRDS(obj_path))
+    return(load(obj_path))
   } else return(F)
 }
 
