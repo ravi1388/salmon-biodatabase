@@ -4,11 +4,11 @@ source("R/biodata-utils/helpers.R")
 
 
 # Load kokanee data object ----
-load_kokanee <- function(kokanee_path = "./data/kokanee/kokanee.Rdata") {
+load_kokanee <- function(kokanee_path = "./data/kokanee/kokanee.rds") {
   
   if(file.exists(kokanee_path)) {
     message("Loading the kokanee data object...")
-    load(kokanee_path)
+    readRDS(kokanee_path)
     
   } else {
     
@@ -25,7 +25,7 @@ load_kokanee <- function(kokanee_path = "./data/kokanee/kokanee.Rdata") {
 
 
 # Create kokanee data object ----
-create_kokanee <- function(path = "data/kokanee/kokanee.Rdata") {
+create_kokanee <- function(path = "data/kokanee/kokanee.rds") {
   
   # Check if `kokanee` exists
   if(file.exists(path)) {
@@ -50,13 +50,13 @@ create_kokanee <- function(path = "data/kokanee/kokanee.Rdata") {
                   rmis = load_rmis())
   
   # Save `kokanee` as single and separate objects
-  message("> Saving kokanee.Rdata")
-  save(kokanee, file = path)
+  message("> Saving kokanee.rds")
+  saveRDS(kokanee, file = path)
   map2(kokanee, names(kokanee), \(x, y) {
-    z <- paste0(y, ".Rdata")
+    z <- paste0(y, ".rds")
     message("> Saving ", z)
-    dest <- gsub("kokanee.Rdata", z, path)
-    save(x, file = dest)
+    dest <- gsub("kokanee.rds", z, path)
+    saveRDS(x, file = dest)
   })
   
   message("Successfully created kokanee data object at '", path, "'")
@@ -88,6 +88,13 @@ load_dat <- function(dat_name, trunc_table = F) {
     dat_dirs <- dat_dirs[grep(dat_name, dat_dirs, ignore.case = T)]
     dat_name <- gsub("\\$", "", dat_name)
     dat_files <- list.files(dat_dirs)
+    
+    # Drop metadata files
+    # ind <- grep("metadata", dat_files, ignore.case = T)
+    # if(length(ind) > 0) {
+    #   dat_files <- dat_files[-ind]
+    # }
+    
     dat_files <- dat_files[c(grep("csv$", dat_files), grep("xlsx$", dat_files))]
     path <- file.path(dat_dirs, dat_files)
     
@@ -136,10 +143,10 @@ load_rmis <- function(...) {
 
 # Check if data object exists ----
 check_object_exists <- function(dat_name) {
-  obj_path <- file.path("data/kokanee", paste0(dat_name, ".Rdata"))
+  obj_path <- file.path("data/kokanee", paste0(dat_name, ".rds"))
   if(file.exists(obj_path)) {
     message("Data object for ", dat_name, " already exists! Loading now...\n")
-    return(load(obj_path))
+    return(readRDS(obj_path))
   } else return(F)
 }
 

@@ -1,20 +1,14 @@
-# Debug `kokanee` functions #
-
-rm(list = ls())
-library(dplyr)
-library(purrr)
-
 # Title: Create `kokanee` data object ----
 
 source("R/biodata-utils/helpers.R")
 
 
-# load_kokanee() ----
-kokanee_path <- "./data/kokanee/kokanee.Rdata"
+# Load kokanee data object ----
+load_kokanee <- function(kokanee_path = "./data/kokanee/kokanee.rds") {
   
   if(file.exists(kokanee_path)) {
     message("Loading the kokanee data object...")
-    load(kokanee_path)
+    readRDS(kokanee_path)
     
   } else {
     
@@ -27,10 +21,11 @@ kokanee_path <- "./data/kokanee/kokanee.Rdata"
     } else create_kokanee()
     
   }
+}
 
 
 # Create kokanee data object ----
-create_kokanee <- function(path = "data/kokanee/kokanee.Rdata") {
+create_kokanee <- function(path = "data/kokanee/kokanee.rds") {
   
   # Check if `kokanee` exists
   if(file.exists(path)) {
@@ -46,93 +41,32 @@ create_kokanee <- function(path = "data/kokanee/kokanee.Rdata") {
   # Load raw data into `kokanee`
   message("Loading raw data files...")
   
-  kokanee <- list(sep_enpro = load_sep_enpro(),
-                  sep_oto_therm = load_sep_oto_therm(),
-                  sep_cwt = load_sep_cwt(),
-                  sep_hist = load_sep_hist(),
-                  kitimat = load_kitimat(),
-                  nechako = load_nechako(),
+  kokanee <- list(sep_enpro = load_dat("sep_enpro"),
+                  sep_oto_therm = load_dat("sep_oto_therm"),
+                  sep_cwt = load_dat("sep_cwt"),
+                  sep_hist = load_dat("sep_hist"),
+                  kitimat = load_dat("kitimat"),
+                  nechako = load_dat("nechako"),
                   rmis = load_rmis())
   
   # Save `kokanee` as single and separate objects
-  message("> Saving kokanee.Rdata")
-  save(kokanee, file = path)
+  message("> Saving kokanee.rds")
+  saveRDS(kokanee, file = path)
   map2(kokanee, names(kokanee), \(x, y) {
-    z <- paste0(y, ".Rdata")
+    z <- paste0(y, ".rds")
     message("> Saving ", z)
-    dest <- gsub("kokanee.Rdata", z, path)
-    save(x, file = dest)
+    dest <- gsub("kokanee.rds", z, path)
+    saveRDS(x, file = dest)
   })
   
   message("Successfully created kokanee data object at '", path, "'")
   
 }
 
-
-## SEP Enpro ----
-load_sep_enpro <- function(...) {
-  message("> SEP ENPRO")
-  load_dat("sep_enpro", ...)
-}
-
-## SEP CWT ----
-load_sep_cwt <- function(...) {
-  message("> SEP CWT")
-  load_dat("sep_cwt", ...)
-}
-
-## SEP Otolith/Thermal Mark ----
-load_sep_oto_therm <- function(...) {
-  message("> SEP Otolith/Thermal Mark")
-  load_dat("sep_oto_therm", ...)
-}
-
-
-## SEP Historical ----
-load_sep_hist <- function(...) {
-  message("> SEP historical")
-  return(load_dat("sep_historical", ...))
-}
-
-
-## Kitimat R Hatchery ----
-load_kitimat <- function(...) {
+# Load data files ----
+load_dat <- function(dat_name, trunc_table = F) {
   
-  message("> Kitimat R Hatchery")
-  return(load_dat("kitimat", ...))
-}
-
-
-## Neckako River - DFO ----
-load_nechako <- function(...) {
-  message("> Nechako DFO/NFCP")
-  return(load_dat("nechako", ...))
-}
-
-
-## RMIS ----
-load_rmis <- function(...) {
-  message("> RMIS")
-  
-  # Check to see if object already exists
-  result <- check_object_exists("rmis")
-  if(!isFALSE(result)) {
-    
-    return(result)
-    
-  } else {
-    
-    return(list(rls = load_dat("rls", ...),
-                rcv = load_dat("rcv", ...))
-    )
-    
-  }
-}
-
-
-# load_dat(dat_name, trunc_table = F) ----
-dat_name <- "sep_enpro"
-trunc_table <- F
+  output <- paste0("> ", dat_name)
   
   # Argument checking
   check_type(name = deparse(substitute(dat_name)), 
@@ -154,6 +88,13 @@ trunc_table <- F
     dat_dirs <- dat_dirs[grep(dat_name, dat_dirs, ignore.case = T)]
     dat_name <- gsub("\\$", "", dat_name)
     dat_files <- list.files(dat_dirs)
+    
+    # Drop metadata files
+    ind <- grep("metadata", dat_files, ignore.case = T)
+    if(length(ind) > 0) {
+      dat_files <- dat_files[-ind]
+    }
+    
     dat_files <- dat_files[c(grep("csv$", dat_files), grep("xlsx$", dat_files))]
     path <- file.path(dat_dirs, dat_files)
     
@@ -164,6 +105,7 @@ trunc_table <- F
         df$dat_name <- dat_name
         return(df)
       })
+      return(dat)
     }
     
     dat <- purrr::map(path, \(x) {
@@ -174,21 +116,43 @@ trunc_table <- F
     
     names(dat) <- dat_files
     
+    return(dat)
+  }
+  
+}
+
+## Load RMIS data files ----
+load_rmis <- function(...) {
+  message("> RMIS")
+  
+  # Check to see if object already exists
+  result <- check_object_exists("rmis")
+  if(!isFALSE(result)) {
+    
+    return(result)
+    
+  } else {
+    
+    return(list(rls = load_dat("rls", ...),
+                rcv = load_dat("rcv", ...))
+    )
+    
+  }
+}
 
 
 # Check if data object exists ----
 check_object_exists <- function(dat_name) {
-  obj_path <- file.path("data/kokanee", paste0(dat_name, ".Rdata"))
+  obj_path <- file.path("data/kokanee", paste0(dat_name, ".rds"))
   if(file.exists(obj_path)) {
     message("Data object for ", dat_name, " already exists! Loading now...\n")
-    return(load(obj_path))
+    return(readRDS(obj_path))
   } else return(F)
 }
 
 
-# choose_load(path, n_max = Inf, ...) ----
-path <- path[1] 
-n_max = Inf
+# Choose load function ----
+choose_load <- function(path, n_max = Inf, ...) {
   
   message("Loading... ", path)
   
@@ -199,5 +163,7 @@ n_max = Inf
     dat <- readxl::read_xlsx(path, col_types = "text", n_max = n_max)
   }
   
-  dat |> mutate(path = path)
+  return(dat |> mutate(path = path))
+  
+}
 

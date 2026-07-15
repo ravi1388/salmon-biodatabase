@@ -19,9 +19,6 @@ library(janitor)
 library(lubridate)
 source("R/kokanee/kokanee.R")
 
-# Load data ----
-load_kokanee()
-
 # Data cleaning ----
 
 #------------------#
@@ -31,8 +28,7 @@ load_kokanee()
 ## Load data
 # enpro_dat <- readxl::read_xlsx("data/kokanee/SEP/SEP_ENPRO_CN.xlsx")
 # enpro_meta <- readxl::read_xlsx("data/kokanee/SEP/SEP_ENPRO_CN_METADATA.xlsx")
-enpro_dat <- kokanee$sep_enpro
-
+enpro_dat <- load_dat("sep_enpro")
 
 ### Check for dupes ----
 enpro_work <- clean_names(enpro_dat)
