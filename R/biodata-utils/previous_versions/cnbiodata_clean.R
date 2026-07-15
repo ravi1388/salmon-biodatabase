@@ -2,10 +2,13 @@
 # Author: Ravi Maharaj
 # Date: 2025-07-30
 
+# Setup Environment ----
+rm(list = ls())
+
 # Description ----
 #' This script is used to clean-up and standardize variables in different 
 #' sources of biodata used in our analyses.
-
+ 
 # Packages ----
 library(tidyr)
 library(dplyr)
@@ -14,9 +17,10 @@ library(stringr)
 library(purrr)
 library(janitor)
 library(lubridate)
+source("R/kokanee/kokanee.R")
 
 # Load data ----
-# load("./data/kokanee/kokanee.Rdata")
+load_kokanee()
 
 # Data cleaning ----
 
@@ -27,6 +31,8 @@ library(lubridate)
 ## Load data
 # enpro_dat <- readxl::read_xlsx("data/kokanee/SEP/SEP_ENPRO_CN.xlsx")
 # enpro_meta <- readxl::read_xlsx("data/kokanee/SEP/SEP_ENPRO_CN_METADATA.xlsx")
+enpro_dat <- kokanee$sep_enpro
+
 
 ### Check for dupes ----
 enpro_work <- clean_names(enpro_dat)
@@ -101,7 +107,9 @@ sort(unique(enpro_work$site_river_location_impute))
 
 #### Consolidate names:
 #' "Atnarko R Low", "Atnarko R Mid" & "Atnarko R Up" into "Atnarko R"
-#' "Tsu-Ma_Uss" & "Somass R" to "Somass R"
+#' "Tsu-Ma_Uss" & "Somass R" into "Somass R"
+#' "Big Qualicum R", "L Qualicum R" into "B+L Qualicum R"
+#' "Nanaimo R Low Fall", "Nanaimo R Up Summer" into "Nanaimo R"
 enpro_work <- enpro_work |> 
   mutate(site_river_location_impute = case_when(
     site_river_location_impute %in% c("Atnarko R Low", "Atnarko R Mid", "Atnarko R Up") ~ "Atnarko R",
@@ -123,6 +131,7 @@ rm(dupes_enpro, keep_rows, enpro_dupe_ids)
 
 ## Load data
 # oto_dat <- readxl::read_xlsx("data/kokanee/SEP/SEP_OTO_THERM_CN.xlsx")
+oto_dat <- kokanee$sep
 oto_work <- oto_dat |> clean_names()
 
 ### Check for dupes ----
